@@ -1,0 +1,37 @@
+- name: Charlotte
+  options: aux fraises / poire et chocolat
+  tags: [france]
+
+- name: Mousse au chocolat
+  tags: [france]
+
+- name: Gateau à la crème de marron
+  tags: [france]
+
+- name: Quatre quart
+  tags: [france]
+
+- name: Madeleines
+  tags: [france]
+
+- name: Fondant au chocolat
+  tags: [france]
+
+- name: Crêpes
+  options: sugar / lemon sugar cinammon / banana chocolate / vegan
+  tags: [france]
+
+- name: Bananes flambées
+  options: with rhum / conammon / sugar / butter
+
+- name: Tarte aux pommes
+  options: with compote de pommes / poire
+
+- name: Tarte à la rhubarbe
+
+- name: Compote de pommes
+
+- name: Chocotorta
+  tags: [argentina]
+
+- name: Riz au lait

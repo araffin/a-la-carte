@@ -1,0 +1,156 @@
+- name: Champignons pain au lait
+  options: with/without ginger and chilis
+  ingredients: [paprika, chili, crème fraîche, onion, garlic]
+  tags: [india]
+
+- name: Empanadas
+  options: carne (bolo) / vegetarian (bolo soja) / cheese / champignons
+  tags: [argentina]
+
+- name: Ratatouille
+  options: served with rice or pasta
+  ingredients: [aubergine, zucchini, tomato, onion, garlic]
+
+- name: Riste d'aubergine
+  options: served with pasta
+  tags: [france]
+
+- name: Lasagne
+  options: bolo / vegetarian / aubergines
+  tags: [italy]
+
+- name: Tomate feta and pasta
+  options: with garlic and crème fraîche
+
+- name: Asperges au Parmesan
+  options: served with rice
+  
+- name: Risotto aux champignons
+  options: with white wine
+
+- name: Egg onion tomato bread
+  options: with chili or tomato sauce
+  tags: [breakfast]
+
+- name: Pasta with vegetables
+  options: paprika / zucchini / aubergines / sweet potato / butternut
+
+- name: Velouté de butternut
+  ingredients: [butternut, crème fraîche]
+  tags: [winter]
+
+- name: Vegetables in oven
+  options: aubergines / sweet potato / butternut / chili / garlic
+  ingredients: [paprika, piment, thyme]
+
+- name: Pommes de terre sautées
+  options: à la graisse de canard with duck / vegatarian option? (butter + soja)
+
+- name: Bruschetta (toasted bread)
+  options: tomato / cheese / avocado / bread toasted in butter/oil
+  ingredients: [basil, walnut oil, truffel oil, toasted sesame oil, moutarde, soja sauce]
+
+- name: Raclette
+  options: with champignons / potatoes / butter
+  tags: [france]
+
+- name: Quiche
+  options: champignons fromage / asperges
+  tags: [france]
+
+- name: Gratin de Ravioles
+  options: made in the oven
+  ingredients: [ravioles, crème fraîche, cheese]
+  tags: [france]
+
+- name: Ravioles
+  options: with butter/oil
+  tags: [france]
+
+- name: Salade de Couscous
+  options: with tomato / mais / cucumber / avocado / cold ravioles
+  tags: [cold]
+
+- name: Fondue aux poireaux
+  options: with tagliatelles (fresh pasta)
+  ingredients: [leek, crème fraîche]
+
+- name: Crêpes salées
+  options: cheese / champignons
+  tags: [france]
+
+- name: Pizza
+  options: champignons / mais / vegetables / potatoes / cheese
+
+- name: Flammekueche (Tarte Flambée)
+  options: feta cheese / champignons
+  ingredients: [crème fraîche]
+  tags: [france]
+
+- name: Coco curry
+  options: chicken / carrot / ginger / sweet potato / onion / soja / served with rice or korean noodles
+  tags: [asian]
+
+- name: Thai vegetables
+  options: brocoli / cauliflower / carottes / served with rice
+  ingredients: [soja sauce, ginger]
+  tags: [asia]
+
+- name: Paneer
+  options: kadayi (normal) / palaak paneer
+  tags: [india]
+
+- name: Baigan kabharta
+  ingredients: [aubergine]
+  tags: [india]
+
+- name: Naan
+  options: normal / garlic naan
+  tags: [india]
+
+- name: Alou ghobi
+  options: served with chapatis / rice
+  ingredients: [potato, cauliflower]
+  tags: [india]
+
+- name: Kabouli chana and coconut
+  options: served with chapatis / rice
+  ingredients: [chickpeas, coconut milk]
+  tags: [india]
+
+- name: Rajma
+  options: with cream
+  ingredients: [kidney bean]
+  tags: [india]
+
+- name: Indian Potato / Carrot
+  options: with fenugrek
+  tags: [india]
+
+- name: Alou palaak
+  options: served with chapatis / rice
+  ingredients: [potato, spinach]
+  tags: [india]
+
+- name: Dal
+  options: served with chapatis / rice
+  ingredients: [lentil]
+  tags: [india]
+
+- name: Moong Dal
+  options: served with chapatis / rice
+  ingredients: [green lentil]
+  tags: [india]
+
+- name: Pao badji
+  options: served with chapatis / rice
+  tags: [india]
+
+- name: Fried rice noodle
+  options: with Worcestershire sauce
+  tags: [india]
+
+- name: Enchiladas
+
+- name: Galettes bretonnes
+  tags: [france]
