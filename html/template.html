@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Restaurant Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+
+<style>
+@font-face {
+  font-family: "samarkan";
+  src:
+    local("samarkan"),
+    url("assets/SAMAN___.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: "parisienne";
+  src:
+    local("parisienne"),
+    url("assets/Parisienne-Regular.ttf") format("truetype"),
+}
+
+.samarkan {
+    font-family: 'samarkan', sans-serif;
+}
+
+.parisienne {
+    font-family: 'parisienne', sans-serif;
+}
+
+</style>
+</head>
+
+
+
+<body>
+    <section class="section hero is-white has-text-centered">
+        <div class="container">
+            <h1 class="title is-1 is-uppercase has-text-info-dark samarkan">
+                Menu
+            </h1>
+            <p class="subtitle is-1 parisienne">
+                Home Restaurant by Ria & Antonin
+            </p>
+        </div>
+    </section>
+
+    <section class="section has-background-light">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <h3 class="title is-1 is-uppercase has-text-info-dark">Main Course</h3> 
+                    {% for dish in dishes %}
+                    {% if loop.index % 14 == 0 %}
+                    </div>
+                    <div class="column is-mobile is-full">
+                        <hr class="has-background-info">
+                    </div>
+                    {% endif %}
+
+                    {% if loop.index % 7 == 0 and loop.index % 14 != 0 %}
+                    </div>
+                    {% endif %}
+
+                    {% if loop.index % 7 == 0 %}
+                    <div class="column is-half">
+                    {% endif %}
+                    
+
+                    <div class="block">
+                        <p class="title">
+                            {{ dish.name }}
+                            <span class="is-size-5">
+                                {{ dish.flags }}
+                            </span>
+
+                        </p>
+                        <p class="subtitle is-italic">{{ dish.options}}</p>
+                    </div>
+                    {% endfor %}
+                      
+                </div>
+
+
+                <div class="column is-half">
+                    <h3 class="title is-2 is-uppercase has-text-info-dark is-underlined">Desserts</h3>
+                    {% for dish in desserts %}
+                    <div class="block">
+                        <p class="title">
+                            {{ dish.name }}
+                            <span class="is-size-5">
+                                {{ dish.flags }}
+                            </span>
+                    
+                        </p>
+                        <p class="subtitle is-italic">{{ dish.options}}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

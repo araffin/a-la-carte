@@ -135,7 +135,7 @@
 - name: Dal
   options: served with chapatis / rice
   ingredients: [lentil]
-  tags: [india]
+  tags: [india, spicy]
 
 - name: Moong Dal
   options: served with chapatis / rice
@@ -144,7 +144,7 @@
 
 - name: Pao badji
   options: served with chapatis / rice
-  tags: [india]
+  tags: [india, spicy]
 
 - name: Fried rice noodle
   options: with Worcestershire sauce
