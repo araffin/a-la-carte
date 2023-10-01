@@ -12,8 +12,8 @@ name_to_flags = {
     "france": "🇫🇷",
     "spicy": "🌶️",
 }
-n_dish_per_column = 7
-n_dish_per_page = 14
+n_dish_per_column = 6
+n_dish_per_page = 2 * n_dish_per_column
 for key in data.keys():
     with open(f"data/{key}.yaml") as f:
         raw_data = yaml.safe_load(f)
