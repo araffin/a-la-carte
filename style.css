@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "samarkan";
+    src:
+        local("samarkan"),
+        url("assets/SAMAN___.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: "parisienne";
+    src:
+        local("parisienne"),
+        url("assets/Parisienne-Regular.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: "parchment";
+    src:
+        local("parchment"),
+        url("assets/Parchment_MF.ttf") format("truetype"),
+}
+
+.samarkan {
+    font-family: 'samarkan', sans-serif;
+}
+
+.parisienne {
+    font-family: 'parisienne', sans-serif;
+}
+
+.parchment {
+    font-family: 'parchment', sans-serif;
+}
+
+/* .main-section {
+    background-image: url("./assets/chili.png");
+    background-size: cover;
+} */

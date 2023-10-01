@@ -150,6 +150,14 @@
   options: with Worcestershire sauce
   tags: [india]
 
+- name: Gobi Matar
+  options: served with chapatis / rice
+  tags: [india, spicy]
+
+- name: Paneer Butter Masala
+  options: served with chapatis / rice
+  tags: [india, spicy]
+
 - name: Enchiladas
 
 - name: Galettes bretonnes
