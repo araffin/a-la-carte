@@ -38,12 +38,10 @@
 
                 <div class="glide">
                 <div class="glide__track" data-glide-el="track">
+
                 <div class="glide__slides">
                 {% for dish in dishes %}
                 {% if dish.new_page %}
-                <!-- <div class="column is-mobile is-full">
-                    <hr class="has-background-info">
-                </div> -->
                 <div class="glide__slide">
                 <div class="columns">
                 {% endif %}
@@ -51,10 +49,15 @@
                 {% if dish.new_column %}
                 <div class="column">
                 {% endif %}
-           
                     <div class="block">
                         <p class="title parchment is-1 mb-4">
+                            {% if dish.link %}
+                            <a href="{{dish.link}}" , target="_blank">
+                                {{loop.index}}. {{ dish.name }}
+                            </a>
+                            {% else %}
                             {{loop.index}}. {{ dish.name }}
+                            {% endif %}
                             <span class="is-size-5">
                                 {{ dish.flags }}
                             </span>
@@ -62,42 +65,32 @@
                         </p>
                         <p class="subtitle">{{ dish.options}}</p>
                     </div>
-
                 {% if dish.close_column %}
-                </div>
+                </div> <!-- Close column -->
                 {% endif %}
 
                 {% if dish.close_page %}
-                </div>
-                </div>
+                </div> <!-- Close Page Columns -->
+                </div> <!-- Close glide slide -->
                 {% endif %}
 
                 {% endfor %}
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
+                </div> <!-- Close glide slides -->
+
                 <nav class="pagination is-centered is-large mt-5" data-glide-el="controls" role="navigation" aria-label="pagination">
                     <a class="pagination-previous is-light" data-glide-dir="<">Previous</a>
                     <a class="pagination-next" data-glide-dir=">">Next</a>
 
-                    <ul class="pagination-list" data-glide-el="controls[nav]">
-                        <li data-glide-dir="=0">
-                            <a class="pagination-link">1</a>
+                    <ul class="pagination-list glide__bullets" data-glide-el="controls[nav]">
+                        {% for idx in range(n_pages_dishes) %}
+                        <li class="glide__bullet" data-glide-dir="={{idx}}">
+                            <a class="pagination-link {{'is-current' if idx == 0}}">{{idx + 1}}</a>
                         </li>
-                        <li data-glide-dir="=1">
-                            <a class="pagination-link">2</a>
-                        </li>
-                        <li data-glide-dir="=2">
-                            <a class="pagination-link">3</a>
-                        </li>
-                        <li data-glide-dir="=3">
-                            <a class="pagination-link">4</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </nav>
-                </div>
+                </div> <!-- Close glide track -->
+                </div> <!-- Close glide -->
                 
             </div>
 
@@ -106,7 +99,16 @@
 
     <script type="text/javascript" src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.js"></script>
     <script>
-        new Glide('.glide').mount()
+        var glide = new Glide('.glide')
+        glide.mount()
+
+        glide.on('run.after', function () {
+            let current = document.getElementsByClassName("is-current")[0];
+            current.classList.remove("is-current");
+            current = document.getElementsByClassName("glide__bullet--active")[0];
+            // Add class is-current
+            current.children[0].classList.add("is-current");
+        })
     </script>
 </body>
 

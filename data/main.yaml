@@ -162,3 +162,12 @@
 
 - name: Galettes bretonnes
   tags: [france]
+
+- name: Pasta Paprika à la Jamie Olivier
+  options: with feta and roquette
+  ingredients: [paprika, tomato, onion, garlic, roquette, feta]
+  link: https://www.youtube.com/watch?v=3CpoVc77rpw
+
+- name: Vegetables soja
+  options: with brocoli, champignons and roasted soja
+  tags: [china, spicy]

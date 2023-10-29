@@ -25,4 +25,7 @@ check-codestyle:
 
 commit-checks: format type lint
 
+live-reload:
+	when-changed html/template.html python read.py
+
 .PHONY: lint format check-codestyle commit-checks doc spelling docker type pytest
