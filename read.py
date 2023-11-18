@@ -56,6 +56,6 @@ content = template.render(
     n_pages_dishes=n_pages["main"],
 )
 
-with open("result.html", mode="w", encoding="utf-8") as result:
+with open("index.html", mode="w", encoding="utf-8") as result:
     result.write(content)
     print("Done.")
