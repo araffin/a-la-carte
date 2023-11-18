@@ -63,7 +63,20 @@
                             </span>
 
                         </p>
-                        <p class="subtitle">{{ dish.options}}</p>
+                        <p class="subtitle">
+                            {{ dish.options}}
+                            {% if dish.image %}
+                            &nbsp;
+                            <a href="#" class="expand">Show more</a>
+                            {% endif %}
+                        </p>
+                        {% if dish.image %}
+                        <div class="hidden-block collapse">
+                            <figure class="image is-16by9">
+                                <img style="object-fit: cover; max-height: 400px;" class="dish-image" src="{{dish.image}}" alt="Dish image">
+                            </figure>
+                        </div>
+                        {% endif %}
                     </div>
                 {% if dish.close_column %}
                 </div> <!-- Close column -->
@@ -102,13 +115,40 @@
         var glide = new Glide('.glide')
         glide.mount()
 
-        glide.on('run.after', function () {
+        glide.on('run.before', function()
+        {
+            // Check if any hidden-block is shown
+            // if so click on them
+            let hiddenBlocks = document.querySelectorAll('.hidden-block.show');
+            hiddenBlocks.forEach(function (el) {
+                // el.previousElementSibling.click();
+                el.parentElement.querySelector('a.expand').click();
+            });
+        })
+
+        glide.on('run.after', function ()
+        {
             let current = document.getElementsByClassName("is-current")[0];
             current.classList.remove("is-current");
             current = document.getElementsByClassName("glide__bullet--active")[0];
             // Add class is-current
             current.children[0].classList.add("is-current");
         })
+
+        // When a.expand is clicked, toggle the hidden-block
+        document.querySelectorAll('a.expand').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                let hiddenBlock = this.parentElement.parentElement.querySelector('.hidden-block');
+                hiddenBlock.classList.toggle('show');
+                // Change the text of the link
+                if (hiddenBlock.classList.contains('show')) {
+                    this.innerHTML = "Show less";
+                } else {
+                    this.innerHTML = "Show more";
+                }
+            });
+        });
     </script>
 </body>
 

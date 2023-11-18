@@ -81,6 +81,7 @@
 
 - name: Pizza
   options: champignons / mais / vegetables / potatoes / cheese
+  image: https://dummyimage.com/640/fff/aaa
 
 - name: Flammekueche (Tarte Flambée)
   options: feta cheese / champignons
@@ -167,6 +168,7 @@
   options: with feta and roquette
   ingredients: [paprika, tomato, onion, garlic, roquette, feta]
   link: https://www.youtube.com/watch?v=3CpoVc77rpw
+  image: https://realfood.tesco.com/media/images/1400x919-Summer-Veg-Pasta-aae6d821-e3ed-4c8f-9aac-b04bd6b6a4a8-0-1400x919.jpg
 
 - name: Vegetables soja
   options: with brocoli, champignons and roasted soja

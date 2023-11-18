@@ -31,6 +31,7 @@ for key in data.keys():
 
         processed_dish["flags"] = flag_str
         processed_dish["link"] = dish.get("link")
+        processed_dish["image"] = dish.get("image")
         processed_dish["options"] = dish.get("options", "TODO")
         processed_dish["new_page"] = (idx % n_dish_per_page) == 0
         processed_dish["close_page"] = idx > 0 and ((idx + 1) % n_dish_per_page) == 0 or idx == len(raw_data) - 1
