@@ -46,3 +46,9 @@
     max-height: 99em;
     transition: max-height 0.5s ease-in-out;
 }
+
+.title.parchment {
+    font-weight: normal;
+    font-size: 3.5em;
+}
+
