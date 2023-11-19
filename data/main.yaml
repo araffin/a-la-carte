@@ -101,9 +101,11 @@
   options: kadayi (normal) / palaak paneer
   tags: [india]
 
-- name: Baigan kabharta
+- name: Baingan ka bharta
   ingredients: [aubergine]
   tags: [india]
+  link: https://hebbarskitchen.com/baingan-bharta-recipe-baingan-ka-bharta/
+  image: https://hebbarskitchen.com/wp-content/uploads/2019/09/baingan-bharta-recipe-baingan-ka-bharta-smoky-eggplant-stir-fry-mash-1-1024x683.jpeg
 
 - name: Naan
   options: normal / garlic naan
