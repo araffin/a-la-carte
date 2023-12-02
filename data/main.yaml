@@ -176,3 +176,9 @@
 - name: Vegetables soja
   options: with brocoli, champignons and roasted soja
   tags: [china, spicy]
+
+- name: Clear Soup Recipe
+  options: best served with a dash of vinegar and yoghurt
+  link: https://hebbarskitchen.com/clear-soup-recipe-veg-clear-soup-recipe/
+  image: images/soup.jpg
+  
