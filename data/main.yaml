@@ -43,6 +43,7 @@
 - name: Vegetables in oven
   options: aubergines / sweet potato / butternut / chili / garlic
   ingredients: [paprika, piment, thyme]
+  image: images/legumes_four.webp
 
 - name: Pommes de terre sautées
   options: à la graisse de canard with duck / vegatarian option? (butter + soja)
