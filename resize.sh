@@ -2,7 +2,7 @@
 
 mogrify -path ./images/ \
         -resize 600x \
-        -format jpg \
-        -quality 90 \
-        ./images/*
+        -format webp \
+        -quality 85 \
+        ./images-tmp/*
 

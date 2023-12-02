@@ -10,6 +10,7 @@
 - name: Ratatouille
   options: served with rice or pasta
   ingredients: [aubergine, zucchini, tomato, onion, garlic]
+  tags: [france]
 
 - name: Riste d'aubergine
   options: served with pasta
@@ -180,5 +181,6 @@
 - name: Clear Soup Recipe
   options: best served with a dash of vinegar and yoghurt
   link: https://hebbarskitchen.com/clear-soup-recipe-veg-clear-soup-recipe/
-  image: images/soup.jpg
+  ingredients: [onion, ginger, garlic, brocoli, mushrooms]
+  image: images/soup.webp
   

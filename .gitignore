@@ -20,6 +20,8 @@ hub
 *.json
 _build/
 
+images-tmp/
+
 tests/dummy_env/build/
 
 
