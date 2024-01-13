@@ -10,6 +10,8 @@ name_to_flags = {
     "argentina": "🇦🇷",
     "india": "🇮🇳",
     "france": "🇫🇷",
+    "italy": "🇮🇹",
+    "afghanistan": "🇦🇫",
     "spicy": "🌶️",
 }
 n_dish_per_column = 6

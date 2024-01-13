@@ -31,6 +31,20 @@
     font-family: 'parchment', sans-serif;
 }
 
+.bg-image {
+    background-image: url("images/home.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vw;
+    /* Adding blur background image */
+    filter: blur(4px);
+}
+
+div.top {
+    margin-top: 3rem;
+}
+
 /* .main-section {
     background-image: url("./assets/chili.png");
     background-size: cover;
@@ -52,3 +66,6 @@
     font-size: 3.5em;
 }
 
+.glide * {
+    user-select: text;
+}

@@ -1,11 +1,13 @@
 - name: Champignons pain au lait
   options: with/without ginger and chilis
   ingredients: [paprika, chili, crème fraîche, onion, garlic]
-  tags: [india]
+  tags: [india, france, spicy]
+  image: images/pain_au_lait.webp
 
 - name: Empanadas
   options: carne (bolo) / vegetarian (bolo soja) / cheese / champignons
   tags: [argentina]
+  image: images/empanadas.webp
 
 - name: Ratatouille
   options: served with rice or pasta
@@ -28,10 +30,6 @@
   
 - name: Risotto aux champignons
   options: with white wine
-
-- name: Egg onion tomato bread
-  options: with chili or tomato sauce
-  tags: [breakfast]
 
 - name: Pasta with vegetables
   options: paprika / zucchini / aubergines / sweet potato / butternut
@@ -58,16 +56,21 @@
 
 - name: Quiche
   options: champignons fromage / asperges
+  ingredients: [egg, mushrooms, cheese, crème fraîche]
   tags: [france]
+  image: images/quiche.webp
 
 - name: Gratin de Ravioles
   options: made in the oven
   ingredients: [ravioles, crème fraîche, cheese]
   tags: [france]
+  images: images/ravioles_gratin.webp
 
 - name: Ravioles
-  options: with butter/oil
+  options: with butter/oil or champignons
+  ingredients: [ravioles, cheese, onion]
   tags: [france]
+  image: images/ravioles.webp
 
 - name: Salade de Couscous
   options: with tomato / mais / cucumber / avocado / cold ravioles
@@ -100,8 +103,9 @@
   tags: [asia]
 
 - name: Paneer
-  options: kadayi (normal) / palaak paneer
+  options: kadai (normal) / palaak paneer
   tags: [india]
+  image: images/kadai_paneer.webp
 
 - name: Baingan ka bharta
   options: Smoky eggplant stir fry mash served with chapatis
@@ -114,7 +118,7 @@
   options: normal / garlic naan
   tags: [india]
 
-- name: Alou ghobi
+- name: Aloo gobi
   options: served with chapatis / rice
   ingredients: [potato, cauliflower]
   tags: [india]
@@ -128,12 +132,13 @@
   options: with cream
   ingredients: [kidney bean]
   tags: [india]
+  image: images/rajma.webp
 
 - name: Indian Potato / Carrot
   options: with fenugrek
   tags: [india]
 
-- name: Alou palaak
+- name: Aloo palaak
   options: served with chapatis / rice
   ingredients: [potato, spinach]
   tags: [india]
@@ -142,11 +147,14 @@
   options: served with chapatis / rice
   ingredients: [lentil]
   tags: [india, spicy]
+  image: images/dal.webp
 
 - name: Moong Dal
   options: served with chapatis / rice
   ingredients: [green lentil]
   tags: [india]
+  link: https://www.indianhealthyrecipes.com/moong-dal-recipe/
+  image: images/moong_dal.webp
 
 - name: Pao badji
   options: served with chapatis / rice
@@ -170,10 +178,11 @@
   tags: [france]
 
 - name: Pasta Paprika à la Jamie Olivier
-  options: with feta and roquette
-  ingredients: [paprika, tomato, onion, garlic, roquette, feta]
+  options: with feta and rocket
+  ingredients: [paprika, tomato, onion, garlic, rocket, feta]
   link: https://www.youtube.com/watch?v=3CpoVc77rpw
-  image: https://realfood.tesco.com/media/images/1400x919-Summer-Veg-Pasta-aae6d821-e3ed-4c8f-9aac-b04bd6b6a4a8-0-1400x919.jpg
+  image: images/jaime_pasta.webp
+  tags: [italy]
 
 - name: Vegetables soja
   options: with brocoli, champignons and roasted soja
@@ -184,4 +193,33 @@
   link: https://hebbarskitchen.com/clear-soup-recipe-veg-clear-soup-recipe/
   ingredients: [onion, ginger, garlic, brocoli, mushrooms]
   image: images/soup.webp
-  
+
+- name: Isa's Omelette
+  options: served with bread
+  ingredients: [onion, egg, tomato sauce]
+  tags: [brunch, afghanistan]
+  image: images/isa_omelette.webp
+
+- name: Couscous sauté roquette
+  options: served with a sunny side-up egg
+  ingredients: [onion, egg, rocket, ghee, coconut oil, cheese, harissa]
+  tags: []
+  image: images/couscous_saute.webp
+
+- name: Bombay Toast
+  options: a spicy version of the French toast
+  ingredients: [onion, garlic, milk, green chili]
+  tags: [india, spicy]
+  image: images/bombay_toast.webp
+
+- name: Ria's Brunch
+  options: served with toasted bread
+  ingredients: [onion, tomato, bread, egg]
+  tags: [india, brunch]
+  image: images/ria_brunch.webp
+
+- name: Bindi sabji 
+  options: okra sauté and fried aubergine
+  ingredients: [okra, aubergine]
+  tags: [india]
+  image: images/okra.webp

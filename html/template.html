@@ -24,12 +24,11 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"> -->
 </head>
 
-
-
 <body>
+
     <section class="section hero is-white has-text-centered">
-        <div class="container">
-            <img src="icons/bunman_no_bg.webp" style="max-width: 250px;" alt="logo">
+        <div class="bg-image"></div>
+        <div class="container top">
             <h2>
                 <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span> 
                 <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
@@ -83,7 +82,9 @@
                         {% if dish.image %}
                         <div class="hidden-block collapse">
                             <figure class="image is-16by9">
-                                <img style="object-fit: cover; max-height: 400px;" class="dish-image" src="{{dish.image}}" alt="Dish image">
+                                <img style="object-fit: cover; max-height: 400px;"
+                                    loading="lazy"
+                                    class="dish-image" src="{{dish.image}}" alt="Dish image">
                             </figure>
                         </div>
                         {% endif %}
@@ -122,7 +123,7 @@
 
     <script type="text/javascript" src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.js"></script>
     <script>
-        var glide = new Glide('.glide')
+        var glide = new Glide('.glide', { swipeThreshold: false, dragThreshold: false })
         glide.mount()
 
         glide.on('run.before', function()
