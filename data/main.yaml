@@ -83,6 +83,7 @@
 - name: Crêpes salées
   options: cheese / champignons
   tags: [france]
+  link: https://www.atelierdeschefs.fr/recettes/4929/pate-a-crepe-facile/
 
 - name: Pizza
   options: champignons / mais / vegetables / potatoes / cheese
@@ -123,7 +124,7 @@
   ingredients: [potato, cauliflower]
   tags: [india]
 
-- name: Kabouli chana and coconut
+- name: Kabuli chana and coconut
   options: served with chapatis / rice
   ingredients: [chickpeas, coconut milk]
   tags: [india]
