@@ -39,128 +39,61 @@
     <section class="section has-background-light main-section">
         <div class="container">
 
-            <div class="columns is-multiline">
-                <div class="column is-mobile is-full">
-                    <h3 class="title is-2 is-uppercase has-text-info-dark">Main Course</h3>
-                    <hr class="has-background-info">
-                </div>
-
-                <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-
-                <div class="glide__slides">
-                {% for dish in dishes %}
-                {% if dish.new_page %}
-                <div class="glide__slide">
-                <div class="columns">
-                {% endif %}
-
-                {% if dish.new_column %}
-                <div class="column">
-                {% endif %}
-                    <div class="block">
-                        <p class="title parchment is-1 mb-4">
-                            {% if dish.link %}
-                            <a href="{{dish.link}}" , target="_blank">
-                                {{loop.index}}. {{ dish.name }}
-                            </a>
-                            {% else %}
-                            {{loop.index}}. {{ dish.name }}
-                            {% endif %}
-                            <span class="is-size-5">
-                                {{ dish.flags }}
-                            </span>
-
-                        </p>
-                        <p class="subtitle">
-                            {{ dish.options}}
-                            {% if dish.image %}
-                            &nbsp;
-                            <a href="#" class="expand">Show more</a>
-                            {% endif %}
-                        </p>
-                        {% if dish.image %}
-                        <div class="hidden-block collapse">
-                            <figure class="image is-16by9">
-                                <img style="object-fit: cover; max-height: 400px;"
-                                    loading="lazy"
-                                    class="dish-image" src="{{dish.image}}" alt="Dish image">
-                            </figure>
-                        </div>
-                        {% endif %}
-                    </div>
-                {% if dish.close_column %}
-                </div> <!-- Close column -->
-                {% endif %}
-
-                {% if dish.close_page %}
-                </div> <!-- Close Page Columns -->
-                </div> <!-- Close glide slide -->
-                {% endif %}
-
-                {% endfor %}
-                </div> <!-- Close glide slides -->
-
-                <nav class="pagination is-centered is-large mt-5" data-glide-el="controls" role="navigation" aria-label="pagination">
-                    <a class="pagination-previous is-light" data-glide-dir="<">Previous</a>
-                    <a class="pagination-next" data-glide-dir=">">Next</a>
-
-                    <ul class="pagination-list glide__bullets" data-glide-el="controls[nav]">
-                        {% for idx in range(n_pages_dishes) %}
-                        <li class="glide__bullet" data-glide-dir="={{idx}}">
-                            <a class="pagination-link {{'is-current' if idx == 0}}">{{idx + 1}}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-                </div> <!-- Close glide track -->
-                </div> <!-- Close glide -->
-                
+            <div class="is-mobile is-full">
+                <h3 class="title is-2 is-uppercase has-text-info-dark">Main Course</h3>
+                <hr class="has-background-info">
             </div>
+
+            {% for dish in dishes %}
+            {% if dish.new_page %}
+            <div class="columns">
+            {% endif %}
+
+            {% if dish.new_column %}
+            <div class="column {{ column_class }}">
+            {% endif %}
+                <div class="block">
+                    <p class="title parchment is-1 mb-4">
+                        {% if dish.link %}
+                        <a href="{{dish.link}}" , target="_blank">
+                            {{loop.index}}. {{ dish.name }}
+                        </a>
+                        {% else %}
+                        {{loop.index}}. {{ dish.name }}
+                        {% endif %}
+                        <span class="is-size-5">
+                            {{ dish.flags }}
+                        </span>
+
+                    </p>
+                    <p class="subtitle">
+                        {{ dish.options}}
+                    </p>
+                    {% if dish.image %}
+                    <div class="collapse show">
+                        <figure class="image is-16by9">
+                            <img style="object-fit: cover; max-height: 400px;"
+                                loading="lazy"
+                                class="dish-image" src="{{dish.image}}" alt="Dish image">
+                        </figure>
+                    </div>
+                    {% endif %}
+                </div>
+            
+            {% if dish.close_column %}
+            </div> <!-- Close column -->
+            {% endif %}
+
+
+            {% if dish.close_page %}
+            </div> <!-- Close Page Columns -->
+            <hr class="has-background-dark">
+            {% endif %}
+
+            {% endfor %}
 
         </div>
     </section>
-
-    <script type="text/javascript" src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.js"></script>
-    <script>
-        var glide = new Glide('.glide', { swipeThreshold: false, dragThreshold: false })
-        glide.mount()
-
-        glide.on('run.before', function()
-        {
-            // Check if any hidden-block is shown
-            // if so click on them
-            let hiddenBlocks = document.querySelectorAll('.hidden-block.show');
-            hiddenBlocks.forEach(function (el) {
-                // el.previousElementSibling.click();
-                el.parentElement.querySelector('a.expand').click();
-            });
-        })
-
-        glide.on('run.after', function ()
-        {
-            let current = document.getElementsByClassName("is-current")[0];
-            current.classList.remove("is-current");
-            current = document.getElementsByClassName("glide__bullet--active")[0];
-            // Add class is-current
-            current.children[0].classList.add("is-current");
-        })
-
-        // When a.expand is clicked, toggle the hidden-block
-        document.querySelectorAll('a.expand').forEach(function (el) {
-            el.addEventListener('click', function (e) {
-                e.preventDefault();
-                let hiddenBlock = this.parentElement.parentElement.querySelector('.hidden-block');
-                hiddenBlock.classList.toggle('show');
-                // Change the text of the link
-                if (hiddenBlock.classList.contains('show')) {
-                    this.innerHTML = "Show less";
-                } else {
-                    this.innerHTML = "Show more";
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

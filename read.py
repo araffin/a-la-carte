@@ -14,12 +14,21 @@ name_to_flags = {
     "afghanistan": "🇦🇫",
     "spicy": "🌶️",
 }
-n_dish_per_column = 6
-n_dish_per_page = 2 * n_dish_per_column
+n_columns = 3
 n_pages = {}
+column_class = {
+    1: "is-full",
+    2: "is-half",
+    3: "is-one-third",
+    4: "is-one-quarter",
+}
 for key in data.keys():
     with open(f"data/{key}.yaml") as f:
         raw_data = yaml.safe_load(f)
+
+    n_dish_per_column = len(raw_data) // n_columns
+    n_dish_per_page = n_columns * n_dish_per_column
+
     n_pages[key] = 0
     # preprocess flags
     processed_data = []
@@ -55,7 +64,7 @@ template = environment.get_template("template.html")
 content = template.render(
     dishes=data["main"],
     desserts=data["dessert"],
-    n_pages_dishes=n_pages["main"],
+    column_class=column_class[n_columns],
 )
 
 with open("index.html", mode="w", encoding="utf-8") as result:
