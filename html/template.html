@@ -37,7 +37,8 @@
     </section>
 
     <section class="section has-background-light main-section">
-        <div class="container">
+        <div class="container" id="main-gallery">
+            <div class="is-full js-shuffle-sizer"></div>
 
             {% for meal in meals %}
             <div class="is-mobile is-full">
@@ -53,7 +54,7 @@
             {% if dish.new_column %}
             <div class="column {{ column_class }}">
             {% endif %}
-                <div class="block">
+                <div class="block" data-groups="{{ dish.tags }}">
                     <p class="title parchment is-1 mb-4">
                         {% if dish.link %}
                         <a href="{{dish.link}}" , target="_blank">
@@ -96,6 +97,23 @@
 
         </div>
     </section>
+    <!-- <script src="https://unpkg.com/shufflejs@6.1.0/dist/shuffle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const Shuffle = window.Shuffle; // Assumes you're using the UMD version of Shuffle (for example, from unpkg.com).
+            const element = document.getElementById('main-gallery');
+    
+            const shuffleInstance = new Shuffle(element, {
+                itemSelector: '.block',
+                // sizer: ".column",
+                // columnWidth: (containerWidth) => 0.33 * containerWidth,
+                delimiter: ',',
+            });
+            // shuffleInstance.filter(Shuffle.ALL_ITEMS);
+     
+        });
+
+    </script> -->
 </body>
 
 </html>
