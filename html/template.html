@@ -42,14 +42,15 @@
                 <div class="field">
                     <label class="label">Search&Filter</label>
                     <div class="control">
-                        <input class="search" type="text" placeholder="Search" />
+                        <input class="input is-medium search" type="text" placeholder="Ex: galette...">
                     </div>
                 </div>
+                <p>{{ total_recipes }} recipes</p>
             </div>
 
             {% for meal in meals %}
             <div class="is-mobile is-full">
-                <h3 class="title is-2 is-uppercase has-text-info-dark">{{meal.name}}</h3>
+                <h3 class="title mt-5 is-2 is-uppercase has-text-info-dark">{{meal.name}}</h3>
                 <hr class="has-background-info">
             </div>
 
@@ -150,7 +151,7 @@
                 }
             });
 
-        }, 100));
+        }, 150));
 
         // Fuzzy search in a string
         // function fuzzyMatch(str, pattern) {

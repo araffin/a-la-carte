@@ -22,12 +22,14 @@ column_class = {
     3: "is-one-third",
     4: "is-one-quarter",
 }
+total_recipes = 0
 for key in data.keys():
     with open(f"data/{key}.yaml") as f:
         raw_data = yaml.safe_load(f)
 
     n_dish_per_column = len(raw_data) // n_columns + 1
     n_dish_per_page = n_columns * n_dish_per_column
+    total_recipes += len(raw_data)
 
     n_pages[key] = 0
     # preprocess flags
@@ -68,6 +70,7 @@ content = template.render(
         {"name": "Desserts", "dishes": data["dessert"]},
     ],
     column_class=column_class[n_columns],
+    total_recipes=total_recipes,
 )
 
 with open("index.html", mode="w", encoding="utf-8") as result:
