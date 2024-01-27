@@ -45,7 +45,7 @@
                         <input class="input is-medium search" type="text" placeholder="Ex: galette...">
                     </div>
                 </div>
-                <p>{{ total_recipes }} recipes</p>
+                <p id="n_results" data-total="{{ total_recipes }}">{{ total_recipes }} recipes</p>
             </div>
 
             {% for meal in meals %}
@@ -126,22 +126,30 @@
         };
         search.addEventListener('keyup', debounce(() => {
             const term = search.value.toLowerCase().trim();
+            let n_results = 0;
 
             // if the search bar is empty, show all dishes
             if (!term) {
                 dishes.forEach(dish => {
                     dish.style.display = 'block';
                 });
+                // access data-total attribute
+                let n_recipes = document.querySelector('#n_results').dataset.total;
+                document.querySelector('#n_results').textContent = `${n_recipes} recipes`;
+
                 return;
             }
+
+            // Time search
+            const start = performance.now();
 
             dishes.forEach(dish => {
                 const name = dish.textContent.toLowerCase();
                 
                 // Exact match
-                let match = name.includes(term)
+                // let match = name.includes(term)
                 // Fuzzy search
-                // let match = fuzzyMatch(name, term)
+                let match = fuzzyMatch(name, term)
 
 
                 if (match) {
@@ -149,18 +157,35 @@
                 } else {
                     dish.style.display = 'none';
                 }
+                n_results += match;
             });
+
+            let n_results_text = n_results == 1 ? 'recipe' : 'recipes';
+
+            document.querySelector('#n_results').textContent = `${n_results} ${n_results_text}`;
+
+            // Time search
+            const end = performance.now();
+            console.log(`Searching for ${term} took ${end - start} milliseconds.`);
 
         }, 150));
 
         // Fuzzy search in a string
-        // function fuzzyMatch(str, pattern) {
-        //     pattern = pattern.split("").reduce(function (a, b) {
-        //         return a + ".*" + b;
-        //     });
-        //     return (new RegExp(pattern)).test(str);
-        // }
+        function fuzzyMatch(string, pattern) {
+            let str = string.toLowerCase();
+            let i = 0;
+            let n = -1;
+            let l;
+            let search = pattern.toLowerCase();
+            for (; l = search[i++];) {
+                if (!~(n = str.indexOf(l, n + 1))) {
+                    return false;
+                }
+            }
+            return true;
+        }
 
+    
     </script>
 </body>
 
