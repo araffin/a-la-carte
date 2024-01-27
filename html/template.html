@@ -41,6 +41,25 @@
             <div class="is-full">
                 <div class="field">
                     <label class="label">Search&Filter</label>
+                    <!-- Show filters -->
+                    <div class="buttons">
+                        <button class="button is-medium is-info-dark">
+                            <span class="icon is-small filter">
+                                🇮🇳
+                            </span>
+                        </button>
+                        <button class="button is-medium is-info-dark">
+                            <span class="icon is-small filter">
+                                🇫🇷
+                            </span>
+                        </button>
+                        <button class="button is-medium is-info-dark">
+                            <span class="icon is-small filter">
+                                🌶️
+                            </span>
+                        </button>
+                    </div>
+
                     <div class="control">
                         <input class="input is-medium search" type="text" placeholder="Ex: galette...">
                     </div>
@@ -140,9 +159,6 @@
                 return;
             }
 
-            // Time search
-            const start = performance.now();
-
             dishes.forEach(dish => {
                 const name = dish.textContent.toLowerCase();
                 
@@ -164,10 +180,6 @@
 
             document.querySelector('#n_results').textContent = `${n_results} ${n_results_text}`;
 
-            // Time search
-            const end = performance.now();
-            console.log(`Searching for ${term} took ${end - start} milliseconds.`);
-
         }, 150));
 
         // Fuzzy search in a string
@@ -184,6 +196,17 @@
             }
             return true;
         }
+
+        // When clicking on a filter, add the characters to the search bar
+        const filters = document.querySelectorAll('.filter');
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // trim extra spaces
+                search.value = search.value.trim();
+                search.value += filter.textContent.trim();
+                search.dispatchEvent(new Event('keyup'));
+            });
+        });
 
     
     </script>

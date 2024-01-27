@@ -41,6 +41,7 @@
 - name: Pastel de nata
 
 - name: Cheesecake
+  image: images/cheesecake.webp
 
 - name: Mousse au chocolat
 
