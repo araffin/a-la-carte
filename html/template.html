@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    
     <section class="section hero is-white has-text-centered">
         <div class="bg-image"></div>
         <div class="container top">
@@ -37,8 +37,15 @@
     </section>
 
     <section class="section has-background-light main-section">
-        <div class="container" id="main-gallery">
-            <div class="is-full js-shuffle-sizer"></div>
+        <div class="container">
+            <div class="is-full">
+                <div class="field">
+                    <label class="label">Search&Filter</label>
+                    <div class="control">
+                        <input class="search" type="text" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
 
             {% for meal in meals %}
             <div class="is-mobile is-full">
@@ -97,23 +104,63 @@
 
         </div>
     </section>
-    <!-- <script src="https://unpkg.com/shufflejs@6.1.0/dist/shuffle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const Shuffle = window.Shuffle; // Assumes you're using the UMD version of Shuffle (for example, from unpkg.com).
-            const element = document.getElementById('main-gallery');
-    
-            const shuffleInstance = new Shuffle(element, {
-                itemSelector: '.block',
-                // sizer: ".column",
-                // columnWidth: (containerWidth) => 0.33 * containerWidth,
-                delimiter: ',',
-            });
-            // shuffleInstance.filter(Shuffle.ALL_ITEMS);
-     
-        });
+        // When typing in the search bar, only show the dishes that match the search
+        const search = document.querySelector('.search');
+        const dishes = document.querySelectorAll('.block');
 
-    </script> -->
+        // Use a debounce function to prevent the search from being triggered too often
+        const debounce = (fn, delay = 500) => {
+            let timeoutId;
+            return (...args) => {
+                // cancel the previous timer
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+                // setup a new timer
+                timeoutId = setTimeout(() => {
+                    fn.apply(null, args);
+                }, delay);
+            };
+        };
+        search.addEventListener('keyup', debounce(() => {
+            const term = search.value.toLowerCase().trim();
+
+            // if the search bar is empty, show all dishes
+            if (!term) {
+                dishes.forEach(dish => {
+                    dish.style.display = 'block';
+                });
+                return;
+            }
+
+            dishes.forEach(dish => {
+                const name = dish.textContent.toLowerCase();
+                
+                // Exact match
+                let match = name.includes(term)
+                // Fuzzy search
+                // let match = fuzzyMatch(name, term)
+
+
+                if (match) {
+                    dish.style.display = 'block';
+                } else {
+                    dish.style.display = 'none';
+                }
+            });
+
+        }, 100));
+
+        // Fuzzy search in a string
+        // function fuzzyMatch(str, pattern) {
+        //     pattern = pattern.split("").reduce(function (a, b) {
+        //         return a + ".*" + b;
+        //     });
+        //     return (new RegExp(pattern)).test(str);
+        // }
+
+    </script>
 </body>
 
 </html>
