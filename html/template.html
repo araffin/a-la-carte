@@ -39,12 +39,13 @@
     <section class="section has-background-light main-section">
         <div class="container">
 
+            {% for meal in meals %}
             <div class="is-mobile is-full">
-                <h3 class="title is-2 is-uppercase has-text-info-dark">Main Course</h3>
+                <h3 class="title is-2 is-uppercase has-text-info-dark">{{meal.name}}</h3>
                 <hr class="has-background-info">
             </div>
 
-            {% for dish in dishes %}
+            {% for dish in meal.dishes %}
             {% if dish.new_page %}
             <div class="columns">
             {% endif %}
@@ -87,9 +88,10 @@
 
             {% if dish.close_page %}
             </div> <!-- Close Page Columns -->
-            <hr class="has-background-dark">
+            <!-- <hr class="has-background-dark"> -->
             {% endif %}
 
+            {% endfor %}
             {% endfor %}
 
         </div>

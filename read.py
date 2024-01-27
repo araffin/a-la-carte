@@ -26,7 +26,7 @@ for key in data.keys():
     with open(f"data/{key}.yaml") as f:
         raw_data = yaml.safe_load(f)
 
-    n_dish_per_column = len(raw_data) // n_columns
+    n_dish_per_column = len(raw_data) // n_columns + 1
     n_dish_per_page = n_columns * n_dish_per_column
 
     n_pages[key] = 0
@@ -62,8 +62,10 @@ environment = Environment(loader=FileSystemLoader("html/"))
 template = environment.get_template("template.html")
 
 content = template.render(
-    dishes=data["main"],
-    desserts=data["dessert"],
+    meals=[
+        {"name": "Main Course", "dishes": data["main"]},
+        {"name": "Desserts", "dishes": data["dessert"]},
+    ],
     column_class=column_class[n_columns],
 )
 
