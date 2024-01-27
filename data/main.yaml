@@ -124,10 +124,18 @@
   ingredients: [potato, cauliflower]
   tags: [india]
 
+- name: Aloo ki sabzi
+  options: served with chapatis
+  ingredients: [potato, tomato]
+  tags: [india]
+  link: https://youtu.be/OgyGDO-PVrY?si=3VHpLdWmX9S-yoI5&t=408
+  image: images/aloo_sabzi.webp
+
 - name: Kabuli chana and coconut
   options: served with chapatis / rice
   ingredients: [chickpeas, coconut milk]
   tags: [india]
+  image: images/kabuli_chana.webp
 
 - name: Rajma
   options: with cream
