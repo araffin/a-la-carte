@@ -45,27 +45,7 @@ div.top {
     margin-top: 3rem;
 }
 
-/* .main-section {
-    background-image: url("./assets/chili.png");
-    background-size: cover;
-} */
-.collapse {
-    display: block;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-}
-
-.collapse.show {
-    max-height: 99em;
-    transition: max-height 0.5s ease-in-out;
-}
-
 .title.parchment {
     font-weight: normal;
     font-size: 3.5em;
-}
-
-.glide * {
-    user-select: text;
 }

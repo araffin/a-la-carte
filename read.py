@@ -1,5 +1,6 @@
 import yaml
 from jinja2 import Environment, FileSystemLoader
+from PIL import Image
 
 # TODO: tags vege/vegan/...
 data = {
@@ -47,6 +48,13 @@ for key in data.keys():
         processed_dish["flags"] = flag_str
         processed_dish["link"] = dish.get("link")
         processed_dish["image"] = dish.get("image")
+        # Retrieve image dimensions by reading the image
+        if processed_dish["image"] and "https" not in processed_dish["image"]:
+            with Image.open(processed_dish["image"]) as img:
+                processed_dish["image_width"], processed_dish["image_height"] = img.size
+        else:
+            processed_dish["image_width"], processed_dish["image_height"] = 0, 0
+
         processed_dish["options"] = dish.get("options", "")
         processed_dish["new_page"] = (idx % n_dish_per_page) == 0
         processed_dish["close_page"] = idx > 0 and ((idx + 1) % n_dish_per_page) == 0 or idx == len(raw_data) - 1

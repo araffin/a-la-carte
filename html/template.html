@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
-    <!-- Required Core Stylesheet -->
-    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.core.min.css">
+    <!-- PhotoSwipe -->
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.css">
     <meta name="robots" content="noindex">
 
     <!-- icons -->
@@ -105,12 +105,18 @@
                         
                     </p>
                     {% if dish.image %}
-                    <div class="collapse show">
-                        <figure class="image is-16by9">
-                            <img style="object-fit: cover; max-height: 400px;"
-                                loading="lazy"
-                                class="dish-image" src="{{dish.image}}" alt="Dish image">
-                        </figure>
+                    <div class="dish-image">
+                        <a href="{{dish.image}}"
+                            data-pswp-width="{{ dish.image_width }}"
+                            data-pswp-height="{{ dish.image_height }}"
+                            data-cropped="true"
+                            target="_blank">
+                            <figure class="image is-16by9">
+                                <img style="object-fit: cover; max-height: 400px;"
+                                    loading="lazy"
+                                    class="dish-image" src="{{dish.image}}" alt="Dish image">
+                            </figure>
+                        </a>
                     </div>
                     {% endif %}
                 </div>
@@ -213,8 +219,18 @@
                 search.dispatchEvent(new Event('keyup'));
             });
         });
-
     
+    </script>
+    <!-- Use image swipe to zoom in images when clicked -->
+    <!-- <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js"></script> -->
+    <script type="module">
+        import Lightbox from 'https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js';
+        const lightbox = new Lightbox({
+            gallery: '.dish-image',
+            children: 'a',
+            pswpModule: () => import('https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.min.js')
+        });
+        lightbox.init();
     </script>
 </body>
 
