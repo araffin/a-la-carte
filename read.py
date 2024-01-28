@@ -43,6 +43,7 @@ for key in data.keys():
                 flag_str += " " + name_to_flags[tag]
 
         processed_dish["tags"] = ",".join(processed_dish.get("tags", []))
+        processed_dish["ingredients"] = ",".join(processed_dish.get("ingredients", []))
         processed_dish["flags"] = flag_str
         processed_dish["link"] = dish.get("link")
         processed_dish["image"] = dish.get("image")

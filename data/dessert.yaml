@@ -1,50 +1,78 @@
 - name: Charlotte
   options: aux fraises / poire et chocolat
   tags: [france]
+  image: images/charlotte.webp
 
 - name: Mousse au chocolat
   tags: [france]
 
 - name: Gateau à la crème de marron
   tags: [france]
+  image: images/marron.webp
 
 - name: Quatre quart
   tags: [france]
 
 - name: Madeleines
   tags: [france]
+  image: images/madeleines.webp
 
 - name: Fondant au chocolat
   tags: [france]
+  image: images/fondant.webp
 
 - name: Crêpes
-  options: sugar / lemon sugar cinammon / banana chocolate / vegan
+  options: sugar / lemon sugar cinammon / banana chocolate
   tags: [france]
+  image: images/crepes.webp
 
 - name: Bananes flambées
-  options: with rhum / conammon / sugar / butter
+  options: with rhum / cinammon / sugar / butter
 
 - name: Tarte aux pommes
   options: with compote de pommes / poire
+  image: images/tarte_pomme.webp
+
+- name: Tarte aux framboises
+  options: with crème patissière
+  image: images/framboise.webp
+  tags: [france]
 
 - name: Tarte à la rhubarbe
+  image: images/rhubarbe.webp
 
 - name: Compote de pommes
 
 - name: Chocotorta
   tags: [argentina]
+  image: images/torta1.webp
 
 - name: Riz au lait
 
 - name: Carrot cake
+  image: images/carrot_cake.webp
 
 - name: Pastel de nata
 
 - name: Cheesecake
   image: images/cheesecake.webp
 
-- name: Mousse au chocolat
-
 - name: Cookies
+  image: images/cookies.webp
 
 - name: Muffins
+  image: images/muffins.webp
+
+- name: Flan
+  image: images/flan.webp
+
+- name: Macarons
+  image: images/macaron.webp
+  tags: [france]
+
+- name: Millefeuille
+  image: images/millefeuille.webp
+  tags: [france]
+
+- name: Eclair au chocolat
+  tags: [france]

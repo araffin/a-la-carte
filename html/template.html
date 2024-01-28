@@ -98,6 +98,12 @@
                     <p class="subtitle">
                         {{ dish.options}}
                     </p>
+                    <p class="additional-info" style="display: none;">
+                        <!-- useful for search -->
+                        {{ dish.tags }}
+                        {{ dish.ingredients }}
+                        
+                    </p>
                     {% if dish.image %}
                     <div class="collapse show">
                         <figure class="image is-16by9">

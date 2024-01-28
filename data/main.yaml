@@ -21,6 +21,7 @@
 - name: Lasagne
   options: bolo / vegetarian / aubergines
   tags: [italy]
+  image: images/lasagne.webp
 
 - name: Tomate feta and pasta
   options: with garlic and crème fraîche
@@ -33,6 +34,7 @@
 
 - name: Pasta with vegetables
   options: paprika / zucchini / aubergines / sweet potato / butternut
+  image: images/pasta_veg.webp 
 
 - name: Velouté de butternut
   ingredients: [butternut, crème fraîche]
@@ -64,7 +66,7 @@
   options: made in the oven
   ingredients: [ravioles, crème fraîche, cheese]
   tags: [france]
-  images: images/ravioles_gratin.webp
+  image: images/ravioles_gratin.webp
 
 - name: Ravioles
   options: with butter/oil or champignons
@@ -104,9 +106,10 @@
   tags: [asia]
 
 - name: Paneer
-  options: kadai (normal) / palaak paneer
+  options: kadai (normal) with cashew paste / palaak paneer
   tags: [india]
-  image: images/kadai_paneer.webp
+  image: images/kadai.webp
+  link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
 
 - name: Baingan ka bharta
   options: Smoky eggplant stir fry mash served with chapatis
