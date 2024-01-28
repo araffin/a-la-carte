@@ -2997,13 +2997,15 @@
     
     </script>
     <!-- Use image swipe to zoom in images when clicked -->
-    <!-- <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js"></script> -->
+    <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js"></script>
+    <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.min.js"></script>
     <script type="module">
         import Lightbox from 'https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js';
         const lightbox = new Lightbox({
             gallery: '.dish-image',
             children: 'a',
-            pswpModule: () => import('https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.min.js')
+            pswpModule: () => import('https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.min.js'),
+            tapAction: 'close',
         });
         lightbox.init();
     </script>
