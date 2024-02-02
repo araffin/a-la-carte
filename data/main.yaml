@@ -43,7 +43,7 @@
 - name: Vegetables in oven
   options: aubergines / sweet potato / butternut / chili / garlic
   ingredients: [paprika, piment, thyme]
-  image: images/legumes_four.webp
+  image: images/legumes_oven.webp
 
 - name: Pommes de terre sautées
   options: à la graisse de canard with duck / vegatarian option? (butter + soja)
@@ -81,6 +81,8 @@
 - name: Fondue aux poireaux
   options: with tagliatelles (fresh pasta)
   ingredients: [leek, crème fraîche]
+  image: images/fondue_poireaux.webp
+  tags: [france]
 
 - name: Crêpes salées
   options: cheese / champignons
@@ -235,3 +237,9 @@
   ingredients: [okra, aubergine]
   tags: [india]
   image: images/okra.webp
+
+- name: Methi Dal Fry
+  ingredients: [lentils]
+  tags: [india]
+  link: https://hebbarskitchen.com/methi-dal-fry-recipe-dal-methi-fry/
+  image: images/methi.webp
