@@ -23,8 +23,10 @@
   tags: [italy]
   image: images/lasagne.webp
 
-- name: Tomate feta and pasta
+- name: Tomato feta and pasta
   options: with garlic and crème fraîche
+  ingredients: [tomato, feta, pasta]
+  image: images/pasta_feta.webp
 
 - name: Asperges au Parmesan
   options: served with rice
