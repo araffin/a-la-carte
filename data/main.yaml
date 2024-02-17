@@ -18,10 +18,11 @@
   options: served with pasta
   tags: [france]
 
-- name: Lasagne
-  options: bolo / vegetarian / aubergines
+- name: Lasagnes
+  options: vegetarian bolognese (soja) / aubergines
   tags: [italy]
-  image: images/lasagne.webp
+  image: images/lasagnes.webp
+  link: recipe.html?id=lasagnes
 
 - name: Tomato feta and pasta
   options: with garlic and crème fraîche
@@ -172,7 +173,7 @@
   link: https://www.indianhealthyrecipes.com/moong-dal-recipe/
   image: images/moong_dal.webp
 
-- name: Pao badji
+- name: Pav bhaji
   options: served with chapatis / rice
   tags: [india, spicy]
 

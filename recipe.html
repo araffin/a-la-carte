@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Restaurant Menu | Recipe</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="robots" content="noindex">
+
+    <!-- icons -->
+    <link rel="icon" sizes="any" href="icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="64x64" href="icons/android-chrome-64x64.png">
+    <link rel="icon" type="image/svg+xml" href="icons/bunman_no_bg.svg">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Optional Theme Stylesheet -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"> -->
+</head>
+
+<body>
+
+    <section class="section hero is-white has-text-centered">
+        <div class="bg-image"></div>
+        <div class="container top">
+            <h2>
+                <a href="./">
+                    <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span>
+                    <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
+                </a>
+            </h2>
+        </div>
+    </section>
+
+    <section class="section has-background-light main-section">
+        <div class="container content">
+            <div id="recipe"></div>
+       </div>
+    </section>
+
+    <script type="module">
+        import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+        // Get the argument from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeId = urlParams.get('id');
+        
+        // if the length is greater than 0, then the recipeId is valid
+        if (recipeId.length > 0) {
+            fetch(`./data/recipes/${recipeId}.md`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Change page title
+                    return response.text();
+                })
+                .then(text => {
+                    // Log the recipe to the console
+                    document.getElementById('recipe').innerHTML = marked.parse(text);
+                    document.title = `Home Restaurant Menu | Recipe ${recipeId}`;
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        }
+
+    </script>
+ 
+</body>
+
+</html>
