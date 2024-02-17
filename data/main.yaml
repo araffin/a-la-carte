@@ -106,9 +106,12 @@
   tags: [asian]
 
 - name: Thai vegetables
-  options: brocoli / cauliflower / carottes / served with rice
+  options: 
+    brocoli / cauliflower / carottes
+    roasted soja / zucchini / served with rice or mie noodles
   ingredients: [soja sauce, ginger]
-  tags: [asia]
+  tags: [asia, thai]
+  image: images/vege_soja.webp
 
 - name: Paneer
   options: kadai (normal) with cashew paste / palaak paneer
@@ -201,7 +204,7 @@
   image: images/jaime_pasta.webp
   tags: [italy]
 
-- name: Vegetables soja
+- name: Chinese Vegetables Soja
   options: with brocoli, champignons and roasted soja
   tags: [china, spicy]
 
