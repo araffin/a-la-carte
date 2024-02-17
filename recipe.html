@@ -46,10 +46,22 @@
         import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
         // Get the argument from the URL
         const urlParams = new URLSearchParams(window.location.search);
+
+        const is_defined = (x) => {
+                return (typeof x !== 'undefined' && x !== null);
+        }
+
+        // define fn to display 404 error message
+        const display404 = () => {
+            document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
+            document.title = `Home Restaurant | 404 Recipe Not Found`;
+        }
+
+        // Get the recipeId from the URL
         const recipeId = urlParams.get('id');
 
         // if the length is greater than 0, then the recipeId is valid
-        if (recipeId.length > 0 && recipeId.match(/^[a-zA-Z0-9_]+$/)) {
+        if (is_defined(recipeId) && recipeId.length > 0 && recipeId.match(/^[a-zA-Z0-9_]+$/)) {
             fetch(`./data/recipes/${recipeId}.md`)
                 .then(response => {
                     if (!response.ok) {
@@ -66,12 +78,12 @@
                     document.title = `${recipeName} | Home Restaurant Recipe`;
                 })
                 .catch(error => {
-                    // Display 404 error message
-                    document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
-                    // Console page title
-                    document.title = `Home Restaurant | 404 Recipe Not Found`;
+                    display404();
                     console.error('There has been a problem with your fetch operation:', error);
                 });
+        }
+        else {
+            display404();
         }
 
     </script>
