@@ -2,8 +2,7 @@ import yaml
 from jinja2 import Environment, FileSystemLoader
 from PIL import Image
 
-# TODO: tags vege/vegan/...
-data = {
+data: dict[str, list[dict]] = {
     "main": [],
     "dessert": [],
 }
@@ -48,6 +47,10 @@ for key in data.keys():
         processed_dish["flags"] = flag_str
         processed_dish["link"] = dish.get("link")
         processed_dish["image"] = dish.get("image")
+
+        if processed_dish["link"] and "http" not in processed_dish["link"]:
+            processed_dish["link"] = f"recipe.html?id={processed_dish['link']}"
+
         # Retrieve image dimensions by reading the image
         if processed_dish["image"] and "https" not in processed_dish["image"]:
             with Image.open(processed_dish["image"]) as img:

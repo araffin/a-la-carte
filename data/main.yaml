@@ -22,7 +22,7 @@
   options: vegetarian bolognese (soja) / aubergines
   tags: [italy]
   image: images/lasagnes.webp
-  link: recipe.html?id=lasagnes
+  link: lasagnes
 
 - name: Tomato feta and pasta
   options: with garlic and crème fraîche
@@ -210,6 +210,7 @@
   link: https://hebbarskitchen.com/clear-soup-recipe-veg-clear-soup-recipe/
   ingredients: [onion, ginger, garlic, brocoli, mushrooms]
   image: images/soup.webp
+  notes: Add more onion ginger and garlic + sour yoghurt at the end
 
 - name: Isa's Omelette
   options: served with bread
@@ -222,6 +223,7 @@
   ingredients: [onion, egg, rocket, ghee, coconut oil, cheese, harissa]
   tags: []
   image: images/couscous_saute.webp
+  link: couscous_saute
 
 - name: Bombay Toast
   options: a spicy version of the French toast

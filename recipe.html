@@ -63,7 +63,7 @@
                     document.getElementById('recipe').innerHTML = marked.parse(text);
                     // The recipe name is the first title
                     let recipeName = document.getElementById('recipe').querySelector('h2').textContent;
-                    document.title = `Home Restaurant Recipe | ${recipeName}`;
+                    document.title = `${recipeName} | Home Restaurant Recipe`;
                 })
                 .catch(error => {
                     // Display 404 error message

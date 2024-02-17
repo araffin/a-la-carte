@@ -26,10 +26,13 @@ check-codestyle:
 commit-checks: format type lint
 
 live-reload:
-	when-changed html/template.html python read.py
+	when-changed html/ data/ read.py -c python read.py
 
 .PHONY: lint format check-codestyle commit-checks doc spelling docker type pytest
 
 
 server:
 	python3 -m http.server
+
+# live-server:
+# 	livereload
