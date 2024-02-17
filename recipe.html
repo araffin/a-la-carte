@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Restaurant Menu | Recipe</title>
+    <title>Home Restaurant Recipe </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
@@ -47,9 +47,9 @@
         // Get the argument from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const recipeId = urlParams.get('id');
-        
+
         // if the length is greater than 0, then the recipeId is valid
-        if (recipeId.length > 0) {
+        if (recipeId.length > 0 && recipeId.match(/^[a-zA-Z0-9_]+$/)) {
             fetch(`./data/recipes/${recipeId}.md`)
                 .then(response => {
                     if (!response.ok) {
@@ -61,9 +61,15 @@
                 .then(text => {
                     // Log the recipe to the console
                     document.getElementById('recipe').innerHTML = marked.parse(text);
-                    document.title = `Home Restaurant Menu | Recipe ${recipeId}`;
+                    // The recipe name is the first title
+                    let recipeName = document.getElementById('recipe').querySelector('h2').textContent;
+                    document.title = `Home Restaurant Recipe | ${recipeName}`;
                 })
                 .catch(error => {
+                    // Display 404 error message
+                    document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
+                    // Console page title
+                    document.title = `Home Restaurant | 404 Recipe Not Found`;
                     console.error('There has been a problem with your fetch operation:', error);
                 });
         }
