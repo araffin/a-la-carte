@@ -10,8 +10,10 @@
   tags: [france]
   image: images/marron.webp
 
-- name: Quatre quart
+- name: Quatre-Quarts
   tags: [france]
+  image: images/quatre_quarts.webp
+  link:  quatre_quarts
 
 - name: Madeleines
   tags: [france]
