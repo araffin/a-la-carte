@@ -28,6 +28,7 @@
   options: with garlic and crème fraîche
   ingredients: [tomato, feta, pasta]
   image: images/pasta_feta.webp
+  link: feta_pasta
 
 - name: Asperges au Parmesan
   options: served with rice
