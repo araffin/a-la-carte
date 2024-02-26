@@ -19,18 +19,18 @@
     <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png">
     <link rel="manifest" href="icons/manifest.json">
     <meta name="theme-color" content="#ffffff">
-    
+
     <!-- Optional Theme Stylesheet -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css"> -->
 </head>
 
 <body>
-    
+
     <section class="section hero is-white has-text-centered">
         <div class="bg-image"></div>
         <div class="container top">
             <h2>
-                <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span> 
+                <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span>
                 <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
             </h2>
         </div>
@@ -102,7 +102,7 @@
                         <!-- useful for search -->
                         {{ dish.tags }}
                         {{ dish.ingredients }}
-                        
+
                     </p>
                     {% if dish.image %}
                     <div class="dish-image">
@@ -120,7 +120,7 @@
                     </div>
                     {% endif %}
                 </div>
-            
+
             {% if dish.close_column %}
             </div> <!-- Close column -->
             {% endif %}
@@ -137,6 +137,8 @@
         </div>
     </section>
     <script>
+      // TODOS: link to go directly to a recipe, fix line height, better search by relevance
+
         // When typing in the search bar, only show the dishes that match the search
         const search = document.querySelector('.search');
         const dishes = document.querySelectorAll('.block');
@@ -173,7 +175,7 @@
 
             dishes.forEach(dish => {
                 const name = dish.textContent.toLowerCase();
-                
+
                 // Exact match
                 // let match = name.includes(term)
                 // Fuzzy search
@@ -219,7 +221,9 @@
                 search.dispatchEvent(new Event('keyup'));
             });
         });
-    
+
+
+
     </script>
     <!-- Use image swipe to zoom in images when clicked -->
     <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js"></script>

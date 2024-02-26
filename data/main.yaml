@@ -31,13 +31,13 @@
 
 - name: Asperges au Parmesan
   options: served with rice
-  
+
 - name: Risotto aux champignons
   options: with white wine
 
 - name: Pasta with vegetables
   options: paprika / zucchini / aubergines / sweet potato / butternut
-  image: images/pasta_veg.webp 
+  image: images/pasta_veg.webp
 
 - name: Velouté de butternut
   ingredients: [butternut, crème fraîche]
@@ -104,9 +104,10 @@
 - name: Coco curry
   options: chicken / carrot / ginger / sweet potato / onion / soja / served with rice or korean noodles
   tags: [asian]
+  image: images/coco_curry.webp
 
 - name: Thai vegetables
-  options: 
+  options:
     brocoli / cauliflower / carottes
     roasted soja / zucchini / served with rice or mie noodles
   ingredients: [soja sauce, ginger]
@@ -191,6 +192,8 @@
 - name: Paneer Butter Masala
   options: served with chapatis / rice
   tags: [india, spicy]
+  image: images/butter_paneer.webp
+  link: https://hebbarskitchen.com/paneer-butter-masala-recipe/
 
 - name: Enchiladas
 
@@ -240,7 +243,7 @@
   tags: [india, brunch]
   image: images/ria_brunch.webp
 
-- name: Bindi sabji 
+- name: Bindi sabji
   options: okra sauté and fried aubergine
   ingredients: [okra, aubergine]
   tags: [india]
