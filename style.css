@@ -49,3 +49,11 @@ div.top {
     font-weight: normal;
     font-size: 3.5em;
 }
+
+.anchor i:hover {
+    color: hsl(207deg, 61%, 53%) !important;
+}
+
+.dish-name {
+    line-height: 0.9;
+}

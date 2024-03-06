@@ -81,8 +81,8 @@
             {% if dish.new_column %}
             <div class="column {{ column_class }}">
             {% endif %}
-                <div class="block" data-groups="{{ dish.tags }}">
-                    <p class="title parchment is-1 mb-4">
+                <div class="block" id="{{ dish.id }}" data-groups="{{ dish.tags }}">
+                    <p class="title parchment is-1 mb-4 dish-name">
                         {% if dish.link %}
                         <a href="{{dish.link}}" , target="_blank">
                             {{loop.index}}. {{ dish.name }}
@@ -93,6 +93,17 @@
                         <span class="is-size-5">
                             {{ dish.flags }}
                         </span>
+                        <!-- Add white space to the right -->
+                        <span class="is-size-5">
+                            &nbsp;
+                        </span>
+                            
+                        <!-- Anchor to the current dish -->
+                        <a href="#{{ dish.id }}" class="is-size-6 anchor">
+                            <span class="icon is-small">
+                                <i class="fa fa-link has-text-grey-light"></i>
+                            </span>
+                        </a>
 
                     </p>
                     <p class="subtitle">

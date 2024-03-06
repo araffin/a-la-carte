@@ -1,6 +1,10 @@
+import re
+
 import yaml
 from jinja2 import Environment, FileSystemLoader
 from PIL import Image
+
+NON_ALPHA_NUMERIC = re.compile(r"[^a-zA-Z0-9]")
 
 data: dict[str, list[dict]] = {
     "main": [],
@@ -42,6 +46,11 @@ for key in data.keys():
             if tag in name_to_flags:
                 flag_str += " " + name_to_flags[tag]
 
+        # convert name to an id by removing spaces and lowercasing
+        # and remove non-alphanumeric characters
+        dish_id = NON_ALPHA_NUMERIC.sub("", dish["name"].lower())
+
+        processed_dish["id"] = dish_id
         processed_dish["tags"] = ",".join(processed_dish.get("tags", []))
         processed_dish["ingredients"] = ",".join(processed_dish.get("ingredients", []))
         processed_dish["flags"] = flag_str
