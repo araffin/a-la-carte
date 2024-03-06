@@ -57,3 +57,7 @@ div.top {
 .dish-name {
     line-height: 0.9;
 }
+
+.dish-block {
+    scroll-margin-top: 100px;
+}

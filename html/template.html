@@ -86,7 +86,7 @@
             {% if dish.new_column %}
             <div class="column {{ column_class }}">
             {% endif %}
-                <div class="block" id="{{ dish.id }}" data-groups="{{ dish.tags }}">
+                <div class="block dish-block" id="{{ dish.id }}" data-groups="{{ dish.tags }}">
                     <p class="title parchment is-1 mb-4 dish-name">
                         {% if dish.link %}
                         <a href="{{dish.link}}" , target="_blank">
