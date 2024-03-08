@@ -38,6 +38,9 @@
                     <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
                 </a>
             </h2>
+            <h3 id="recipe-title" class="subtitle is-1">
+                Recipe
+            </h3>
         </div>
     </section>
 
@@ -56,10 +59,13 @@
                 return (typeof x !== 'undefined' && x !== null);
         }
 
+        let recipeTitle = document.getElementById('recipe-title');
+
         // define fn to display 404 error message
         const display404 = () => {
             document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
             document.title = `Home Restaurant | 404 Recipe Not Found`;
+            recipeTitle.textContent = `Recipe Not Found`;
         }
 
         // Get the recipeId from the URL
@@ -76,11 +82,12 @@
                     return response.text();
                 })
                 .then(text => {
-                    // Log the recipe to the console
                     document.getElementById('recipe').innerHTML = marked.parse(text);
                     // The recipe name is the first title
                     let recipeName = document.getElementById('recipe').querySelector('h2').textContent;
                     document.title = `${recipeName} | Home Restaurant Recipe`;
+                    
+                    recipeTitle.textContent = `Recipe | ${recipeName}`;
                 })
                 .catch(error => {
                     display404();

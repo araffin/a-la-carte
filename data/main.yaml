@@ -16,7 +16,9 @@
 
 - name: Riste d'aubergine
   options: served with pasta
+  ingredients: [aubergine, tomato, tomato sauce]
   tags: [france]
+  image: images/riste.webp
 
 - name: Lasagnes
   options: vegetarian bolognese (soja) / aubergines
