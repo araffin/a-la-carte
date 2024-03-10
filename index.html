@@ -72,6 +72,16 @@
                 <p id="n_results" data-total="73">73 recipes</p>
             </div>
 
+            <div id="search-results" class="is-mobile is-full" style="display: none;">
+                <h3 class="title mt-5 is-2 is-uppercase has-text-info-dark">Search Results</h3>
+                <hr class="has-background-info">
+                <div id="results-columns" class="columns is-multiline">
+                    <!-- <div  class="column is-full">
+
+                    </div> -->
+                </div>
+            </div>
+
             
             <div class="is-mobile is-full">
                 <h3 class="title mt-5 is-2 is-uppercase has-text-info-dark">Main Course</h3>
@@ -3874,12 +3884,30 @@
 
         </div>
     </section>
+    
+    <script src="https://unpkg.com/quick-score@0.0.14/dist/quick-score.min.js"></script>
     <script>
-      // TODOS: link to go directly to a recipe, fix line height, better search by relevance
-
+        
         // When typing in the search bar, only show the dishes that match the search
         const search = document.querySelector('.search');
         const dishes = document.querySelectorAll('.block');
+        const search_results = document.querySelector('#search-results');
+        const results_column = document.querySelector('#results-columns');
+
+        // Convert to a list of objects
+        // Remove extra spaces from the text, replace any "  " by " "
+        const dishes_list = Array.from(dishes).map((dish, index) => {
+            return {
+                index: index,
+                text: dish.textContent.toLowerCase().replace(/\s+/g, ' '),
+                // Clone the node to keep the original html
+                html: dish.cloneNode(true),
+                html_id: dish.id,
+            };
+        });
+        
+        // Fuzzy search using quick sort
+        const quickscore = new quickScore.QuickScore(dishes_list,  ["text"]);
 
         // Use a debounce function to prevent the search from being triggered too often
         const debounce = (fn, delay = 500) => {
@@ -3898,12 +3926,13 @@
         search.addEventListener('keyup', debounce(() => {
             const term = search.value.toLowerCase().trim();
             let n_results = 0;
+            // Hide and clear results
+            results_column.innerHTML = '';
+            search_results.style.display = 'none';
+
 
             // if the search bar is empty, show all dishes
             if (!term) {
-                dishes.forEach(dish => {
-                    dish.style.display = 'block';
-                });
                 // access data-total attribute
                 let n_recipes = document.querySelector('#n_results').dataset.total;
                 document.querySelector('#n_results').textContent = `${n_recipes} recipes`;
@@ -3911,43 +3940,31 @@
                 return;
             }
 
-            dishes.forEach(dish => {
-                const name = dish.textContent.toLowerCase();
+            // Fuzzy search using quick score
+            const results = quickscore.search(term);
 
-                // Exact match
-                // let match = name.includes(term)
-                // Fuzzy search
-                let match = fuzzyMatch(name, term)
-
-
-                if (match) {
-                    dish.style.display = 'block';
-                } else {
-                    dish.style.display = 'none';
-                }
-                n_results += match;
+            // Display the results by relevance
+            results_column.innerHTML = '';
+            results.forEach(result => {
+                let html_element = result.item.html;
+                // Remove html id
+                html_element.id = '';
+                // Add a div around of class "column is-one-third"
+                let column = document.createElement('div');
+                column.className = 'column is-one-third';
+                column.appendChild(html_element);
+                results_column.appendChild(column);
             });
 
+            search_results.style.display = 'block';
+
+            n_results = results.length;
             let n_results_text = n_results == 1 ? 'recipe' : 'recipes';
 
             document.querySelector('#n_results').textContent = `${n_results} ${n_results_text}`;
 
         }, 150));
 
-        // Fuzzy search in a string
-        function fuzzyMatch(string, pattern) {
-            let str = string.toLowerCase();
-            let i = 0;
-            let n = -1;
-            let l;
-            let search = pattern.toLowerCase();
-            for (; l = search[i++];) {
-                if (!~(n = str.indexOf(l, n + 1))) {
-                    return false;
-                }
-            }
-            return true;
-        }
 
         // When clicking on a filter, add the characters to the search bar
         const filters = document.querySelectorAll('.filter');
@@ -3964,8 +3981,8 @@
 
     </script>
     <!-- Use image swipe to zoom in images when clicked -->
-    <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js"></script>
-    <script src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.min.js"></script>
+    <script type="module" src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js"></script>
+    <script type="module" src="https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.min.js"></script>
     <script type="module">
         import Lightbox from 'https://unpkg.com/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js';
         const lightbox = new Lightbox({
