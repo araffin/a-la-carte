@@ -19,7 +19,6 @@ name_to_flags = {
     "spicy": "🌶️",
 }
 n_columns = 3
-n_pages = {}
 column_class = {
     1: "is-full",
     2: "is-half",
@@ -35,11 +34,10 @@ for key in data.keys():
     n_dish_per_page = n_columns * n_dish_per_column
     total_recipes += len(raw_data)
 
-    n_pages[key] = 0
     # preprocess flags
     processed_data = []
     raw_data = sorted(raw_data, key=lambda item: item["name"])
-    for idx, dish in enumerate(raw_data):
+    for dish in raw_data:
         processed_dish = dish.copy()
         flag_str = ""
         for tag in processed_dish.get("tags", []):
@@ -68,13 +66,7 @@ for key in data.keys():
             processed_dish["image_width"], processed_dish["image_height"] = 0, 0
 
         processed_dish["options"] = dish.get("options", "")
-        processed_dish["new_page"] = (idx % n_dish_per_page) == 0
-        processed_dish["close_page"] = idx > 0 and ((idx + 1) % n_dish_per_page) == 0 or idx == len(raw_data) - 1
-        processed_dish["new_column"] = (idx % n_dish_per_column) == 0
-        processed_dish["close_column"] = idx > 0 and ((idx + 1) % n_dish_per_column) == 0 or idx == len(raw_data) - 1
         processed_data.append(processed_dish)
-        if processed_dish["new_page"]:
-            n_pages[key] += 1
 
     data[key] = processed_data
 
