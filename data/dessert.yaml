@@ -78,3 +78,7 @@
 
 - name: Eclair au chocolat
   tags: [france]
+
+- name: Smoothie
+  image: images/smoothie.webp
+  ingredients: [banana, strawberry, yogurt, kiwi]

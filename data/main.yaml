@@ -97,7 +97,9 @@
 
 - name: Pizza
   options: champignons / mais / vegetables / potatoes / cheese
-  image: https://dummyimage.com/640/fff/aaa
+  image: images/pizza.webp
+  tags: [italy]
+  link: https://www.kochbar.de/rezept/429836/Pizza-mit-Quark-OEl-Teig.html
 
 - name: Flammekueche (Tarte Flambée)
   options: feta cheese / champignons
@@ -129,10 +131,6 @@
   tags: [india]
   link: https://hebbarskitchen.com/baingan-bharta-recipe-baingan-ka-bharta/
   image: images/baigan_ka.webp
-
-- name: Naan
-  options: normal / garlic naan
-  tags: [india]
 
 - name: Aloo gobi
   options: served with chapatis / rice
@@ -257,3 +255,8 @@
   tags: [india]
   link: https://hebbarskitchen.com/methi-dal-fry-recipe-dal-methi-fry/
   image: images/methi.webp
+
+- name: Thokku
+  ingredients: [aubergine, oignion, ginger, garlic, green chili, mustard seeds, tamarind paste, jaggery]
+  tags: [india, spicy]
+  image: images/thokku.webp

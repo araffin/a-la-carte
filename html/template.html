@@ -63,6 +63,11 @@
                                 🌶️
                             </span>
                         </button>
+                        <button class="button is-medium is-info-dark">
+                            <span class="icon is-small filter">
+                                🇮🇹
+                            </span>
+                        </button>
                     </div>
 
                     <div class="control">
@@ -272,6 +277,11 @@
             hideAnimationDuration: 200,
         });
         lightbox.init();
+        // Initialize another lightbox if the search results change
+        search.addEventListener('keyup', debounce(() => {
+            lightbox.init();
+        }, 150));
+
     </script>
 </body>
 
