@@ -224,6 +224,7 @@
   ingredients: [onion, egg, tomato sauce]
   tags: [brunch, afghanistan]
   image: images/isa_omelette.webp
+  link: isa
 
 - name: Couscous sauté roquette
   options: served with a sunny side-up egg
