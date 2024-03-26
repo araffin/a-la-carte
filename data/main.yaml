@@ -84,6 +84,17 @@
   options: with tomato / mais / cucumber / avocado / cold ravioles
   tags: [cold]
 
+- name: Tomato Mozzarella Salad
+  options: with roquette
+  ingredients: [tomato, mozzarella, rocket]
+  tags: [cold, italy]
+  image: images/salade_composee.webp
+
+- name: Pasta Aglio Olio
+  ingredients: [garlic, red chili flakes, cherry tomatoes, pickle pepperonies]
+  tags: [italy]
+  image: images/aglio.webp
+
 - name: Fondue aux poireaux
   options: with tagliatelles (fresh pasta)
   ingredients: [leek, crème fraîche]
@@ -136,6 +147,7 @@
   options: served with chapatis / rice
   ingredients: [potato, cauliflower]
   tags: [india]
+  image: images/aloo_gobi.webp
 
 - name: Aloo ki sabzi
   options: served with chapatis
@@ -177,6 +189,13 @@
   tags: [india]
   link: https://www.indianhealthyrecipes.com/moong-dal-recipe/
   image: images/moong_dal.webp
+
+- name: Dal Fry
+  options: served with chapatis / rice
+  ingredients: [lentil]
+  tags: [india]
+  link: https://www.indianhealthyrecipes.com/dal-fry-recipe/
+  image: images/dal_fry.webp
 
 - name: Pav bhaji
   options: served with chapatis / rice
@@ -261,3 +280,9 @@
   ingredients: [aubergine, oignion, ginger, garlic, green chili, mustard seeds, tamarind paste, jaggery]
   tags: [india, spicy]
   image: images/thokku.webp
+
+- name: Shahi Paneer
+  ingredients: []
+  tags: [india]
+  image: images/shahi_paneer.webp
+  link: https://www.youtube.com/watch?v=T9hQV22Uezw
