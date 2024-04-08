@@ -82,3 +82,6 @@
 - name: Smoothie
   image: images/smoothie.webp
   ingredients: [banana, strawberry, yogurt, kiwi]
+
+- name: Marble cake
+  image: images/marble.webp

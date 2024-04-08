@@ -33,7 +33,8 @@
   link: feta_pasta
 
 - name: Asperges au Parmesan
-  options: served with rice
+  options: served with rice/fresh tagliatelles
+  image: images/asperges.webp
 
 - name: Risotto aux champignons
   options: with white wine
@@ -51,8 +52,10 @@
   ingredients: [paprika, piment, thyme]
   image: images/legumes_oven.webp
 
-- name: Pommes de terre sautées
-  options: à la graisse de canard with duck / vegatarian option? (butter + soja)
+# - name: Pommes de terre sautées
+#   options: with carrot
+#   ingredients: [potato, carrot]
+#   image: images/sautees.webp
 
 - name: Bruschetta (toasted bread)
   options: tomato / cheese / avocado / bread toasted in butter/oil
@@ -171,6 +174,8 @@
 - name: Indian Potato / Carrot
   options: with fenugrek
   tags: [india]
+  ingredients: [potato, carrot]
+  image: images/sautees.webp
 
 - name: Aloo palaak
   options: served with chapatis / rice
@@ -198,8 +203,10 @@
   image: images/dal_fry.webp
 
 - name: Pav bhaji
-  options: served with chapatis / rice
+  options: served with chapatis / rice / toasted bread
   tags: [india, spicy]
+  link: https://www.indianhealthyrecipes.com/pav-bhaji-recipe-how-to-make-pav-bhaji-step-by-step-pictures/
+  image: images/pav.webp
 
 - name: Fried rice noodle
   options: with Worcestershire sauce
