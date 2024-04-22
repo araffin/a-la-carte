@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+from typing import Any
 
 from jinja2 import Environment, FileSystemLoader
 from omg import Menu
@@ -9,10 +10,10 @@ NON_ALPHA_NUMERIC = re.compile(r"[^a-zA-Z0-9]")
 
 current_dir = Path(__file__).parent
 
-menus: dict[str, Menu] = {
-    "main": Menu.load(f"{current_dir}/data/main.yaml", "main", "Main Course"),
-    "dessert": Menu.load(f"{current_dir}/data/dessert.yaml", "dessert", "Desserts"),
-}
+menus = [
+    Menu.load(f"{current_dir}/data/main.yaml", "main", "Main Course"),
+    Menu.load(f"{current_dir}/data/dessert.yaml", "dessert", "Desserts"),
+]
 
 metadata: dict[str, list[dict]] = {}
 
@@ -24,7 +25,7 @@ column_class = {
     4: "is-one-quarter",
 }
 total_recipes = 0
-for key, menu in menus.items():
+for menu in menus:
     n_dish_per_column = len(menu.dishes) // n_columns + 1
     n_dish_per_page = n_columns * n_dish_per_column
     total_recipes += len(menu.dishes)
@@ -32,7 +33,7 @@ for key, menu in menus.items():
     # preprocess flags
     processed_info = []
     for idx, dish in enumerate(menu.dishes):
-        dish_info = {}
+        dish_info: dict[str, Any] = {}
 
         if dish.link and "http" not in dish.link:
             dish_info["link"] = f"recipe.html?id={dish.link}"
@@ -52,7 +53,7 @@ for key, menu in menus.items():
         dish_info["close_column"] = idx > 0 and ((idx + 1) % n_dish_per_column) == 0 or idx == len(menu.dishes) - 1
         processed_info.append(dish_info)
 
-    metadata[key] = processed_info
+    metadata[menu.name] = processed_info
 
 
 # pprint(data)
