@@ -87,24 +87,24 @@
                 </div>
             </div>
 
-            {% for meal in meals %}
+            {% for name, menu in menus.items() %}
             <div class="is-mobile is-full">
-                <h3 class="title mt-5 is-2 is-uppercase has-text-info-dark">{{meal.name}}</h3>
+                <h3 class="title mt-5 is-2 is-uppercase has-text-info-dark">{{menu.full_name}}</h3>
                 <hr class="has-background-info">
             </div>
 
-            {% for dish in meal.dishes %}
-            {% if dish.new_page %}
+            {% for dish in menu.dishes %}{% set dish_info = metadata[name][loop.index - 1] %}
+            {% if dish_info.new_page %}
             <div class="columns">
             {% endif %}
 
-            {% if dish.new_column %}
+            {% if dish_info.new_column %}
             <div class="column {{ column_class }}">
             {% endif %}
-                <div class="block dish-block" id="{{ dish.id }}" data-groups="{{ dish.tags }}">
+                <div class="block dish-block" id="{{ dish.dish_id }}" data-groups="{{ dish.tags_str }}">
                     <p class="title parchment is-1 mb-4 dish-name">
                         {% if dish.link %}
-                        <a href="{{dish.link}}" , target="_blank">
+                        <a href="{{dish_info.link}}" , target="_blank">
                             {{loop.index}}. {{ dish.name }}
                         </a>
                         {% else %}
@@ -119,7 +119,7 @@
                         </span>
 
                         <!-- Anchor to the current dish -->
-                        <a href="#{{ dish.id }}" class="is-size-6 anchor">
+                        <a href="#{{ dish.dish_id }}" class="is-size-6 anchor">
                             <span class="icon is-small">
                                 <i class="fa fa-link has-text-grey-light"></i>
                             </span>
@@ -131,15 +131,15 @@
                     </p>
                     <p class="additional-info" style="display: none;">
                         <!-- useful for search -->
-                        {{ dish.tags }}
-                        {{ dish.ingredients }}
+                        {{ dish.tags_str }}
+                        {{ dish.ingredients_str }}
 
                     </p>
                     {% if dish.image %}
                     <div class="dish-image">
                         <a href="{{dish.image}}"
-                            data-pswp-width="{{ dish.image_width }}"
-                            data-pswp-height="{{ dish.image_height }}"
+                            data-pswp-width="{{ dish_info.image_width }}"
+                            data-pswp-height="{{ dish_info.image_height }}"
                             data-cropped="true"
                             target="_blank">
                             <figure class="image is-16by9">
@@ -152,12 +152,12 @@
                     {% endif %}
                 </div>
 
-            {% if dish.close_column %}
+            {% if dish_info.close_column %}
             </div> <!-- Close column -->
             {% endif %}
 
 
-            {% if dish.close_page %}
+            {% if dish_info.close_page %}
             </div> <!-- Close Page Columns -->
             <!-- <hr class="has-background-dark"> -->
             {% endif %}
@@ -185,7 +185,7 @@
                 text: dish.textContent.toLowerCase().replace(/\s+/g, ' '),
                 // Clone the node to keep the original html
                 html: dish.cloneNode(true),
-                html_id: dish.id,
+                html_id: dish.dish_id,
             };
         });
         
