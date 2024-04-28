@@ -139,6 +139,19 @@
   link: couscous_saute
   image: images/couscous_saute.webp
 
+- name: Creamy Sesame Udon Noodles
+  options: with miso sauce
+  ingredients:
+  - miso paste
+  - sesame paste
+  - mushroom
+  - tofu
+  - corn
+  tags:
+  - japan
+  link: ''
+  image: images/udon_noodle.webp
+
 - name: Crêpes salées
   options: cheese / champignons
   ingredients: []
@@ -466,6 +479,16 @@
   - cold
   link: ''
   image: ''
+
+- name: Scrambled Eggs
+  options: ''
+  ingredients:
+  - egg
+  - paprika
+  - onion
+  tags: []
+  link: ''
+  image: images/scrambled.webp
 
 - name: Shahi Paneer
   options: ''

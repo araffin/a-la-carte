@@ -15,7 +15,6 @@ format:
 	ruff check --select I ${LINT_PATHS} --fix
 	# Reformat using black
 	black ${LINT_PATHS}
-	# yamlfmt data/*.yaml
 
 check-codestyle:
 	# Sort imports
