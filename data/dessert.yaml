@@ -1,87 +1,191 @@
+- name: Bananes flambées
+  options: with rhum / cinammon / sugar / butter
+  ingredients: []
+  tags: []
+  link: ''
+  image: ''
+
+- name: Carrot cake
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/carrot_cake.webp
+
 - name: Charlotte
   options: aux fraises / poire et chocolat
-  tags: [france]
+  ingredients: []
+  tags:
+  - france
+  link: ''
   image: images/charlotte.webp
 
-- name: Mousse au chocolat
-  tags: [france]
+- name: Cheesecake
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/cheesecake.webp
 
-- name: Gateau à la crème de marron
-  tags: [france]
-  image: images/marron.webp
+- name: Chocotorta
+  options: ''
+  ingredients: []
+  tags:
+  - argentina
+  link: ''
+  image: images/torta1.webp
 
-- name: Quatre-Quarts
-  tags: [france]
-  image: images/quatre_quarts.webp
-  link:  quatre_quarts
+- name: Compote de pommes
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: ''
 
-- name: Madeleines
-  tags: [france]
-  image: images/madeleines.webp
-
-- name: Fondant au chocolat
-  tags: [france]
-  image: images/fondant.webp
+- name: Cookies
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/cookies.webp
 
 - name: Crêpes
   options: sugar / lemon sugar cinammon / banana chocolate
-  tags: [france]
+  ingredients: []
+  tags:
+  - france
+  link: ''
   image: images/crepes.webp
 
-- name: Bananes flambées
-  options: with rhum / cinammon / sugar / butter
+- name: Eclair au chocolat
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: ''
 
-- name: Tarte aux pommes
-  options: with compote de pommes / poire
-  image: images/tarte_pomme.webp
+- name: Flan
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/flan.webp
+
+- name: Fondant au chocolat
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: images/fondant.webp
+
+- name: Gateau à la crème de marron
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: images/marron.webp
+
+- name: Macarons
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: images/macaron.webp
+
+- name: Madeleines
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: images/madeleines.webp
+
+- name: Marble cake
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/marble.webp
+
+- name: Millefeuille
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: images/millefeuille.webp
+
+- name: Mousse au chocolat
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: ''
+
+- name: Muffins
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/muffins.webp
+
+- name: Pastel de nata
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: ''
+
+- name: Quatre-Quarts
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: quatre_quarts
+  image: images/quatre_quarts.webp
+
+- name: Riz au lait
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: ''
+
+- name: Smoothie
+  options: ''
+  ingredients:
+  - banana
+  - strawberry
+  - yogurt
+  - kiwi
+  tags: []
+  link: ''
+  image: images/smoothie.webp
 
 - name: Tarte aux framboises
   options: with crème patissière
+  ingredients: []
+  tags:
+  - france
+  link: ''
   image: images/framboise.webp
-  tags: [france]
+
+- name: Tarte aux pommes
+  options: with compote de pommes / poire
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/tarte_pomme.webp
 
 - name: Tarte à la rhubarbe
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
   image: images/rhubarbe.webp
 
-- name: Compote de pommes
-
-- name: Chocotorta
-  tags: [argentina]
-  image: images/torta1.webp
-
-- name: Riz au lait
-
-- name: Carrot cake
-  image: images/carrot_cake.webp
-
-- name: Pastel de nata
-
-- name: Cheesecake
-  image: images/cheesecake.webp
-
-- name: Cookies
-  image: images/cookies.webp
-
-- name: Muffins
-  image: images/muffins.webp
-
-- name: Flan
-  image: images/flan.webp
-
-- name: Macarons
-  image: images/macaron.webp
-  tags: [france]
-
-- name: Millefeuille
-  image: images/millefeuille.webp
-  tags: [france]
-
-- name: Eclair au chocolat
-  tags: [france]
-
-- name: Smoothie
-  image: images/smoothie.webp
-  ingredients: [banana, strawberry, yogurt, kiwi]
-
-- name: Marble cake
-  image: images/marble.webp

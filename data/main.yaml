@@ -1,295 +1,560 @@
-- name: Champignons pain au lait
-  options: with/without ginger and chilis
-  ingredients: [paprika, chili, crème fraîche, onion, garlic]
-  tags: [india, france, spicy]
-  image: images/pain_au_lait.webp
-
-- name: Empanadas
-  options: carne (bolo) / vegetarian (bolo soja) / cheese / champignons
-  tags: [argentina]
-  image: images/empanadas.webp
-
-- name: Ratatouille
-  options: served with rice or pasta
-  ingredients: [aubergine, zucchini, tomato, onion, garlic]
-  tags: [france]
-
-- name: Riste d'aubergine
-  options: served with pasta
-  ingredients: [aubergine, tomato, tomato sauce]
-  tags: [france]
-  image: images/riste.webp
-
-- name: Lasagnes
-  options: vegetarian bolognese (soja) / aubergines
-  tags: [italy]
-  image: images/lasagnes.webp
-  link: lasagnes
-
-- name: Tomato feta and pasta
-  options: with garlic and crème fraîche
-  ingredients: [tomato, feta, pasta]
-  image: images/pasta_feta.webp
-  link: feta_pasta
-
-- name: Asperges au Parmesan
-  options: served with rice/fresh tagliatelles
-  image: images/asperges.webp
-
-- name: Risotto aux champignons
-  options: with white wine
-
-- name: Pasta with vegetables
-  options: paprika / zucchini / aubergines / sweet potato / butternut
-  image: images/pasta_veg.webp
-
-- name: Velouté de butternut
-  ingredients: [butternut, crème fraîche]
-  tags: [winter]
-
-- name: Vegetables in oven
-  options: aubergines / sweet potato / butternut / chili / garlic
-  ingredients: [paprika, piment, thyme]
-  image: images/legumes_oven.webp
-
-# - name: Pommes de terre sautées
-#   options: with carrot
-#   ingredients: [potato, carrot]
-#   image: images/sautees.webp
-
-- name: Bruschetta (toasted bread)
-  options: tomato / cheese / avocado / bread toasted in butter/oil
-  ingredients: [basil, walnut oil, truffel oil, toasted sesame oil, moutarde, soja sauce]
-
-- name: Raclette
-  options: with champignons / potatoes / butter
-  tags: [france]
-
-- name: Quiche
-  options: champignons fromage / asperges
-  ingredients: [egg, mushrooms, cheese, crème fraîche]
-  tags: [france]
-  image: images/quiche.webp
-
-- name: Gratin de Ravioles
-  options: made in the oven
-  ingredients: [ravioles, crème fraîche, cheese]
-  tags: [france]
-  image: images/ravioles_gratin.webp
-
-- name: Ravioles
-  options: with butter/oil or champignons
-  ingredients: [ravioles, cheese, onion]
-  tags: [france]
-  image: images/ravioles.webp
-
-- name: Salade de Couscous
-  options: with tomato / mais / cucumber / avocado / cold ravioles
-  tags: [cold]
-
-- name: Tomato Mozzarella Salad
-  options: with roquette
-  ingredients: [tomato, mozzarella, rocket]
-  tags: [cold, italy]
-  image: images/salade_composee.webp
-
-- name: Pasta Aglio Olio
-  ingredients: [garlic, red chili flakes, cherry tomatoes, pickle pepperonies]
-  tags: [italy]
-  image: images/aglio.webp
-
-- name: Fondue aux poireaux
-  options: with tagliatelles (fresh pasta)
-  ingredients: [leek, crème fraîche]
-  image: images/fondue_poireaux.webp
-  tags: [france]
-
-- name: Crêpes salées
-  options: cheese / champignons
-  tags: [france]
-  link: https://www.atelierdeschefs.fr/recettes/4929/pate-a-crepe-facile/
-
-- name: Pizza
-  options: champignons / mais / vegetables / potatoes / cheese
-  image: images/pizza.webp
-  tags: [italy]
-  link: https://www.kochbar.de/rezept/429836/Pizza-mit-Quark-OEl-Teig.html
-
-- name: Flammekueche (Tarte Flambée)
-  options: feta cheese / champignons
-  ingredients: [crème fraîche]
-  tags: [france]
-
-- name: Coco curry
-  options: chicken / carrot / ginger / sweet potato / onion / soja / served with rice or korean noodles
-  tags: [asian]
-  image: images/coco_curry.webp
-
-- name: Thai vegetables
-  options:
-    brocoli / cauliflower / carottes
-    roasted soja / zucchini / served with rice or mie noodles
-  ingredients: [soja sauce, ginger]
-  tags: [asia, thai]
-  image: images/vege_soja.webp
-
-- name: Paneer
-  options: kadai (normal) with cashew paste / palaak paneer
-  tags: [india]
-  image: images/kadai.webp
-  link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
-
-- name: Baingan ka bharta
-  options: Smoky eggplant stir fry mash served with chapatis
-  ingredients: [aubergine]
-  tags: [india]
-  link: https://hebbarskitchen.com/baingan-bharta-recipe-baingan-ka-bharta/
-  image: images/baigan_ka.webp
-
 - name: Aloo gobi
   options: served with chapatis / rice
-  ingredients: [potato, cauliflower]
-  tags: [india]
+  ingredients:
+  - potato
+  - cauliflower
+  tags:
+  - india
+  link: ''
   image: images/aloo_gobi.webp
 
 - name: Aloo ki sabzi
   options: served with chapatis
-  ingredients: [potato, tomato]
-  tags: [india]
+  ingredients:
+  - potato
+  - tomato
+  tags:
+  - india
   link: https://youtu.be/OgyGDO-PVrY?si=3VHpLdWmX9S-yoI5&t=408
   image: images/aloo_sabzi.webp
 
-- name: Kabuli chana and coconut
-  options: served with chapatis / rice
-  ingredients: [chickpeas, coconut milk]
-  tags: [india]
-  image: images/kabuli_chana.webp
-
-- name: Rajma
-  options: with cream
-  ingredients: [kidney bean]
-  tags: [india]
-  image: images/rajma.webp
-
-- name: Indian Potato / Carrot
-  options: with fenugrek
-  tags: [india]
-  ingredients: [potato, carrot]
-  image: images/sautees.webp
-
 - name: Aloo palaak
   options: served with chapatis / rice
-  ingredients: [potato, spinach]
-  tags: [india]
+  ingredients:
+  - potato
+  - spinach
+  tags:
+  - india
+  link: ''
+  image: ''
 
-- name: Dal
-  options: served with chapatis / rice
-  ingredients: [lentil]
-  tags: [india, spicy]
-  image: images/dal.webp
-
-- name: Moong Dal
-  options: served with chapatis / rice
-  ingredients: [green lentil]
-  tags: [india]
-  link: https://www.indianhealthyrecipes.com/moong-dal-recipe/
-  image: images/moong_dal.webp
-
-- name: Dal Fry
-  options: served with chapatis / rice
-  ingredients: [lentil]
-  tags: [india]
-  link: https://www.indianhealthyrecipes.com/dal-fry-recipe/
-  image: images/dal_fry.webp
-
-- name: Pav bhaji
-  options: served with chapatis / rice / toasted bread
-  tags: [india, spicy]
-  link: https://www.indianhealthyrecipes.com/pav-bhaji-recipe-how-to-make-pav-bhaji-step-by-step-pictures/
-  image: images/pav.webp
-
-- name: Fried rice noodle
-  options: with Worcestershire sauce
-  tags: [india]
-
-- name: Gobi Matar
-  options: served with chapatis / rice
-  tags: [india, spicy]
-
-- name: Paneer Butter Masala
-  options: served with chapatis / rice
-  tags: [india, spicy]
-  image: images/butter_paneer.webp
-  link: https://hebbarskitchen.com/paneer-butter-masala-recipe/
-
-- name: Enchiladas
-
-- name: Galettes bretonnes
-  tags: [france]
-
-- name: Pasta Paprika à la Jamie Olivier
-  options: with feta and rocket
-  ingredients: [paprika, tomato, onion, garlic, rocket, feta]
-  link: https://www.youtube.com/watch?v=3CpoVc77rpw
-  image: images/jaime_pasta.webp
-  tags: [italy]
-
-- name: Chinese Vegetables Soja
-  options: with brocoli, champignons and roasted soja
-  tags: [china, spicy]
-
-- name: Clear Soup Recipe
-  options: best served with a dash of vinegar and yoghurt
-  link: https://hebbarskitchen.com/clear-soup-recipe-veg-clear-soup-recipe/
-  ingredients: [onion, ginger, garlic, brocoli, mushrooms]
-  image: images/soup.webp
-  notes: Add more onion ginger and garlic + sour yoghurt at the end
-
-- name: Isa's Omelette
-  options: served with bread
-  ingredients: [onion, egg, tomato sauce]
-  tags: [brunch, afghanistan]
-  image: images/isa_omelette.webp
-  link: isa
-
-- name: Couscous sauté roquette
-  options: served with a sunny side-up egg
-  ingredients: [onion, egg, rocket, ghee, coconut oil, cheese, harissa]
+- name: Asperges au Parmesan
+  options: served with rice/fresh tagliatelles
+  ingredients: []
   tags: []
-  image: images/couscous_saute.webp
-  link: couscous_saute
+  link: ''
+  image: images/asperges.webp
 
-- name: Bombay Toast
-  options: a spicy version of the French toast
-  ingredients: [onion, garlic, milk, green chili]
-  tags: [india, spicy]
-  image: images/bombay_toast.webp
-
-- name: Ria's Brunch
-  options: served with toasted bread
-  ingredients: [onion, tomato, bread, egg]
-  tags: [india, brunch]
-  image: images/ria_brunch.webp
+- name: Baingan ka bharta
+  options: Smoky eggplant stir fry mash served with chapatis
+  ingredients:
+  - aubergine
+  tags:
+  - india
+  link: https://hebbarskitchen.com/baingan-bharta-recipe-baingan-ka-bharta/
+  image: images/baigan_ka.webp
 
 - name: Bindi sabji
   options: okra sauté and fried aubergine
-  ingredients: [okra, aubergine]
-  tags: [india]
+  ingredients:
+  - okra
+  - aubergine
+  tags:
+  - india
+  link: ''
   image: images/okra.webp
 
+- name: Bombay Toast
+  options: a spicy version of the French toast
+  ingredients:
+  - onion
+  - garlic
+  - milk
+  - green chili
+  tags:
+  - india
+  - spicy
+  link: ''
+  image: images/bombay_toast.webp
+
+- name: Bruschetta (toasted bread)
+  options: tomato / cheese / avocado / bread toasted in butter/oil
+  ingredients:
+  - basil
+  - walnut oil
+  - truffel oil
+  - toasted sesame oil
+  - moutarde
+  - soja sauce
+  tags: []
+  link: ''
+  image: ''
+
+- name: Champignons pain au lait
+  options: with/without ginger and chilis
+  ingredients:
+  - paprika
+  - chili
+  - crème fraîche
+  - onion
+  - garlic
+  tags:
+  - india
+  - france
+  - spicy
+  link: ''
+  image: images/pain_au_lait.webp
+
+- name: Chinese Vegetables Soja
+  options: with brocoli, champignons and roasted soja
+  ingredients: []
+  tags:
+  - china
+  - spicy
+  link: ''
+  image: ''
+
+- name: Clear Soup Recipe
+  options: best served with a dash of vinegar and yoghurt
+  ingredients:
+  - onion
+  - ginger
+  - garlic
+  - brocoli
+  - mushrooms
+  tags: []
+  link: https://hebbarskitchen.com/clear-soup-recipe-veg-clear-soup-recipe/
+  image: images/soup.webp
+
+- name: Coco curry
+  options: chicken / carrot / ginger / sweet potato / onion / soja / served with rice
+    or korean noodles
+  ingredients: []
+  tags:
+  - asian
+  link: ''
+  image: images/coco_curry.webp
+
+- name: Couscous sauté roquette
+  options: served with a sunny side-up egg
+  ingredients:
+  - onion
+  - egg
+  - rocket
+  - ghee
+  - coconut oil
+  - cheese
+  - harissa
+  tags: []
+  link: couscous_saute
+  image: images/couscous_saute.webp
+
+- name: Crêpes salées
+  options: cheese / champignons
+  ingredients: []
+  tags:
+  - france
+  link: https://www.atelierdeschefs.fr/recettes/4929/pate-a-crepe-facile/
+  image: ''
+
+- name: Dal
+  options: served with chapatis / rice
+  ingredients:
+  - lentil
+  tags:
+  - india
+  - spicy
+  link: ''
+  image: images/dal.webp
+
+- name: Dal Fry
+  options: served with chapatis / rice
+  ingredients:
+  - lentil
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/dal-fry-recipe/
+  image: images/dal_fry.webp
+
+- name: Empanadas
+  options: carne (bolo) / vegetarian (bolo soja) / cheese / champignons
+  ingredients: []
+  tags:
+  - argentina
+  link: ''
+  image: images/empanadas.webp
+
+- name: Enchiladas
+  options: ''
+  ingredients: []
+  tags: []
+  link: ''
+  image: ''
+
+- name: Flammekueche (Tarte Flambée)
+  options: feta cheese / champignons
+  ingredients:
+  - crème fraîche
+  tags:
+  - france
+  link: ''
+  image: ''
+
+- name: Fondue aux poireaux
+  options: with tagliatelles (fresh pasta)
+  ingredients:
+  - leek
+  - crème fraîche
+  tags:
+  - france
+  link: ''
+  image: images/fondue_poireaux.webp
+
+- name: Fried rice noodle
+  options: with Worcestershire sauce
+  ingredients: []
+  tags:
+  - india
+  link: ''
+  image: ''
+
+- name: Galettes bretonnes
+  options: ''
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: ''
+
+- name: Gobi Matar
+  options: served with chapatis / rice
+  ingredients: []
+  tags:
+  - india
+  - spicy
+  link: ''
+  image: ''
+
+- name: Gratin de Ravioles
+  options: made in the oven
+  ingredients:
+  - ravioles
+  - crème fraîche
+  - cheese
+  tags:
+  - france
+  link: ''
+  image: images/ravioles_gratin.webp
+
+- name: Indian Potato / Carrot
+  options: with fenugrek
+  ingredients:
+  - potato
+  - carrot
+  tags:
+  - india
+  link: ''
+  image: images/sautees.webp
+
+- name: Isa's Omelette
+  options: served with bread
+  ingredients:
+  - onion
+  - egg
+  - tomato sauce
+  tags:
+  - brunch
+  - afghanistan
+  link: isa
+  image: images/isa_omelette.webp
+
+- name: Kabuli chana and coconut
+  options: served with chapatis / rice
+  ingredients:
+  - chickpeas
+  - coconut milk
+  tags:
+  - india
+  link: ''
+  image: images/kabuli_chana.webp
+
+- name: Lasagnes
+  options: vegetarian bolognese (soja) / aubergines
+  ingredients: []
+  tags:
+  - italy
+  link: lasagnes
+  image: images/lasagnes.webp
+
 - name: Methi Dal Fry
-  ingredients: [lentils]
-  tags: [india]
+  options: ''
+  ingredients:
+  - lentils
+  tags:
+  - india
   link: https://hebbarskitchen.com/methi-dal-fry-recipe-dal-methi-fry/
   image: images/methi.webp
 
-- name: Thokku
-  ingredients: [aubergine, oignion, ginger, garlic, green chili, mustard seeds, tamarind paste, jaggery]
-  tags: [india, spicy]
-  image: images/thokku.webp
+- name: Moong Dal
+  options: served with chapatis / rice
+  ingredients:
+  - green lentil
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/moong-dal-recipe/
+  image: images/moong_dal.webp
+
+- name: Paneer
+  options: kadai (normal) with cashew paste / palaak paneer
+  ingredients: []
+  tags:
+  - india
+  link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
+  image: images/kadai.webp
+
+- name: Paneer Butter Masala
+  options: served with chapatis / rice
+  ingredients: []
+  tags:
+  - india
+  - spicy
+  link: https://hebbarskitchen.com/paneer-butter-masala-recipe/
+  image: images/butter_paneer.webp
+
+- name: Pasta Aglio Olio
+  options: ''
+  ingredients:
+  - garlic
+  - red chili flakes
+  - cherry tomatoes
+  - pickle pepperonies
+  tags:
+  - italy
+  link: ''
+  image: images/aglio.webp
+
+- name: Pasta Paprika à la Jamie Olivier
+  options: with feta and rocket
+  ingredients:
+  - paprika
+  - tomato
+  - onion
+  - garlic
+  - rocket
+  - feta
+  tags:
+  - italy
+  link: https://www.youtube.com/watch?v=3CpoVc77rpw
+  image: images/jaime_pasta.webp
+
+- name: Pasta with vegetables
+  options: paprika / zucchini / aubergines / sweet potato / butternut
+  ingredients: []
+  tags: []
+  link: ''
+  image: images/pasta_veg.webp
+
+- name: Pav bhaji
+  options: served with chapatis / rice / toasted bread
+  ingredients: []
+  tags:
+  - india
+  - spicy
+  link: https://www.indianhealthyrecipes.com/pav-bhaji-recipe-how-to-make-pav-bhaji-step-by-step-pictures/
+  image: images/pav.webp
+
+- name: Pizza
+  options: champignons / mais / vegetables / potatoes / cheese
+  ingredients: []
+  tags:
+  - italy
+  link: https://www.kochbar.de/rezept/429836/Pizza-mit-Quark-OEl-Teig.html
+  image: images/pizza.webp
+
+- name: Quiche
+  options: champignons fromage / asperges
+  ingredients:
+  - egg
+  - mushrooms
+  - cheese
+  - crème fraîche
+  tags:
+  - france
+  link: ''
+  image: images/quiche.webp
+
+- name: Raclette
+  options: with champignons / potatoes / butter
+  ingredients: []
+  tags:
+  - france
+  link: ''
+  image: ''
+
+- name: Rajma
+  options: with cream
+  ingredients:
+  - kidney bean
+  tags:
+  - india
+  link: ''
+  image: images/rajma.webp
+
+- name: Ratatouille
+  options: served with rice or pasta
+  ingredients:
+  - aubergine
+  - zucchini
+  - tomato
+  - onion
+  - garlic
+  tags:
+  - france
+  link: ''
+  image: ''
+
+- name: Ravioles
+  options: with butter/oil or champignons
+  ingredients:
+  - ravioles
+  - cheese
+  - onion
+  tags:
+  - france
+  link: ''
+  image: images/ravioles.webp
+
+- name: Ria's Brunch
+  options: served with toasted bread
+  ingredients:
+  - onion
+  - tomato
+  - bread
+  - egg
+  tags:
+  - india
+  - brunch
+  link: ''
+  image: images/ria_brunch.webp
+
+- name: Ria's Omelette
+  options: ''
+  ingredients:
+  - egg
+  - milk
+  - chili
+  - onion
+  - tomato
+  - coriander
+  tags:
+  - india
+  link: ''
+  image: images/omelette_ria.webp
+
+- name: Risotto aux champignons
+  options: with white wine
+  ingredients: []
+  tags: []
+  link: ''
+  image: ''
+
+- name: Riste d'aubergine
+  options: served with pasta
+  ingredients:
+  - aubergine
+  - tomato
+  - tomato sauce
+  tags:
+  - france
+  link: ''
+  image: images/riste.webp
+
+- name: Salade de Couscous
+  options: with tomato / mais / cucumber / avocado / cold ravioles
+  ingredients: []
+  tags:
+  - cold
+  link: ''
+  image: ''
 
 - name: Shahi Paneer
+  options: ''
   ingredients: []
-  tags: [india]
-  image: images/shahi_paneer.webp
+  tags:
+  - india
   link: https://www.youtube.com/watch?v=T9hQV22Uezw
+  image: images/shahi_paneer.webp
+
+- name: Shakshuka with feta
+  options: ''
+  ingredients:
+  - paprika
+  - egg
+  - feta
+  - tomato
+  tags:
+  - ''
+  link: https://www.gutekueche.at/shakshuka-mit-feta-rezept-42755
+  image: images/chak.webp
+
+- name: Thai vegetables
+  options: brocoli / cauliflower / carottes roasted soja / zucchini / served with
+    rice or mie noodles
+  ingredients:
+  - soja sauce
+  - ginger
+  tags:
+  - asia
+  - thai
+  link: ''
+  image: images/vege_soja.webp
+
+- name: Thokku
+  options: ''
+  ingredients:
+  - aubergine
+  - oignion
+  - ginger
+  - garlic
+  - green chili
+  - mustard seeds
+  - tamarind paste
+  - jaggery
+  tags:
+  - india
+  - spicy
+  link: ''
+  image: images/thokku.webp
+
+- name: Tomato Mozzarella Salad
+  options: with roquette
+  ingredients:
+  - tomato
+  - mozzarella
+  - rocket
+  tags:
+  - cold
+  - italy
+  link: ''
+  image: images/salade_composee.webp
+
+- name: Tomato feta and pasta
+  options: with garlic and crème fraîche
+  ingredients:
+  - tomato
+  - feta
+  - pasta
+  tags: []
+  link: feta_pasta
+  image: images/pasta_feta.webp
+
+- name: Vegetables in oven
+  options: aubergines / sweet potato / butternut / chili / garlic
+  ingredients:
+  - paprika
+  - piment
+  - thyme
+  tags: []
+  link: ''
+  image: images/legumes_oven.webp
+
+- name: Velouté de butternut
+  options: ''
+  ingredients:
+  - butternut
+  - crème fraîche
+  tags:
+  - winter
+  link: ''
+  image: ''
+
