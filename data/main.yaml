@@ -528,6 +528,17 @@
   link: ''
   image: images/salade_composee.webp
 
+- name: Tomato Soup
+  options: served with baguette
+  ingredients:
+  - tomato
+  - onion
+  - crème fraîche
+  - garlic
+  tags: []
+  link: tomato_soup
+  image: images/tomato_soup.webp
+
 - name: Tomato feta and pasta
   options: with garlic and crème fraîche
   ingredients:
