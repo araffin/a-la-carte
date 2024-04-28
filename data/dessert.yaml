@@ -141,6 +141,18 @@
   link: ''
   image: ''
 
+- name: Payasam
+  options: ''
+  ingredients:
+  - milk
+  - rice
+  - cardamom
+  - sugar
+  tags:
+  - india
+  link: payasam
+  image: images/payasam.webp
+
 - name: Quatre-Quarts
   options: ''
   ingredients: []
@@ -184,7 +196,11 @@
 
 - name: Tarte à la rhubarbe
   options: ''
-  ingredients: []
+  ingredients:
+  - rhubarbe
+  - crème fraîche
+  - egg
   tags: []
-  link: ''
+  link: https://www.marmiton.org/recettes/recette_tarte-a-la-rhubarbe-facile-et-rapide_37644.aspx
   image: images/rhubarbe.webp
+
