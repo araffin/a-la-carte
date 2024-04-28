@@ -10,7 +10,9 @@ images = [item.name for item in (current_dir / "images-tmp").iterdir() if item.i
 
 default_image = images[0] if len(images) == 1 else ""
 
-menu = Menu.load(f"{current_dir}/data/main.yaml", "main", "Main Course")
+menu_name = Prompt.ask("Menu?", choices=["main", "dessert"], default="main")
+
+menu = Menu.load(f"{current_dir}/data/{menu_name}.yaml")
 
 try:
     name = Prompt.ask("Name?")
@@ -48,4 +50,4 @@ except KeyboardInterrupt:
     pass
 
 # Save the updated menu
-menu.save(f"{current_dir}/data/main.yaml")
+menu.save(f"{current_dir}/data/{menu_name}.yaml")
