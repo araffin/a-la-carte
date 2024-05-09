@@ -366,6 +366,19 @@
   link: https://www.indianhealthyrecipes.com/pav-bhaji-recipe-how-to-make-pav-bhaji-step-by-step-pictures/
   image: images/pav.webp
 
+- name: Pavi's Lazy Sambar
+  options: served with rica or dosa
+  ingredients:
+  - vegetables
+  - dal
+  - jaggery
+  - tomato
+  - tamarind
+  tags:
+  - india
+  link: pavi_sambar
+  image: images/pavi_sambar.webp
+
 - name: Pizza
   options: champignons / mais / vegetables / potatoes / cheese
   ingredients: []
