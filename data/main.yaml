@@ -597,3 +597,14 @@
   link: ''
   image: ''
 
+- name: Velouté de champignons aux noisettes
+  options: ''
+  ingredients:
+  - haselnut
+  - mushrooms
+  - philadelphia
+  tags:
+  - france
+  link: https://www.cuisineaz.com/recettes/veloute-de-champignons-aux-noisettes-17271.aspx
+  image: images/veloute_noisettes.webp
+
