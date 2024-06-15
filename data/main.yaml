@@ -1,11 +1,12 @@
-- name: Aloo gobi
+- name: Aloo Gobi Matar
   options: served with chapatis / rice
   ingredients:
   - potato
   - cauliflower
+  - green pees
   tags:
   - india
-  link: ''
+  link: https://www.vegrecipesofindia.com/aloo-gobi-matar-recipe/#wprm-recipe-container-135011
   image: images/aloo_gobi.webp
 
 - name: Aloo ki sabzi
@@ -226,15 +227,6 @@
   ingredients: []
   tags:
   - france
-  link: ''
-  image: ''
-
-- name: Gobi Matar
-  options: served with chapatis / rice
-  ingredients: []
-  tags:
-  - india
-  - spicy
   link: ''
   image: ''
 
