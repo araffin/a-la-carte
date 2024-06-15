@@ -65,6 +65,17 @@
   link: ''
   image: ''
 
+- name: Financier
+  options: ''
+  ingredients:
+  - egg white
+  - almond powder
+  - butter
+  tags:
+  - france
+  link: https://www.marmiton.org/recettes/recette_financier-minute-pour-utiliser-des-blancs-d-oeuf_17526.aspx
+  image: images/financier.webp
+
 - name: Flan
   options: ''
   ingredients: []
