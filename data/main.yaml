@@ -18,7 +18,7 @@
   link: https://youtu.be/OgyGDO-PVrY?si=3VHpLdWmX9S-yoI5&t=408
   image: images/aloo_sabzi.webp
 
-- name: Aloo palaak
+- name: Aloo palak
   options: served with chapatis / rice
   ingredients:
   - potato
@@ -26,7 +26,7 @@
   tags:
   - india
   link: ''
-  image: ''
+  image: images/palaak.webp
 
 - name: Asperges au Parmesan
   options: served with rice/fresh tagliatelles
