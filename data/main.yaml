@@ -137,7 +137,7 @@
   - harissa
   tags: []
   link: couscous_saute
-  image: images/couscous_saute.webp
+  image: images/couscous.webp
 
 - name: Creamy Sesame Udon Noodles
   options: with miso sauce
@@ -583,7 +583,7 @@
   - pasta
   tags: []
   link: feta_pasta
-  image: images/pasta_feta.webp
+  image: images/feta.webp
 
 - name: Vegetables in oven
   options: aubergines / sweet potato / butternut / chili / garlic
