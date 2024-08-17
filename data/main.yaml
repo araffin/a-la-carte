@@ -1,3 +1,14 @@
+- name: Aloo Bhindi
+  options: ''
+  ingredients:
+  - potato
+  - carrot
+  - okra
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/aloo-bhindi/
+  image: images/aloo_bhindi.webp
+
 - name: Aloo Gobi Matar
   options: served with chapatis / rice
   ingredients:
@@ -45,7 +56,7 @@
   link: https://hebbarskitchen.com/baingan-bharta-recipe-baingan-ka-bharta/
   image: images/baigan_ka.webp
 
-- name: Bindi sabji
+- name: Bhindi sabji
   options: okra sauté and fried aubergine
   ingredients:
   - okra
@@ -419,6 +430,19 @@
   link: ''
   image: images/mutta_curry.webp
 
+- name: Preeja's stir fry
+  options: ''
+  ingredients:
+  - carrot
+  - paprika
+  - zucchini
+  - green chili
+  tags:
+  - india
+  - spicy
+  link: ''
+  image: images/pree_stir_fry.webp
+
 - name: Quiche
   options: champignons fromage / asperges
   ingredients:
@@ -511,7 +535,7 @@
   tags:
   - india
   - spicy
-  link: ''
+  link: https://www.indianhealthyrecipes.com/chicken-tikka-masala/
   image: images/malou_wrap.webp
 
 - name: Risotto aux courgettes
@@ -651,6 +675,18 @@
   tags: []
   link: feta_pasta
   image: images/feta.webp
+
+- name: Veg Cutlet
+  options: ''
+  ingredients:
+  - potato
+  - peas
+  - carrot
+  - beans
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/veg-cutlet-recipe-vegetable-cutlet-recipe/
+  image: images/veg_cutlet.webp
 
 - name: Vegetables in oven
   options: aubergines / sweet potato / butternut / chili / garlic
