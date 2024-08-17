@@ -299,6 +299,19 @@
   link: https://www.indianhealthyrecipes.com/moong-dal-recipe/
   image: images/moong_dal.webp
 
+- name: Mushroom Masala
+  options: with bell pepper and served with chapatis
+  ingredients:
+  - mushroom
+  - paprika
+  - onion
+  - ginger
+  - garlic
+  tags:
+  - india
+  link: https://hebbarskitchen.com/mushroom-curry-recipe-mushroom-masala/#Recipe_Card_for_Mushroom_Curry
+  image: images/mushroom_masala.webp
+
 - name: Paneer
   options: kadai (normal) with cashew paste / palaak paneer
   ingredients: []
