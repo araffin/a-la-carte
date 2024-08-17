@@ -223,12 +223,23 @@
   image: ''
 
 - name: Galettes bretonnes
-  options: ''
+  options: chèvre miel, gorgonzola noix, onion garlic mushrooms
   ingredients: []
   tags:
   - france
   link: ''
-  image: ''
+  image: images/galette.webp
+
+- name: Gobi Manchurian
+  options: ''
+  ingredients:
+  - cauliflower
+  - spring onion
+  tags:
+  - india
+  - spicy
+  link: https://www.indianhealthyrecipes.com/gobi-manchurian-recipe/
+  image: images/gobi_manchurian.webp
 
 - name: Gratin de Ravioles
   options: made in the oven
@@ -392,6 +403,22 @@
   link: https://www.kochbar.de/rezept/429836/Pizza-mit-Quark-OEl-Teig.html
   image: images/pizza.webp
 
+- name: Preeja's Mutta curry
+  options: served with dosa
+  ingredients:
+  - egg
+  - turmeric
+  - red chili powder
+  - curry leaves
+  - onion
+  - tomato
+  - green chili
+  tags:
+  - india
+  - spicy
+  link: ''
+  image: images/mutta_curry.webp
+
 - name: Quiche
   options: champignons fromage / asperges
   ingredients:
@@ -472,12 +499,34 @@
   link: ''
   image: images/omelette_ria.webp
 
-- name: Risotto aux champignons
-  options: with white wine
-  ingredients: []
-  tags: []
+- name: Ria's Wrap
+  options: ''
+  ingredients:
+  - vegan minced meat
+  - onion
+  - yoghurt
+  - tomato
+  - green chili
+  - lemon
+  tags:
+  - india
+  - spicy
   link: ''
-  image: ''
+  image: images/malou_wrap.webp
+
+- name: Risotto aux courgettes
+  options: with white wine (chardonnay, pinot gris)
+  ingredients:
+  - zucchini
+  - mushroom
+  - onion
+  - butter
+  - parmesan
+  - rice
+  tags:
+  - italy
+  link: https://cuisine.journaldesfemmes.fr/recette/325612-risotto-aux-courgettes
+  image: images/risotto.webp
 
 - name: Riste d'aubergine
   options: served with pasta
@@ -527,6 +576,19 @@
   - ''
   link: https://www.gutekueche.at/shakshuka-mit-feta-rezept-42755
   image: images/chak.webp
+
+- name: Thai Red Curry
+  options: ''
+  ingredients:
+  - red curry paste
+  - coconut milk
+  - soja sauce
+  - cauliflower
+  - paprika
+  tags:
+  - thai
+  link: ''
+  image: images/red_curry.webp
 
 - name: Thai vegetables
   options: brocoli / cauliflower / carottes roasted soja / zucchini / served with
