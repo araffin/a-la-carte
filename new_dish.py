@@ -5,6 +5,9 @@ from rich.prompt import Prompt
 
 current_dir = Path(__file__).parent
 
+# Create dirs
+(current_dir / "images-tmp" / "processed").mkdir(parents=True, exist_ok=True)
+
 # List all the filenames in the images-tmp directory
 images = [item.name for item in (current_dir / "images-tmp").iterdir() if item.is_file()]
 
@@ -15,7 +18,11 @@ menu_name = Prompt.ask("Menu?", choices=["main", "dessert"], default="main")
 menu = Menu.load(f"{current_dir}/data/{menu_name}.yaml")
 
 try:
-    name = Prompt.ask("Name?")
+    while True:
+        name = Prompt.ask("Name?")
+        if name:
+            break
+        print("Please enter a name (name was empty)")
     image = Prompt.ask("Image?", choices=images, default=default_image)
     options = Prompt.ask("Options?", default="")
     ingredients = Prompt.ask("Ingredients?", default="").split(",")
