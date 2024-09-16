@@ -3,13 +3,13 @@
 ### Ingredients
 
 - 1 pot crème de marron de 350-400g environ
-- 200g chocolat 
+- 200g chocolat
 - 3 ou 4 oeufs
 
 ### Steps
 
 1. Faire fondre le chocolat et mélanger à la crème de marron
-2; Ajouter les jaunes d'oeufs
+2. Ajouter les jaunes d'oeufs
 3. Battre les blancs d'oeufs et ajouter
 
 As for the baking, you kinda do it with instinct ;)
