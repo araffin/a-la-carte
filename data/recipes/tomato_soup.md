@@ -3,6 +3,7 @@
 ### Ingredients
 
 For two people:
+
 - one onion
 - two pods of garlic
 - 2 tomatoes

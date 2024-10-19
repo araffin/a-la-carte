@@ -5,13 +5,16 @@
 For 5-6 people:
 
 either
+
 - vegetables solo (pumpkin or okra or onion échalotte)
+
 or
+
 - veg combo: carrot, green beans, aubergine, potato
 - 2 tomatoes or 1 tsp tamarind paste
 - toor dal
 - a bit of jaggery
-- tempering: 
+- tempering:
     - 2-3 tbsp ghee or coconut oil
     - 3/4 tsp mustard seeds
     - 1 tsp cumin seeds (jeera),
