@@ -1,9 +1,13 @@
 - name: Bananes flambées
   options: with rhum / cinammon / sugar / butter
-  ingredients: []
-  tags: []
+  ingredients:
+  - banana
+  - butter
+  - rhum
+  tags:
+  - ''
   link: ''
-  image: ''
+  image: images/bananesflambes.webp
 
 - name: Carrot cake
   options: ''
@@ -132,11 +136,13 @@
 
 - name: Mousse au chocolat
   options: ''
-  ingredients: []
+  ingredients:
+  - chocolate
+  - eggs
   tags:
   - france
   link: ''
-  image: ''
+  image: images/mousseauchocolat.webp
 
 - name: Muffins
   options: ''

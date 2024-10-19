@@ -88,9 +88,10 @@
   - toasted sesame oil
   - moutarde
   - soja sauce
-  tags: []
+  tags:
+  - ''
   link: ''
-  image: ''
+  image: images/bruschettatoastedbread.webp
 
 - name: Champignons pain au lait
   options: with/without ginger and chilis
@@ -162,7 +163,7 @@
   tags:
   - japan
   link: ''
-  image: images/udon_noodle.webp
+  image: images/creamysesameudonnoodles.webp
 
 - name: Crêpes salées
   options: cheese / champignons
