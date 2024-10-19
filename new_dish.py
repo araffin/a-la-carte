@@ -48,9 +48,7 @@ try:
 
     menu.add(new_dish)
 
-    # sort menu
-    # TODO: add to omg package
-    menu._dishes.sort(key=lambda item: item.name)
+    menu.sort()
 
 except KeyboardInterrupt:
     print("Exiting...")
