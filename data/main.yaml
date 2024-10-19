@@ -303,6 +303,15 @@
   link: lasagnes
   image: images/lasagnes.webp
 
+- name: Masala Dosa
+  options: ''
+  ingredients:
+  - potato
+  tags:
+  - india
+  link: ''
+  image: images/masaladosa.webp
+
 - name: Methi Dal Fry
   options: ''
   ingredients:
@@ -379,10 +388,12 @@
 
 - name: Pasta with vegetables
   options: paprika / zucchini / aubergines / sweet potato / butternut
-  ingredients: []
-  tags: []
+  ingredients:
+  - ''
+  tags:
+  - ''
   link: ''
-  image: images/pasta_veg.webp
+  image: images/pastawithvegetables.webp
 
 - name: Pav bhaji
   options: served with chapatis / rice / toasted bread
