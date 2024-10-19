@@ -361,6 +361,16 @@
   link: https://hebbarskitchen.com/paneer-butter-masala-recipe/
   image: images/butter_paneer.webp
 
+- name: Paneer Tikka
+  options: with mint chutney
+  ingredients:
+  - Paneer
+  - bell peppers
+  tags:
+  - india
+  link: ''
+  image: images/paneertikka.webp
+
 - name: Pasta Aglio Olio
   options: ''
   ingredients:
