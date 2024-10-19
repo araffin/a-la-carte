@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from omg import Dish, Menu
+from menu_backend import Dish, Menu
 from rich.prompt import Prompt
 
 current_dir = Path(__file__).parent

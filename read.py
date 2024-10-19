@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Any
 
 from jinja2 import Environment, FileSystemLoader
-from omg import Menu
+from menu_backend import Menu
 from PIL import Image
 
 NON_ALPHA_NUMERIC = re.compile(r"[^a-zA-Z0-9]")

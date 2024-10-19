@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from omg import Menu
+from menu_backend import Menu
 
 current_dir = Path(__file__).parent
 menu = Menu.load(f"{current_dir}/data/main.yaml")
