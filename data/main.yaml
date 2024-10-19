@@ -496,6 +496,17 @@
   link: ''
   image: images/ravioles.webp
 
+- name: Ravioles à la crème de parmesan
+  options: ''
+  ingredients:
+  - crème fraîche
+  - ravioles
+  - parmesan
+  tags:
+  - france
+  link: ''
+  image: images/ravioleslacrmedeparmesan.webp
+
 - name: Ria's Brunch
   options: served with toasted bread
   ingredients:
@@ -697,6 +708,21 @@
   tags: []
   link: ''
   image: images/legumes_oven.webp
+
+- name: Vegetarian Burger
+  options: ''
+  ingredients:
+  - soja patty
+  - mustard
+  - tomato
+  - rucola
+  - mozarella
+  - onion
+  - garlic
+  tags:
+  - ''
+  link: ''
+  image: images/vegetarianburger.webp
 
 - name: Velouté de butternut
   options: ''
