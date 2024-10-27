@@ -3,6 +3,7 @@
 ### Ingredients
 
 For two people:
+
 - 1 cup (my steel cup) rice 
 - 3 cups water
 - 1/2 liter milk

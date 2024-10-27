@@ -1,6 +1,7 @@
 ## Quatre-Quarts
 
 For 6 people:
+
 - 4 eggs (~250g)
 - 250g butter
 - 250g sugar
