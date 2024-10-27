@@ -1,5 +1,7 @@
 ## Lasagnes végétariennes
 
+### Ingredients
+
 For 4 people:
 
 - Kaltbach gruyère
@@ -9,6 +11,12 @@ For 4 people:
 - one onion
 - 2 pods garlic
 - 30 minutes at 200°C in oven (20 middle, 10 bottom)
+
+## Steps
+
+1. Do the bolognese
+2. Do the béchamel
+3. Assemble and put in oven
 
 Layers:
 
