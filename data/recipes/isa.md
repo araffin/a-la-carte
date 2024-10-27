@@ -12,6 +12,7 @@ For two people:
 - Bread slices
 
 Spice powders
+
 - Turmeric - 1 tsp
 - Curry 
 - Cinnamon 
