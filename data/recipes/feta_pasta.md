@@ -1,6 +1,7 @@
 ## Tomato feta and pasta
 
 ### Ingredients
+
 For one person:
 
 - Black tomato or tasty tomato (1 large)
