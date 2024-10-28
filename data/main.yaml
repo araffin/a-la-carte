@@ -42,8 +42,12 @@
 
 - name: Asperges au Parmesan
   options: served with rice/fresh tagliatelles
-  ingredients: []
-  tags: []
+  ingredients:
+  - asparagus
+  - parmesan
+  - onion
+  tags:
+  - ''
   link: ''
   image: images/asperges.webp
 
