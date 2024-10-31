@@ -173,11 +173,12 @@
 
 - name: Crêpes salées
   options: cheese / champignons
-  ingredients: []
+  ingredients:
+  - ''
   tags:
   - france
   link: https://www.atelierdeschefs.fr/recettes/4929/pate-a-crepe-facile/
-  image: ''
+  image: images/crpessales.webp
 
 - name: Dal
   options: served with chapatis / rice

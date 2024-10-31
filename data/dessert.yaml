@@ -55,10 +55,14 @@
 
 - name: Crêpes
   options: sugar / lemon sugar cinammon / banana chocolate
-  ingredients: []
+  ingredients:
+  - egg
+  - milk
+  - butter
+  - flour
   tags:
   - france
-  link: ''
+  link: https://www.atelierdeschefs.fr/recettes/4929/pate-a-crepe-facile/
   image: images/crepes.webp
 
 - name: Eclair au chocolat
