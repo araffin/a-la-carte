@@ -472,6 +472,16 @@
   link: ''
   image: images/pree_stir_fry.webp
 
+- name: Pumpkin chole
+  options: rice/chapati
+  ingredients:
+  - Muscat squash
+  - chickpeas
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/pumpkin-curry-recipe/
+  image: images/pumpkinchole.webp
+
 - name: Quiche
   options: champignons fromage / asperges
   ingredients:
