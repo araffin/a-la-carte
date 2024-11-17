@@ -303,6 +303,19 @@
   link: ''
   image: images/kabuli_chana.webp
 
+- name: Kadai Paneer
+  options: with cashew paste
+  ingredients:
+  - paprika
+  - onion
+  - tomato
+  - paneer
+  tags:
+  - india
+  - spicy
+  link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
+  image: images/kadai.webp
+
 - name: Lasagnes
   options: vegetarian bolognese (soja) / aubergines
   ingredients: []
@@ -351,13 +364,17 @@
   link: https://hebbarskitchen.com/mushroom-curry-recipe-mushroom-masala/#Recipe_Card_for_Mushroom_Curry
   image: images/mushroom_masala.webp
 
-- name: Paneer
-  options: kadai (normal) with cashew paste / palaak paneer
-  ingredients: []
+- name: Palak Paneer
+  options: ''
+  ingredients:
+  - Spinach
+  - cashew
+  - tomato
+  - onion
   tags:
   - india
-  link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
-  image: images/kadai.webp
+  link: https://www.indianhealthyrecipes.com/palak-paneer-recipe-easy-paneer-recipes-step-by-step-pics/
+  image: images/palakpaneer.webp
 
 - name: Paneer Butter Masala
   options: served with chapatis / rice
