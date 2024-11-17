@@ -461,7 +461,7 @@
   image: images/pizza.webp
 
 - name: Preeja's Mutta curry
-  options: served with dosa
+  options: served with dosa/upma/chapatis
   ingredients:
   - egg
   - turmeric

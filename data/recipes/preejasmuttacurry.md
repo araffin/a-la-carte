@@ -29,5 +29,5 @@ For 4 people:
 5. Hard boil eggs, cut them in half, place them gently on top of the curry
 6. Garnish with coriander leaves
 
-Note: best served with upma, chapatis or galettes bretonnes
+Note: best served with dosa, upma, chapatis or galettes bretonnes
 
