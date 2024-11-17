@@ -25,7 +25,7 @@ For 4 people:
 1. Heat coconut oil, splutter mustard seeds, curry leaves, green chilies
 2. Add onions, cook til medium golden
 3. Add ginger, tomatoes, tomato purée, water, let cook
-4. When tomatoes are mashed, add tumeric, red chili powder, coriander powder, salt
+4. When tomatoes are mashed, add tumeric, red chili powder, coriander powder, salt and pepper
 5. Hard boil eggs, cut them in half, place them gently on top of the curry
 6. Garnish with coriander leaves
 
