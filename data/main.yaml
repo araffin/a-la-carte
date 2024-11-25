@@ -200,11 +200,14 @@
   image: images/dal_fry.webp
 
 - name: Empanadas
-  options: carne (bolo) / vegetarian (bolo soja) / cheese / champignons
-  ingredients: []
+  options: vegetarian (bolo soja) / cheese / champignons / poire
+  ingredients:
+  - cheese
+  - mushroom
+  - pear
   tags:
   - argentina
-  link: ''
+  link: empanadas
   image: images/empanadas.webp
 
 - name: Enchiladas
