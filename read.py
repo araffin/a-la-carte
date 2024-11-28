@@ -2,6 +2,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+import markdown2
 from jinja2 import Environment, FileSystemLoader
 from menu_backend import Menu
 from PIL import Image
@@ -24,6 +25,10 @@ column_class = {
     3: "is-one-third",
     4: "is-one-quarter",
 }
+
+environment = Environment(loader=FileSystemLoader("html/"))
+recipe_template = environment.get_template("recipe_template.html")
+
 total_recipes = 0
 for menu in menus:
     n_dish_per_column = len(menu.dishes) // n_columns + 1
@@ -36,7 +41,17 @@ for menu in menus:
         dish_info: dict[str, Any] = {}
 
         if dish.link and "http" not in dish.link:
-            dish_info["link"] = f"recipe.html?id={dish.link}"
+            recipe_html = markdown2.markdown_path(f"{current_dir}/data/recipes/{dish.link}.md")
+
+            content_recipe = recipe_template.render(
+                recipe=recipe_html,
+                dish=dish,
+            )
+            with open(f"recipes/{dish.link}.html", mode="w", encoding="utf-8") as result:
+                result.write(content_recipe)
+
+            dish_info["link"] = f"recipes/{dish.link}.html"
+
         else:
             dish_info["link"] = dish.link
 

@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Restaurant Recipe</title>
+    <title>Preeja's Mutta curry | Home Restaurant Recipe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta name="robots" content="noindex">
 
     <!-- icons -->
@@ -19,9 +19,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- For sharing on social media -->
-    <meta property="og:title" content="Home Restaurant Recipe">
-    <meta property="og:description" content="Recipe for Home Restaurant by Ria & Antonin">
-    <meta property="og:image" content="https://araffin.github.io/a-la-carte/images/home.webp">
+    <meta property="og:title" content="Recipe for Preeja's Mutta curry">
+    <meta property="og:description" content="Home Restaurant by Ria & Antonin">
+    <meta property="og:image" content="https://araffin.github.io/a-la-carte/images/preejasmuttacurry.webp">
     <meta property="og:url" content="https://araffin.github.io/a-la-carte/">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -33,54 +33,57 @@
         <div class="bg-image"></div>
         <div class="container top">
             <h2>
-                <a href="./">
+                <a href="../">
                     <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span>
                     <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
                 </a>
             </h2>
             <h3 id="recipe-title" class="subtitle is-1">
-                Recipe
+                Recipe | Preeja's Mutta curry
             </h3>
+            <img style="max-width: 50%;" src="../images/preejasmuttacurry.webp" alt="Image of Preeja's Mutta curry"/>
         </div>
     </section>
 
     <section class="section has-background-light main-section">
         <div class="container content is-max-desktop">
-            <div id="recipe"></div>
+            <div id="recipe"><h2>Preeja's Mutta curry</h2>
+
+<h3>Ingredients</h3>
+
+<p>For 4 people:</p>
+
+<ul>
+<li>4 eggs (hard boiled)</li>
+<li>2 big onions (sliced)</li>
+<li>a lot of tomatoes (4 big) (sliced)</li>
+<li>2 tbsp tomato purée</li>
+<li>1 inch ginger (sliced)</li>
+<li>1 tsp mustard seeds</li>
+<li>3 tsp curry leaves</li>
+<li>1/2 tsp tumeric, 1/2 tsp red chili powder</li>
+<li>1/2 tsp coriander powder</li>
+<li>2 green chilis</li>
+<li>2 tbsp coconut oil</li>
+<li>1/2 cup water</li>
+<li>coriander leaves (presentation)</li>
+</ul>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Heat coconut oil, splutter mustard seeds, curry leaves, green chilies</li>
+<li>Add onions, cook til medium golden</li>
+<li>Add ginger, tomatoes, tomato purée, water, let cook</li>
+<li>When tomatoes are mashed, add tumeric, red chili powder, coriander powder, salt and pepper</li>
+<li>Hard boil eggs, cut them in half, place them gently on top of the curry</li>
+<li>Garnish with coriander leaves</li>
+</ol>
+
+<p>Note: best served with dosa, upma, chapatis or galettes bretonnes</p>
+</div>
        </div>
     </section>
-
-    <script type="module">
-        // Get the argument from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-
-        const is_defined = (x) => {
-                return (typeof x !== 'undefined' && x !== null);
-        }
-
-        let recipeTitle = document.getElementById('recipe-title');
-
-        // define fn to display 404 error message
-        const display404 = () => {
-            document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
-            document.title = `Home Restaurant | 404 Recipe Not Found`;
-            recipeTitle.textContent = `Recipe Not Found`;
-        }
-
-        // Get the recipeId from the URL
-        const recipeId = urlParams.get('id');
-
-        // if the length is greater than 0, then the recipeId is valid
-        if (is_defined(recipeId) && recipeId.length > 0 && recipeId.match(/^[a-zA-Z0-9_]+$/)) {
-          // Simulate an HTTP redirect:
-          window.location.replace(`./recipes/${recipeId}.html`);
-        }
-        else {
-            display404();
-        }
-
-    </script>
-
 </body>
 
 </html>

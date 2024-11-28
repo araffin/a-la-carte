@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Restaurant Recipe</title>
+    <title>Payasam | Home Restaurant Recipe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta name="robots" content="noindex">
 
     <!-- icons -->
@@ -19,9 +19,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- For sharing on social media -->
-    <meta property="og:title" content="Home Restaurant Recipe">
-    <meta property="og:description" content="Recipe for Home Restaurant by Ria & Antonin">
-    <meta property="og:image" content="https://araffin.github.io/a-la-carte/images/home.webp">
+    <meta property="og:title" content="Recipe for Payasam">
+    <meta property="og:description" content="Home Restaurant by Ria & Antonin">
+    <meta property="og:image" content="https://araffin.github.io/a-la-carte/images/payasam.webp">
     <meta property="og:url" content="https://araffin.github.io/a-la-carte/">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -33,54 +33,49 @@
         <div class="bg-image"></div>
         <div class="container top">
             <h2>
-                <a href="./">
+                <a href="../">
                     <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span>
                     <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
                 </a>
             </h2>
             <h3 id="recipe-title" class="subtitle is-1">
-                Recipe
+                Recipe | Payasam
             </h3>
+            <img style="max-width: 50%;" src="../images/payasam.webp" alt="Image of Payasam"/>
         </div>
     </section>
 
     <section class="section has-background-light main-section">
         <div class="container content is-max-desktop">
-            <div id="recipe"></div>
+            <div id="recipe"><h2>Payasam</h2>
+
+<h3>Ingredients</h3>
+
+<p>For two people:</p>
+
+<ul>
+<li>1 cup (my steel cup) rice </li>
+<li>3 cups water</li>
+<li>1/2 liter milk</li>
+<li>8 cardamoms ground</li>
+<li>8 tbsp sugar</li>
+<li>1-2 tbsp ghee</li>
+<li>handful cashew nuts and raisins</li>
+</ul>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Soak the rice in tepid or warm water for 20-30 min. After, rinse the rice and drain the water </li>
+<li>Boil 3 times the amount of water as rice and add the soaked rice and cook on medium heat. </li>
+<li>When the rice is 90% cooked, add the milk.  Let it cook in milk for 5-10 min.</li>
+<li>Meanwhile, add the sugar and ground cardamon and mix well.</li>
+<li>Once the mixture is cooked to a nice creamy consistency, heat ghee in a different saucepan and fry the cashew nuts and raisins till the cashews are very mild brown and raisins have bloated. </li>
+<li>Add the ghee-cashew-raisin mixture to the rice and milk mixture.</li>
+</ol>
+</div>
        </div>
     </section>
-
-    <script type="module">
-        // Get the argument from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-
-        const is_defined = (x) => {
-                return (typeof x !== 'undefined' && x !== null);
-        }
-
-        let recipeTitle = document.getElementById('recipe-title');
-
-        // define fn to display 404 error message
-        const display404 = () => {
-            document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
-            document.title = `Home Restaurant | 404 Recipe Not Found`;
-            recipeTitle.textContent = `Recipe Not Found`;
-        }
-
-        // Get the recipeId from the URL
-        const recipeId = urlParams.get('id');
-
-        // if the length is greater than 0, then the recipeId is valid
-        if (is_defined(recipeId) && recipeId.length > 0 && recipeId.match(/^[a-zA-Z0-9_]+$/)) {
-          // Simulate an HTTP redirect:
-          window.location.replace(`./recipes/${recipeId}.html`);
-        }
-        else {
-            display404();
-        }
-
-    </script>
-
 </body>
 
 </html>

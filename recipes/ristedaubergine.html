@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Restaurant Recipe</title>
+    <title>Riste d'aubergine | Home Restaurant Recipe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta name="robots" content="noindex">
 
     <!-- icons -->
@@ -19,9 +19,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- For sharing on social media -->
-    <meta property="og:title" content="Home Restaurant Recipe">
-    <meta property="og:description" content="Recipe for Home Restaurant by Ria & Antonin">
-    <meta property="og:image" content="https://araffin.github.io/a-la-carte/images/home.webp">
+    <meta property="og:title" content="Recipe for Riste d'aubergine">
+    <meta property="og:description" content="Home Restaurant by Ria & Antonin">
+    <meta property="og:image" content="https://araffin.github.io/a-la-carte/images/riste.webp">
     <meta property="og:url" content="https://araffin.github.io/a-la-carte/">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -33,54 +33,46 @@
         <div class="bg-image"></div>
         <div class="container top">
             <h2>
-                <a href="./">
+                <a href="../">
                     <span class="is-1 title is-uppercase has-text-info-dark samarkan">Menu</span>
                     <span class="subtitle parchment is-1">- Home Restaurant by Ria & Antonin</span>
                 </a>
             </h2>
             <h3 id="recipe-title" class="subtitle is-1">
-                Recipe
+                Recipe | Riste d'aubergine
             </h3>
+            <img style="max-width: 50%;" src="../images/riste.webp" alt="Image of Riste d'aubergine"/>
         </div>
     </section>
 
     <section class="section has-background-light main-section">
         <div class="container content is-max-desktop">
-            <div id="recipe"></div>
+            <div id="recipe"><h2>Riste d'aubergine</h2>
+
+<h3>Ingredients</h3>
+
+<ul>
+<li>aubergine</li>
+<li>onion</li>
+<li>garlic</li>
+<li>tomato sauce</li>
+<li>paprika</li>
+<li>herbs</li>
+</ul>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Roast aubergines in oil, reserve</li>
+<li>Optional, roast paprika, no oil, reserve</li>
+<li>cook onion and garlic</li>
+<li>and put the rest with tomato sauce, salt, pepper, spice and herbs</li>
+<li>slow cook forever</li>
+<li>serve with pasta</li>
+</ol>
+</div>
        </div>
     </section>
-
-    <script type="module">
-        // Get the argument from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-
-        const is_defined = (x) => {
-                return (typeof x !== 'undefined' && x !== null);
-        }
-
-        let recipeTitle = document.getElementById('recipe-title');
-
-        // define fn to display 404 error message
-        const display404 = () => {
-            document.getElementById('recipe').innerHTML = `<h1 class="title is-1">404</h1><p class="subtitle">Recipe not found</p>`;
-            document.title = `Home Restaurant | 404 Recipe Not Found`;
-            recipeTitle.textContent = `Recipe Not Found`;
-        }
-
-        // Get the recipeId from the URL
-        const recipeId = urlParams.get('id');
-
-        // if the length is greater than 0, then the recipeId is valid
-        if (is_defined(recipeId) && recipeId.length > 0 && recipeId.match(/^[a-zA-Z0-9_]+$/)) {
-          // Simulate an HTTP redirect:
-          window.location.replace(`./recipes/${recipeId}.html`);
-        }
-        else {
-            display404();
-        }
-
-    </script>
-
 </body>
 
 </html>
