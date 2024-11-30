@@ -138,6 +138,15 @@
   link: ''
   image: images/millefeuille.webp
 
+- name: Moelleux au chocolat
+  options: ''
+  ingredients:
+  - chocolate
+  tags:
+  - ''
+  link: moelleuxauchocolat
+  image: images/moelleuxauchocolat.webp
+
 - name: Mousse au chocolat
   options: ''
   ingredients:
