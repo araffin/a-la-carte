@@ -457,7 +457,8 @@
 
 - name: Pizza
   options: champignons / mais / vegetables / potatoes / cheese
-  ingredients: []
+  ingredients:
+  - ''
   tags:
   - italy
   link: https://www.kochbar.de/rezept/429836/Pizza-mit-Quark-OEl-Teig.html

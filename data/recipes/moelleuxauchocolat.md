@@ -9,8 +9,8 @@ For 4 people:
 - 4 eggs
 - 200g chocolate
 - 100g flour
-- 110g butter
-- 150g sugar
+- 120g butter
+- 160g sugar
 - a sachet of baking powder
 - a pinch of salt
 - [optional] a sachet of vanilla sugar
