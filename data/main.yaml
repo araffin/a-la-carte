@@ -424,6 +424,19 @@
   link: https://www.youtube.com/watch?v=3CpoVc77rpw
   image: images/jaime_pasta.webp
 
+- name: Pasta with pesto JB
+  options: ''
+  ingredients:
+  - onion
+  - garlic
+  - tomatoes
+  - pesto verde
+  - parmigiano
+  tags:
+  - italy
+  link: pastawithpestojb
+  image: images/pastawithpestojb.webp
+
 - name: Pasta with vegetables
   options: paprika / zucchini / aubergines / sweet potato / butternut
   ingredients:
