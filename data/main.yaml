@@ -80,8 +80,8 @@
   tags:
   - india
   - spicy
-  link: ''
-  image: images/bombay_toast.webp
+  link: bombaytoast
+  image: images/bombaytoast.webp
 
 - name: Bruschetta (toasted bread)
   options: tomato / cheese / avocado / bread toasted in butter/oil
