@@ -649,11 +649,19 @@
 
 - name: Salade de Couscous
   options: with tomato / mais / cucumber / avocado / cold ravioles
-  ingredients: []
+  ingredients:
+  - tomato
+  - rocket
+  - couscous
+  - cucumber
+  - avocado
+  - cheese
+  - mais
+  - corn
   tags:
   - cold
   link: ''
-  image: ''
+  image: images/saladedecouscous.webp
 
 - name: Scrambled Eggs
   options: ''
