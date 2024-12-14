@@ -693,6 +693,16 @@
   link: https://www.gutekueche.at/shakshuka-mit-feta-rezept-42755
   image: images/chak.webp
 
+- name: Tarte à la tomate
+  options: ''
+  ingredients:
+  - tomato
+  - mustard
+  tags:
+  - france
+  link: tartelatomate
+  image: images/tartelatomate.webp
+
 - name: Thai Red Curry
   options: ''
   ingredients:
