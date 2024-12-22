@@ -274,6 +274,17 @@
   link: ''
   image: images/ravioles_gratin.webp
 
+- name: Gratin de Ravioles à la fondue de Poireaux
+  options: with mash salad
+  ingredients:
+  - Ravioles
+  - leek
+  - cream
+  tags:
+  - france
+  link: gratinderaviolesauxpoireaux
+  image: images/gratinderaviolesauxpoireaux.webp
+
 - name: Indian Potato / Carrot
   options: with fenugrek
   ingredients:
