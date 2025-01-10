@@ -5,7 +5,7 @@ Video: [https://www.youtube.com/watch?v=EL9X-P98m2Q](https://www.youtube.com/wat
 
 ### Ingredients
 
-For 3 people:
+For 4/5 people:
 
 - 2x265g cooked chickpeas
 - 1 bay leaf
