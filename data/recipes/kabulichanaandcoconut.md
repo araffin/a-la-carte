@@ -1,4 +1,4 @@
-## Kabuli chana and coconut
+## Chana masala
 
 Video: [https://www.youtube.com/watch?v=EL9X-P98m2Q](https://www.youtube.com/watch?v=EL9X-P98m2Q)
 

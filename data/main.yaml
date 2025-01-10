@@ -307,11 +307,12 @@
   link: isa
   image: images/isa_omelette.webp
 
-- name: Kabuli chana and coconut
+- name: Chana masala
   options: served with chapatis / rice
   ingredients:
   - chickpeas
   - coconut milk
+  - kabuli chana
   tags:
   - india
   link: kabulichanaandcoconut
