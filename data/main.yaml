@@ -114,6 +114,17 @@
   link: ''
   image: images/pain_au_lait.webp
 
+- name: Chana masala
+  options: served with chapatis / rice
+  ingredients:
+  - chickpeas
+  - coconut milk
+  - kabuli chana
+  tags:
+  - india
+  link: kabulichanaandcoconut
+  image: images/kabuli_chana.webp
+
 - name: Chinese Vegetables Soja
   options: with brocoli, champignons and roasted soja
   ingredients: []
@@ -306,17 +317,6 @@
   - afghanistan
   link: isa
   image: images/isa_omelette.webp
-
-- name: Chana masala
-  options: served with chapatis / rice
-  ingredients:
-  - chickpeas
-  - coconut milk
-  - kabuli chana
-  tags:
-  - india
-  link: kabulichanaandcoconut
-  image: images/kabuli_chana.webp
 
 - name: Kadai Paneer
   options: with cashew paste
