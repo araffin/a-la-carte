@@ -99,6 +99,18 @@
   link: ''
   image: images/fondant.webp
 
+- name: Gâteau à l'orange
+  options: ''
+  ingredients:
+  - orange
+  - egg
+  - flour
+  - butter
+  tags:
+  - ''
+  link: https://cuisine.journaldesfemmes.fr/recette/3122764-gateau-a-l-orange
+  image: images/gteaulorange.webp
+
 - name: Gâteau à la crème de marron
   options: ''
   ingredients: []

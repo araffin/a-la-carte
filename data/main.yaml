@@ -410,6 +410,19 @@
   link: ''
   image: images/paneertikka.webp
 
+- name: Parmigiana di melanzane
+  options: ''
+  ingredients:
+  - aubergine
+  - onion
+  - tomato sauce
+  - garlic
+  - parmesan
+  tags:
+  - italy
+  link: parmigianadimelanzane
+  image: images/parmigianadimelanzane.webp
+
 - name: Pasta Aglio Olio
   options: ''
   ingredients:
