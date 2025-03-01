@@ -9,6 +9,18 @@
   link: https://www.indianhealthyrecipes.com/aloo-bhindi/
   image: images/aloo_bhindi.webp
 
+- name: Aloo Biryani
+  options: ''
+  ingredients:
+  - potato
+  - rice
+  - onion
+  tags:
+  - india
+  - spicy
+  link: https://www.indianhealthyrecipes.com/hyderabadi-aloo-dum-biryani-potato-biryani/
+  image: images/aloobiryani.webp
+
 - name: Aloo Gobi Matar
   options: served with chapatis / rice
   ingredients:
@@ -388,7 +400,7 @@
   - onion
   tags:
   - india
-  link: https://www.indianhealthyrecipes.com/palak-paneer-recipe-easy-paneer-recipes-step-by-step-pics/
+  link: https://hebbarskitchen.com/palak-paneer-recipe-restaurant-style/
   image: images/palakpaneer.webp
 
 - name: Paneer Butter Masala
