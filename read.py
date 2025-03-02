@@ -13,6 +13,7 @@ current_dir = Path(__file__).parent
 
 menus = [
     Menu.load(f"{current_dir}/data/main.yaml", "main", "Main Course"),
+    Menu.load(f"{current_dir}/data/side-dish.yaml", "side-dish", "Side Dishes"),
     Menu.load(f"{current_dir}/data/dessert.yaml", "dessert", "Desserts"),
 ]
 
@@ -31,8 +32,12 @@ recipe_template = environment.get_template("recipe_template.html")
 
 total_recipes = 0
 for menu in menus:
-    n_dish_per_column = len(menu.dishes) // n_columns + 1
-    n_dish_per_page = n_columns * n_dish_per_column
+    menu_columns = min(n_columns, len(menu.dishes))
+    n_dish_per_column = len(menu.dishes) // menu_columns
+    # Try to have equal repartition of dishes per column
+    if len(menu.dishes) % menu_columns != 0:
+        n_dish_per_column += 1
+    n_dish_per_page = menu_columns * n_dish_per_column
     total_recipes += len(menu.dishes)
 
     # preprocess flags
@@ -62,10 +67,11 @@ for menu in menus:
         else:
             dish_info["image_width"], dish_info["image_height"] = 0, 0
 
+        last_dish = idx == len(menu.dishes) - 1
         dish_info["new_page"] = (idx % n_dish_per_page) == 0
-        dish_info["close_page"] = idx > 0 and ((idx + 1) % n_dish_per_page) == 0 or idx == len(menu.dishes) - 1
+        dish_info["close_page"] = (idx > 0 and ((idx + 1) % n_dish_per_page) == 0) or last_dish
         dish_info["new_column"] = (idx % n_dish_per_column) == 0
-        dish_info["close_column"] = idx > 0 and ((idx + 1) % n_dish_per_column) == 0 or idx == len(menu.dishes) - 1
+        dish_info["close_column"] = (idx >= 0 and ((idx + 1) % n_dish_per_column) == 0) or last_dish
         processed_info.append(dish_info)
 
     metadata[menu.name] = processed_info

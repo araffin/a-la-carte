@@ -95,10 +95,12 @@
 
             {% for dish in menu.dishes %}{% set dish_info = metadata[menu.name][loop.index - 1] %}
             {% if dish_info.new_page %}
+            <!-- New page -->
             <div class="columns">
             {% endif %}
 
             {% if dish_info.new_column %}
+            <!-- New Column -->
             <div class="column {{ column_class }}">
             {% endif %}
                 <div class="block dish-block" id="{{ dish.dish_id }}" data-groups="{{ dish.tags_str }}">
@@ -167,10 +169,10 @@
 
         </div>
     </section>
-    
+
     <script src="https://unpkg.com/quick-score@0.0.14/dist/quick-score.min.js"></script>
     <script>
-        
+
         // When typing in the search bar, only show the dishes that match the search
         const search = document.querySelector('.search');
         const dishes = document.querySelectorAll('.block');
@@ -188,7 +190,7 @@
                 html_id: dish.dish_id,
             };
         });
-        
+
         // Fuzzy search using quick sort
         const quickscore = new quickScore.QuickScore(dishes_list,  ["text"]);
 

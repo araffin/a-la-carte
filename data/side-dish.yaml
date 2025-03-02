@@ -1,0 +1,31 @@
+- name: Baguette
+  options: ''
+  ingredients:
+  - flour
+  - water
+  - yeast
+  tags:
+  - france
+  link: baguette
+  image: images/baguette.webp
+
+- name: Chapati
+  options: ''
+  ingredients:
+  - flour
+  - water
+  tags:
+  - india
+  link: chapati
+  image: images/chapati.webp
+
+- name: Naan
+  options: ''
+  ingredients:
+  - water
+  - flour
+  - yeast
+  tags:
+  - india
+  link: ''
+  image: images/naan.webp
