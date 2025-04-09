@@ -9,6 +9,19 @@
   link: baguette
   image: images/baguette.webp
 
+- name: Bhatura
+  options: ''
+  ingredients:
+  - flour
+  - water
+  - baking soda
+  - yoghurt
+  - ghee
+  tags:
+  - india
+  link: https://www.youtube.com/watch?v=q1DPVaJJTmE
+  image: images/bhatura.webp
+
 - name: Chapati
   options: ''
   ingredients:
@@ -29,3 +42,4 @@
   - india
   link: ''
   image: images/naan.webp
+

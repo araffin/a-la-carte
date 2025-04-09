@@ -195,6 +195,19 @@
   link: payasam
   image: images/payasam.webp
 
+- name: Plum cake with cinnamon crumble
+  options: ''
+  ingredients:
+  - plum
+  - butter
+  - flour
+  - cinnamon
+  - sugar
+  tags:
+  - ''
+  link: https://www.chefkoch.de/rezepte/584841157633103/Hildes-Zwetschgenkuchen-mit-Zimtstreuseln.html
+  image: images/plumcakewithcinnamoncrumble.webp
+
 - name: Quatre-Quarts
   options: ''
   ingredients: []

@@ -111,6 +111,17 @@
   link: ''
   image: images/bruschettatoastedbread.webp
 
+- name: Cabbage Paratha
+  options: with yoghurt and pickles (chili, mango, ...)
+  ingredients:
+  - cabbage
+  - flour
+  - ''
+  tags:
+  - india
+  link: https://hebbarskitchen.com/cabbage-paratha-recipe-patta-gobhi-ka/
+  image: images/cabbageparatha.webp
+
 - name: Champignons pain au lait
   options: with/without ginger and chilis
   ingredients:
@@ -146,6 +157,15 @@
   link: ''
   image: ''
 
+- name: Chole Bhature
+  options: ''
+  ingredients:
+  - chick peas
+  tags:
+  - india
+  link: https://www.youtube.com/watch?v=q1DPVaJJTmE
+  image: images/cholebhature.webp
+
 - name: Clear Soup Recipe
   options: best served with a dash of vinegar and yoghurt
   ingredients:
@@ -161,11 +181,12 @@
 - name: Coco curry
   options: chicken / carrot / ginger / sweet potato / onion / soja / served with rice
     or korean noodles
-  ingredients: []
+  ingredients:
+  - ''
   tags:
   - asian
-  link: ''
-  image: images/coco_curry.webp
+  link: cococurry
+  image: images/cococurry.webp
 
 - name: Couscous sauté roquette
   options: served with a sunny side-up egg

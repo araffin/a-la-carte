@@ -18,7 +18,7 @@ For 4 people:
 2. Do the béchamel (first melt the butter, then add flour, then slowly add milk, add salt/pepper/nutmeg)
 3. Assemble and put in oven
 
-Layers:
+Layers (2 layers of bolognese):
 
 - 1st béchamel then pasta, then bolognese/béchamel/pasta
 - last layer béchamel/gruyère.
