@@ -1,3 +1,15 @@
+- name: Hachis Parmentier Végétarien
+  options: ''
+  ingredients:
+  - potato
+  - soja
+  - butter
+  - onion
+  tags:
+  - france
+  link: hachisparmentiervgtarien
+  image: images/hachisparmentiervgtarien.webp
+
 - name: Aloo Bhindi
   options: ''
   ingredients:
