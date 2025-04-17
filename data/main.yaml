@@ -1,15 +1,3 @@
-- name: Hachis Parmentier Végétarien
-  options: ''
-  ingredients:
-  - potato
-  - soja
-  - butter
-  - onion
-  tags:
-  - france
-  link: hachisparmentiervgtarien
-  image: images/hachisparmentiervgtarien.webp
-
 - name: Aloo Bhindi
   options: ''
   ingredients:
@@ -200,7 +188,7 @@
   link: cococurry
   image: images/cococurry.webp
 
-- name: Couscous sauté roquette
+- name: Antonin's Couscous sauté roquette
   options: served with a sunny side-up egg
   ingredients:
   - onion
@@ -210,7 +198,8 @@
   - coconut oil
   - cheese
   - harissa
-  tags: []
+  tags:
+  - ''
   link: couscous_saute
   image: images/couscous.webp
 
@@ -340,6 +329,18 @@
   - france
   link: gratinderaviolesauxpoireaux
   image: images/gratinderaviolesauxpoireaux.webp
+
+- name: Hachis Parmentier Végétarien
+  options: ''
+  ingredients:
+  - potato
+  - soja
+  - butter
+  - onion
+  tags:
+  - france
+  link: hachisparmentiervgtarien
+  image: images/hachisparmentiervgtarien.webp
 
 - name: Indian Potato / Carrot
   options: with fenugrek
@@ -905,4 +906,16 @@
   - france
   link: https://www.cuisineaz.com/recettes/veloute-de-champignons-aux-noisettes-17271.aspx
   image: images/veloute_noisettes.webp
+
+- name: Xuming's Aubergine
+  options: ''
+  ingredients:
+  - onion
+  - garlic
+  - aubergine
+  - green beans
+  tags:
+  - china
+  link: xumingsaubergine
+  image: images/xumingsaubergine.webp
 
