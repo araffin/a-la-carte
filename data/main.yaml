@@ -32,6 +32,17 @@
   link: aloogobimatar
   image: images/aloo_gobi.webp
 
+- name: Aloo Tikki
+  options: ''
+  ingredients:
+  - potato
+  - green peas
+  tags:
+  - india
+  - spicy
+  link: https://www.indianhealthyrecipes.com/malai-kofta-recipe/
+  image: images/alootikki.webp
+
 - name: Aloo ki sabzi
   options: served with chapatis
   ingredients:
@@ -51,6 +62,21 @@
   - india
   link: ''
   image: images/palaak.webp
+
+- name: Antonin's Couscous sauté roquette
+  options: served with a sunny side-up egg
+  ingredients:
+  - onion
+  - egg
+  - rocket
+  - ghee
+  - coconut oil
+  - cheese
+  - harissa
+  tags:
+  - ''
+  link: couscous_saute
+  image: images/couscous.webp
 
 - name: Asperges au Parmesan
   options: served with rice/fresh tagliatelles
@@ -187,21 +213,6 @@
   - asian
   link: cococurry
   image: images/cococurry.webp
-
-- name: Antonin's Couscous sauté roquette
-  options: served with a sunny side-up egg
-  ingredients:
-  - onion
-  - egg
-  - rocket
-  - ghee
-  - coconut oil
-  - cheese
-  - harissa
-  tags:
-  - ''
-  link: couscous_saute
-  image: images/couscous.webp
 
 - name: Creamy Sesame Udon Noodles
   options: with miso sauce
@@ -384,6 +395,21 @@
   - italy
   link: lasagnes
   image: images/lasagnes.webp
+
+- name: Malai Kofta
+  options: ''
+  ingredients:
+  - potato
+  - paneer
+  - tomato
+  - onion
+  - garlic
+  - ginger
+  - cashew
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/malai-kofta-recipe/
+  image: images/malaikofta.webp
 
 - name: Masala Dosa
   options: ''
