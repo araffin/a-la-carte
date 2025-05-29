@@ -666,7 +666,7 @@
   link: ''
   image: images/ravioles.webp
 
-- name: Ravioles à la crème de parmesan
+- name: Ravioles à la crème
   options: ''
   ingredients:
   - crème fraîche
@@ -674,7 +674,7 @@
   - parmesan
   tags:
   - france
-  link: ''
+  link: ravioleslacrmedeparmesan
   image: images/ravioleslacrmedeparmesan.webp
 
 - name: Ria's Brunch
