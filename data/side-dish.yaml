@@ -22,6 +22,20 @@
   link: https://www.youtube.com/watch?v=q1DPVaJJTmE
   image: images/bhatura.webp
 
+- name: Chai
+  options: Indian tea
+  ingredients:
+  - oat milk
+  - ginger
+  - cardamom
+  - sugar
+  - thé
+  - chai
+  tags:
+  - india
+  link: chai
+  image: images/chai.webp
+
 - name: Chapati
   options: ''
   ingredients:
