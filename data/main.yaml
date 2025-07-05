@@ -790,6 +790,19 @@
   link: https://www.gutekueche.at/shakshuka-mit-feta-rezept-42755
   image: images/chak.webp
 
+- name: Soja Chunk Curry
+  options: ''
+  ingredients:
+  - soja chunks
+  - green chili
+  - onion
+  - tomato
+  tags:
+  - india
+  - spicy
+  link: https://www.indianhealthyrecipes.com/soya-chunks-curry-meal-maker-curry/#wprm-recipe-container-38324
+  image: images/sojachunkcurry.webp
+
 - name: Tarte à la tomate
   options: ''
   ingredients:
