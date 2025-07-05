@@ -887,6 +887,19 @@
   link: https://www.indianhealthyrecipes.com/veg-cutlet-recipe-vegetable-cutlet-recipe/
   image: images/veg_cutlet.webp
 
+- name: Vegetable Pakora
+  options: ''
+  ingredients:
+  - gram flour
+  - chickpea flour
+  - carrot
+  - capsicum
+  - onion
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/pakora-recipe-vegetable-pakora-pakoda/
+  image: images/vegetablepakora.webp
+
 - name: Vegetables in oven
   options: aubergines / sweet potato / butternut / chili / garlic
   ingredients:
