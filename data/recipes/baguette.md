@@ -12,6 +12,7 @@ For 2 small baguettes:
 
 ### Steps
 
+0. Learn French
 1. Mélanger, malaxer jusqu'à obtenir une pâte lisse et uniforme, ajouter un peu de farine si besoin. 
 2. Laisser reposer qques heures (la nuit), puis mettre le four à chauffer avec un bol d'eau (200-210°C, chauffer par le bas uniquement), former les baguettes, ajouter un peu de farine et laisser pousser ~15 minutes. 
 3. Faire qques entailles, saupoudrer de farine et enfourner pendant ~20-25 minutes (on peut terminer en chauffant par le haut aussi pour la croûte)
