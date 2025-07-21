@@ -6,6 +6,7 @@
 - egg
 - onion
 - cheese
+- couscous
 
 ### Steps
 
