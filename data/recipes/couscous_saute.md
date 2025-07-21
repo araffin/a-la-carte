@@ -7,6 +7,8 @@
 - onion
 - cheese
 - couscous
+- tomato
+- coconut oil
 
 ### Steps
 
