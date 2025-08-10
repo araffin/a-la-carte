@@ -9,6 +9,19 @@
   link: ''
   image: images/bananesflambes.webp
 
+- name: Brownie
+  options: ''
+  ingredients:
+  - chocolate
+  - noix
+  - nuts
+  - walnut
+  - haselnut
+  tags:
+  - usa
+  link: brownie
+  image: images/brownie.webp
+
 - name: Carrot cake
   options: ''
   ingredients: []
