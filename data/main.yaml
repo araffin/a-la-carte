@@ -255,6 +255,20 @@
   link: https://www.indianhealthyrecipes.com/dal-fry-recipe/
   image: images/dal_fry.webp
 
+- name: Dal Tadka
+  options: ''
+  ingredients:
+  - lentils
+  - tomato
+  - onion
+  - garlic
+  - ginger
+  - toor dal
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/dal-tadka/
+  image: images/daltadka.webp
+
 - name: Empanadas
   options: vegetarian (bolo soja) / cheese / champignons / poire
   ingredients:
