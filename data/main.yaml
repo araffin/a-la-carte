@@ -333,6 +333,19 @@
   link: https://www.indianhealthyrecipes.com/gobi-manchurian-recipe/
   image: images/gobi_manchurian.webp
 
+- name: Gobi Matar
+  options: ''
+  ingredients:
+  - Cauliflower
+  - green peas
+  - curry
+  - onion
+  - tomato
+  tags:
+  - india
+  link: https://www.archanaskitchen.com/recipe/amritsari-gobi-matar-recipe-punjabi-style-creamy-cauliflower-and-peas-curry
+  image: images/gobimatar.webp
+
 - name: Gratin de Ravioles
   options: made in the oven
   ingredients:

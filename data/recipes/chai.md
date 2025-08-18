@@ -10,7 +10,8 @@ For 2 people:
 - 1/2 teaspoon of cardamom
 - 2 teaspoons of powdered sugar
 
-NOTE: quantities can be adjusted according to taste 
+NOTE: quantities can be adjusted according to taste
+
 NOTE: cardamom can be replaced by cumin powder or cinnamon
 
 ### Steps
@@ -33,6 +34,7 @@ Pour deux personnes:
 - 2 cuillère à café de sucre en poudre
 
 NOTE: les quantités peuvent être ajustées en fonction du goût
+
 NOTE: la cardamome peut être remplacée par de la poudre de cumin ou de la cannelle.
 
 ## Étapes
