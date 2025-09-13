@@ -108,6 +108,20 @@
   link: ''
   image: images/okra.webp
 
+- name: Black chana curry
+  options: ''
+  ingredients:
+  - kadala
+  - chickpeas
+  - curry leaves
+  - onion
+  - ginger
+  - coconut milk
+  tags:
+  - india
+  link: blackchanacurry
+  image: images/blackchanacurry.webp
+
 - name: Bombay Toast
   options: a spicy version of the French toast
   ingredients:
@@ -522,6 +536,18 @@
   link: parmigianadimelanzane
   image: images/parmigianadimelanzane.webp
 
+- name: Pasta 101
+  options: ''
+  ingredients:
+  - mozzarella
+  - tomato
+  - onion
+  - garlic
+  tags:
+  - italy
+  link: pasta101
+  image: images/pasta101.webp
+
 - name: Pasta Aglio Olio
   options: ''
   ingredients:
@@ -829,6 +855,16 @@
   - spicy
   link: https://www.indianhealthyrecipes.com/soya-chunks-curry-meal-maker-curry/#wprm-recipe-container-38324
   image: images/sojachunkcurry.webp
+
+- name: Stir fry vegetables (à la Xuming)
+  options: ''
+  ingredients:
+  - mushrooms
+  - bell pepper
+  tags:
+  - china
+  link: stirfryvegetableslaxuming
+  image: images/stirfryvegetableslaxuming.webp
 
 - name: Tarte à la tomate
   options: ''
