@@ -19,6 +19,14 @@
         url("assets/Parchment_MF.ttf") format("truetype"),
 }
 
+/* Different style for external links */
+a[href^="https"] {
+  color: #219186;
+}
+a[href^="https"]:hover {
+  color: #0D3A35;
+}
+
 .samarkan {
     font-family: 'samarkan', sans-serif;
 }
