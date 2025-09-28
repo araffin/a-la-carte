@@ -523,6 +523,18 @@
   link: https://hebbarskitchen.com/paneer-tikka-recipe-dry-paneer-tikka/
   image: images/paneertikka.webp
 
+- name: Paneer Tikka Masala
+  options: ''
+  ingredients:
+  - onion
+  - bell pepper
+  - tomato
+  - paneer
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/paneer-tikka-masala-recipe-sanjeev-kapoor/
+  image: images/paneertikkamasala.webp
+
 - name: Parmigiana di melanzane
   options: ''
   ingredients:

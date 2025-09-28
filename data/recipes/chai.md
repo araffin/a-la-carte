@@ -8,7 +8,7 @@ For 2 people:
 - 1 inch (~2cm) of grated ginger (can be grated with the skin on if cleaned)
 - 1/2 teaspoon of chai (black tea)
 - 1/2 teaspoon of cardamom
-- 2 teaspoons of powdered sugar
+- 2 teaspoons of sugar
 
 NOTE: quantities can be adjusted according to taste
 
@@ -31,7 +31,7 @@ Pour deux personnes:
 - un pouce (~2cm) de gingembre râpé (possible avec la peau si nettoyée)
 - 1/2 cuillère à café de chai (thé noir)
 - 1/2 cuillère à café de cardamome
-- 2 cuillère à café de sucre en poudre
+- 2 cuillère à café de sucre
 
 NOTE: les quantités peuvent être ajustées en fonction du goût
 
