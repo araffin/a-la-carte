@@ -429,6 +429,21 @@
   link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
   image: images/kadai.webp
 
+- name: Kerala Egg Curry With Coconut Milk
+  options: ''
+  ingredients:
+  - egg
+  - curry leaves
+  - coconut milk
+  - cloves
+  - green chili
+  - upma
+  tags:
+  - india
+  - spicy
+  link: keralaeggcurrywithcoconutmilk
+  image: images/keralaeggcurrywithcoconutmilk.webp
+
 - name: Lasagnes
   options: vegetarian bolognese (soja) / aubergines
   ingredients: []
