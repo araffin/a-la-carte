@@ -188,15 +188,6 @@
   link: kabulichanaandcoconut
   image: images/kabuli_chana.webp
 
-- name: Chinese Vegetables Soja
-  options: with brocoli, champignons and roasted soja
-  ingredients: []
-  tags:
-  - china
-  - spicy
-  link: ''
-  image: ''
-
 - name: Chole Bhature
   options: ''
   ingredients:
@@ -319,14 +310,6 @@
   - france
   link: fondue_poireaux
   image: images/fondue_poireaux.webp
-
-- name: Fried rice noodle
-  options: with Worcestershire sauce
-  ingredients: []
-  tags:
-  - india
-  link: ''
-  image: ''
 
 - name: Galettes bretonnes
   options: chèvre miel, gorgonzola noix, onion garlic mushrooms
@@ -682,19 +665,6 @@
   link: preejasmuttacurry
   image: images/preejasmuttacurry.webp
 
-- name: Preeja's stir fry
-  options: ''
-  ingredients:
-  - carrot
-  - paprika
-  - zucchini
-  - green chili
-  tags:
-  - india
-  - spicy
-  link: ''
-  image: images/pree_stir_fry.webp
-
 - name: Pumpkin chole
   options: rice/chapati
   ingredients:
@@ -968,7 +938,7 @@
   tags:
   - india
   - spicy
-  link: ''
+  link: thokku
   image: images/thokku.webp
 
 - name: Tomato Mozzarella Salad
