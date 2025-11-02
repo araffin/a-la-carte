@@ -46,6 +46,20 @@
   link: chapati
   image: images/chapati.webp
 
+- name: Mamma’s Upmav
+  options: ''
+  ingredients:
+  - semolina
+  - rava
+  - onion
+  - green chili
+  - curry leaves
+  - mustard seeds
+  tags:
+  - india
+  link: mammasupmav
+  image: images/mammasupmav.webp
+
 - name: Naan
   options: ''
   ingredients:

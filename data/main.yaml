@@ -467,6 +467,18 @@
   link: https://www.indianhealthyrecipes.com/malai-kofta-recipe/
   image: images/malaikofta.webp
 
+- name: Marlis' Letscho
+  options: ''
+  ingredients:
+  - paprika
+  - bell pepper
+  - tomato
+  tags:
+  - hungary
+  - spicy
+  link: letscho
+  image: images/letscho.webp
+
 - name: Masala Dosa
   options: ''
   ingredients:
@@ -849,6 +861,20 @@
   tags: []
   link: ''
   image: images/scrambled.webp
+
+- name: Semmelknödel with Creamy Mushroom
+  options: ''
+  ingredients:
+  - bread
+  - onion
+  - mushroom
+  - cream
+  - egg
+  - parsley
+  tags:
+  - germany
+  link: semmelkndelwithcreamymushroom
+  image: images/semmelkndelwithcreamymushroom.webp
 
 - name: Shahi Paneer
   options: ''
