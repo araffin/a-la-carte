@@ -32,6 +32,17 @@
   link: aloogobimatar
   image: images/aloo_gobi.webp
 
+- name: Aloo Paratha
+  options: ''
+  ingredients:
+  - potato
+  - green chili
+  - ginger
+  tags:
+  - india
+  link: https://www.indianhealthyrecipes.com/aloo-paratha/
+  image: images/alooparatha.webp
+
 - name: Aloo Tikki
   options: ''
   ingredients:
@@ -620,7 +631,15 @@
 
 - name: Pav bhaji
   options: served with chapatis / rice / toasted bread
-  ingredients: []
+  ingredients:
+  - potato
+  - green peas
+  - tomato
+  - cauliflower
+  - ginger
+  - green chili
+  - bell pepper
+  - carrot
   tags:
   - india
   - spicy

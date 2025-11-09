@@ -61,9 +61,14 @@
 
 - name: Cookies
   options: ''
-  ingredients: []
-  tags: []
-  link: ''
+  ingredients:
+  - chocolate
+  - butter
+  - flour
+  - egg
+  tags:
+  - usa
+  link: https://cuisine.journaldesfemmes.fr/recette/310548-american-cookies
   image: images/cookies.webp
 
 - name: Crêpes
