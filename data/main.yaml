@@ -296,13 +296,6 @@
   link: empanadas
   image: images/empanadas.webp
 
-- name: Enchiladas
-  options: ''
-  ingredients: []
-  tags: []
-  link: ''
-  image: ''
-
 - name: Flammekueche (Tarte Flambée)
   options: feta cheese / champignons
   ingredients:
