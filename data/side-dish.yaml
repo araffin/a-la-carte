@@ -1,3 +1,14 @@
+- name: Ana's guacamole
+  options: ''
+  ingredients:
+  - avocado
+  - lemon
+  - garlic
+  tags:
+  - mexico
+  link: anasguacamole
+  image: images/anasguacamole.webp
+
 - name: Baguette
   options: ''
   ingredients:
