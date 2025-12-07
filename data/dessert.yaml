@@ -129,9 +129,12 @@
   link: https://cuisine.journaldesfemmes.fr/recette/3122764-gateau-a-l-orange
   image: images/gteaulorange.webp
 
-- name: Gâteau à la crème de marron
+- name: Léa's Gâteau à la crème de marron
   options: ''
-  ingredients: []
+  ingredients:
+  - chesnut spread
+  - chocolate
+  - eggs
   tags:
   - france
   link: gateau_marron

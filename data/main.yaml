@@ -369,6 +369,17 @@
   link: gratinderaviolesauxpoireaux
   image: images/gratinderaviolesauxpoireaux.webp
 
+- name: 'Gratin de pâte raclette '
+  options: ''
+  ingredients:
+  - garlic
+  - cheese
+  - tomato
+  tags:
+  - france
+  link: gratindepteraclette
+  image: images/gratindepteraclette.webp
+
 - name: Hachis Parmentier Végétarien
   options: ''
   ingredients:
@@ -701,11 +712,15 @@
 
 - name: Raclette
   options: with champignons / potatoes / butter
-  ingredients: []
+  ingredients:
+  - cheese
+  - mushroom
+  - paprika
+  - potato
   tags:
   - france
-  link: ''
-  image: ''
+  link: raclette
+  image: images/raclette.webp
 
 - name: Rajma
   options: with cream
