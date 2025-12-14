@@ -1,16 +1,16 @@
-@font-face {
+/*@font-face {
     font-family: "samarkan";
     src:
         local("samarkan"),
         url("assets/SAMAN___.ttf") format("truetype"),
-}
+}*/
 
-@font-face {
+/*@font-face {
     font-family: "parisienne";
     src:
         local("parisienne"),
         url("assets/Parisienne-Regular.ttf") format("truetype"),
-}
+}*/
 
 @font-face {
     font-family: "parchment";
@@ -27,8 +27,13 @@ a[href^="https"]:hover {
   color: #0D3A35;
 }
 
-.samarkan {
+/*.samarkan {
     font-family: 'samarkan', sans-serif;
+}*/
+
+#logo {
+    height: 6rem;
+    width: 6rem;
 }
 
 .parisienne {
