@@ -15,7 +15,7 @@ For 4 people:
 - bell pepper powder
 - salt & pepper
 - thyme
-- polenta (see [polenta](../creamypolenta.html) page)
+- polenta (see [polenta](./creamypolenta.html) page)
 
 
 ### Steps
