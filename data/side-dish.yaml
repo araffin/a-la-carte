@@ -57,6 +57,17 @@
   link: chapati
   image: images/chapati.webp
 
+- name: Creamy polenta
+  options: ''
+  ingredients:
+  - polenta
+  - garlic
+  - sage
+  tags:
+  - ''
+  link: creamypolenta
+  image: images/creamypolenta.webp
+
 - name: Mamma’s Upmav
   options: ''
   ingredients:

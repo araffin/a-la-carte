@@ -173,6 +173,19 @@
   link: https://hebbarskitchen.com/cabbage-paratha-recipe-patta-gobhi-ka/
   image: images/cabbageparatha.webp
 
+- name: Champignon ragout
+  options: ''
+  ingredients:
+  - champignon
+  - paprika
+  - bell peppers
+  - onion
+  - polenta
+  tags:
+  - romania
+  link: champignonragout
+  image: images/champignonragout.webp
+
 - name: Champignons pain au lait
   options: with/without ginger and chilis
   ingredients:
@@ -413,6 +426,20 @@
   - afghanistan
   link: isa
   image: images/isa_omelette.webp
+
+- name: Jaimie's Cauliflower gratin
+  options: ''
+  ingredients:
+  - cauliflower
+  - gobi
+  - brocoli
+  - butter
+  - garlic
+  - almond
+  tags:
+  - ''
+  link: jaimiescauliflowergratin
+  image: images/jaimiescauliflowergratin.webp
 
 - name: Kadai Paneer
   options: with cashew paste
