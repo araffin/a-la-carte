@@ -14,8 +14,8 @@ For 4 people:
 - 4-5 tablespoons olive oil
 - bell pepper powder
 - salt & pepper
-- polenta (see polenta page)
 - thyme
+- polenta (see [polenta](../creamypolenta.html) page)
 
 
 ### Steps
