@@ -117,6 +117,20 @@
   link: ''
   image: images/fondant.webp
 
+- name: Galette des rois
+  options: ''
+  ingredients:
+  - egg
+  - almond
+  - marzipan
+  - frangipane
+  - butter
+  - sugar
+  tags:
+  - france
+  link: https://www.marmiton.org/recettes/recette_galette-des-rois-a-la-frangipane_20147.aspx
+  image: images/galettedesrois.webp
+
 - name: Gâteau à l'orange
   options: ''
   ingredients:
@@ -162,6 +176,16 @@
   tags: []
   link: ''
   image: images/marble.webp
+
+- name: Meringue
+  options: ''
+  ingredients:
+  - egg
+  - sugar
+  tags:
+  - france
+  link: meringue
+  image: images/meringue.webp
 
 - name: Millefeuille
   options: ''
