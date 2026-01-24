@@ -146,6 +146,23 @@
   link: bombaytoast
   image: images/bombaytoast.webp
 
+- name: Brinjal Thokku
+  options: ''
+  ingredients:
+  - aubergine
+  - onion
+  - ginger
+  - garlic
+  - green chili
+  - mustard seeds
+  - tamarind paste
+  - jaggery
+  tags:
+  - india
+  - spicy
+  link: thokku
+  image: images/thokku.webp
+
 - name: Bruschetta (toasted bread)
   options: tomato / cheese / avocado / bread toasted in butter/oil
   ingredients:
@@ -565,6 +582,20 @@
   link: https://hebbarskitchen.com/paneer-butter-masala-recipe/
   image: images/butter_paneer.webp
 
+- name: Paneer Lababdar
+  options: ''
+  ingredients:
+  - paneer
+  - tomato
+  - garlic
+  - onion
+  - ginger
+  - tomato
+  tags:
+  - indian
+  link: https://www.indianhealthyrecipes.com/paneer-lababdar-recipe/#wprm-recipe-container-37344
+  image: images/paneerlababdar.webp
+
 - name: Paneer Tikka
   options: with mint chutney
   ingredients:
@@ -977,23 +1008,6 @@
   - thai
   link: ''
   image: images/vege_soja.webp
-
-- name: Thokku
-  options: ''
-  ingredients:
-  - aubergine
-  - oignion
-  - ginger
-  - garlic
-  - green chili
-  - mustard seeds
-  - tamarind paste
-  - jaggery
-  tags:
-  - india
-  - spicy
-  link: thokku
-  image: images/thokku.webp
 
 - name: Tomato Mozzarella Salad
   options: with roquette

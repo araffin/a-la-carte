@@ -4,15 +4,30 @@
 
 ### Ingredients
 
-For N people:
+For 3 people:
+
+- 2 medium onions (~ 1/2 cup)
+- 3 pods garlic
+- 2 inches ginger
+- 1 green chili
+- 1 tsp mustard seed
+- 1 tbsp curry leafs
+- 2 medium size aubergine
+- 2 tsp tamarind paste
+- jaggery as per taste
+- salt
+- tumeric
+- red chili powder
 
 
 ### Steps
 
-1. Slice brinjal into slices and soak in turmeric water.
+#### For the aubergine:
+
+1. Slice brinjal (aubergine) into slices and soak in turmeric water.
 2. Drain the water and coat with turmeric chili powder and salt and shallow fry the individual slices till well done and keep aside.
 
-For the gravy:
+#### For the gravy:
 
 1. Chop one large or 2 medium onions finely.
 2. Chop green chillies, ginger and garlic.
