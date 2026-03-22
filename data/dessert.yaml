@@ -1,3 +1,15 @@
+- name: Banana Bread
+  options: ''
+  ingredients:
+  - banana
+  - egg
+  - flour
+  - sugar
+  tags:
+  - ''
+  link: https://www.einfachbacken.de/rezepte/bananenbrot
+  image: images/bananenbread.webp
+
 - name: Bananes flambées
   options: with rhum / cinammon / sugar / butter
   ingredients:
