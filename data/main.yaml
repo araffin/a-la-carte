@@ -358,10 +358,14 @@
 
 - name: Galettes bretonnes
   options: chèvre miel, gorgonzola noix, onion garlic mushrooms
-  ingredients: []
+  ingredients:
+  - butter
+  - farine de sarrasin
+  - buckwheat flour
+  - egg
   tags:
   - france
-  link: ''
+  link: galettesbretonnes
   image: images/galette.webp
 
 - name: Gobi Manchurian
@@ -468,6 +472,19 @@
   - ''
   link: jaimiescauliflowergratin
   image: images/jaimiescauliflowergratin.webp
+
+- name: Juan y Sergio's Arepas
+  options: ''
+  ingredients:
+  - corn flour
+  - mais flour
+  - cheese
+  - milk
+  - butter
+  tags:
+  - colombia
+  link: juanysergiosarepas
+  image: images/juanysergiosarepas.webp
 
 - name: Kadai Paneer
   options: with cashew paste
