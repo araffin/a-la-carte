@@ -89,6 +89,17 @@
   link: couscous_saute
   image: images/couscous.webp
 
+- name: Antonin's riste d'aubergines au poivron
+  options: ''
+  ingredients:
+  - egg plant
+  - bell pepper
+  - tomato sauce
+  tags:
+  - france
+  link: antoninsristedauberginesaupoivron
+  image: images/antoninsristedauberginesaupoivron.webp
+
 - name: Asperges au Parmesan
   options: served with rice/fresh tagliatelles
   ingredients:

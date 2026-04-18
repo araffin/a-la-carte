@@ -1,11 +1,11 @@
 [tool.ruff]
 # Same as Black.
 line-length = 127
-# Assume Python 3.9
-target-version = "py39"
+# Assume Python 3.10
+target-version = "py310"
 
 [tool.ruff.lint]
-# See https://beta.ruff.rs/docs/rules/
+# See https://docs.astral.sh/ruff/rules/
 select = ["E", "F", "B", "UP", "C90", "RUF"]
 # Ignore explicit stacklevel`
 ignore = ["B028"]
