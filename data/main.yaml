@@ -522,6 +522,16 @@
   link: lasagnes
   image: images/lasagnes.webp
 
+- name: 'Lotti''s zucchini i pasta '
+  options: ''
+  ingredients:
+  - zucchini
+  - tomato
+  tags:
+  - italy
+  link: lottiszucchiniipasta
+  image: images/lottiszucchiniipasta.webp
+
 - name: Malai Kofta
   options: ''
   ingredients:
@@ -1152,4 +1162,13 @@
   - china
   link: xumingsaubergine
   image: images/xumingsaubergine.webp
+
+- name: Zucchini friters
+  options: ''
+  ingredients:
+  - Zucchini
+  tags:
+  - ''
+  link: zucchinifriters
+  image: images/zucchinifriters.webp
 
