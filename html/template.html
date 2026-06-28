@@ -83,7 +83,11 @@
             <div id="search-results" class="is-mobile is-full" style="display: none;">
                 <h3 class="title mt-5 is-2 is-uppercase has-text-info-dark">Search Results</h3>
                 <hr class="has-background-info">
-                <div id="results-grid" class="masonry-grid"></div>
+                <div id="results-columns" class="columns is-multiline">
+                    <!-- <div  class="column is-full">
+
+                    </div> -->
+                </div>
             </div>
 
             {% for menu in menus %}
@@ -92,57 +96,78 @@
                 <hr class="has-background-info">
             </div>
 
-            <div class="masonry-grid menu-grid">
-                {% for dish in menu.dishes %}{% set dish_info = metadata[menu.name][loop.index - 1] %}
-                <article class="masonry-item">
-                    <div class="block box dish-block" id="{{ dish.dish_id }}" data-groups="{{ dish.tags_str }}">
-                        <p class="title parchment is-1 mb-4 dish-name">
-                            {% if dish.link %}
-                            <a href="{{dish_info.link}}" , target="_blank">
-                                {{loop.index}}. {{ dish.name }}
-                            </a>
-                            {% else %}
+            {% for dish in menu.dishes %}{% set dish_info = metadata[menu.name][loop.index - 1] %}
+            {% if dish_info.new_page %}
+            <!-- New page -->
+            <div class="columns">
+            {% endif %}
+
+            {% if dish_info.new_column %}
+            <!-- New Column -->
+            <div class="column {{ column_class }}">
+            {% endif %}
+                <div class="block dish-block" id="{{ dish.dish_id }}" data-groups="{{ dish.tags_str }}">
+                    <p class="title parchment is-1 mb-4 dish-name">
+                        {% if dish.link %}
+                        <a href="{{dish_info.link}}" , target="_blank">
                             {{loop.index}}. {{ dish.name }}
-                            {% endif %}
-                            <span class="is-size-5">
-                                {{ dish.flags }}
-                            </span>
-                            <span class="is-size-5">
-                                &nbsp;
-                            </span>
-                            <a href="#{{ dish.dish_id }}" class="is-size-6 anchor">
-                                <span class="icon is-small">
-                                    <i class="fa fa-link has-text-grey-light"></i>
-                                </span>
-                            </a>
-                        </p>
-                        <p class="subtitle">
-                            {{ dish.options}}
-                        </p>
-                        <p class="additional-info" style="display: none;">
-                            {{ dish.tags_str }}
-                            {{ dish.ingredients_str }}
-                        </p>
-                        {% if dish.image %}
-                        <div class="dish-image">
-                            <a href="{{dish.image}}"
-                                data-pswp-width="{{ dish_info.image_width }}"
-                                data-pswp-height="{{ dish_info.image_height }}"
-                                data-cropped="true"
-                                target="_blank">
-                                <figure class="image">
-                                    <img loading="lazy"
-                                        width="{{ dish_info.image_width }}"
-                                        height="{{ dish_info.image_height }}"
-                                        class="dish-photo" src="{{dish.image}}" alt="Dish image">
-                                </figure>
-                            </a>
-                        </div>
+                        </a>
+                        {% else %}
+                        {{loop.index}}. {{ dish.name }}
                         {% endif %}
+                        <span class="is-size-5">
+                            {{ dish.flags }}
+                        </span>
+                        <!-- Add white space to the right -->
+                        <span class="is-size-5">
+                            &nbsp;
+                        </span>
+
+                        <!-- Anchor to the current dish -->
+                        <a href="#{{ dish.dish_id }}" class="is-size-6 anchor">
+                            <span class="icon is-small">
+                                <i class="fa fa-link has-text-grey-light"></i>
+                            </span>
+                        </a>
+
+                    </p>
+                    <p class="subtitle">
+                        {{ dish.options}}
+                    </p>
+                    <p class="additional-info" style="display: none;">
+                        <!-- useful for search -->
+                        {{ dish.tags_str }}
+                        {{ dish.ingredients_str }}
+
+                    </p>
+                    {% if dish.image %}
+                    <div class="dish-image">
+                        <a href="{{dish.image}}"
+                            data-pswp-width="{{ dish_info.image_width }}"
+                            data-pswp-height="{{ dish_info.image_height }}"
+                            data-cropped="true"
+                            target="_blank">
+                            <figure class="image is-16by9">
+                                <img style="object-fit: cover; max-height: 400px;"
+                                    loading="lazy"
+                                    class="dish-image" src="{{dish.image}}" alt="Dish image">
+                            </figure>
+                        </a>
                     </div>
-                </article>
-                {% endfor %}
-            </div>
+                    {% endif %}
+                </div>
+
+            {% if dish_info.close_column %}
+            </div> <!-- Close column -->
+            {% endif %}
+
+
+            {% if dish_info.close_page %}
+            </div> <!-- Close Page Columns -->
+            <!-- <hr class="has-background-dark"> -->
+            {% endif %}
+
+            {% endfor %}
             {% endfor %}
 
         </div>
@@ -153,12 +178,9 @@
 
         // When typing in the search bar, only show the dishes that match the search
         const search = document.querySelector('.search');
-        const dishes = document.querySelectorAll('.dish-block');
+        const dishes = document.querySelectorAll('.block');
         const search_results = document.querySelector('#search-results');
-        const results_grid = document.querySelector('#results-grid');
-        const menu_grids = document.querySelectorAll('.menu-grid');
-        const masonry_sources = new WeakMap();
-        let current_search_items = [];
+        const results_column = document.querySelector('#results-columns');
 
         // Convert to a list of objects
         // Remove extra spaces from the text, replace any "  " by " "
@@ -172,237 +194,78 @@
             };
         });
 
-        // Fuzzy search using quick score
-        const quickscore = new quickScore.QuickScore(dishes_list, ["text"]);
+        // Fuzzy search using quick sort
+        const quickscore = new quickScore.QuickScore(dishes_list,  ["text"]);
 
         // Use a debounce function to prevent the search from being triggered too often
         const debounce = (fn, delay = 500) => {
             let timeoutId;
             return (...args) => {
+                // cancel the previous timer
                 if (timeoutId) {
                     clearTimeout(timeoutId);
                 }
+                // setup a new timer
                 timeoutId = setTimeout(() => {
                     fn.apply(null, args);
                 }, delay);
             };
         };
-
-        const getColumnCount = () => {
-            if (window.innerWidth <= 768) {
-                return 1;
-            }
-            if (window.innerWidth <= 1023) {
-                return 2;
-            }
-            return 3;
-        };
-
-        const getGridGap = (grid) => {
-            const computed = window.getComputedStyle(grid);
-            return parseFloat(computed.gap || computed.columnGap || '0') || 0;
-        };
-
-        const getColumnWidth = (grid, columnCount) => {
-            const gap = getGridGap(grid);
-            const availableWidth = grid.clientWidth - gap * (columnCount - 1);
-            return availableWidth > 0 ? availableWidth / columnCount : 0;
-        };
-
-        const registerMasonryGrid = (grid) => {
-            if (!masonry_sources.has(grid)) {
-                const source_items = Array.from(grid.children).filter(child => child.classList.contains('masonry-item'));
-                masonry_sources.set(grid, source_items);
-            }
-        };
-
-        const createFallbackPartitions = (itemCount, columnCount) => {
-            const partitions = [];
-            const itemsPerColumn = Math.ceil(itemCount / columnCount);
-
-            for (let columnIndex = 0; columnIndex < columnCount; columnIndex += 1) {
-                const start = columnIndex * itemsPerColumn;
-                const end = Math.min(start + itemsPerColumn, itemCount);
-                partitions.push(Array.from({ length: Math.max(end - start, 0) }, (_, offset) => start + offset));
-            }
-
-            return partitions;
-        };
-
-        const measureItemHeights = (items, columnWidth) => {
-            const measurementColumn = document.createElement('div');
-            measurementColumn.className = 'masonry-column';
-            measurementColumn.style.position = 'absolute';
-            measurementColumn.style.visibility = 'hidden';
-            measurementColumn.style.pointerEvents = 'none';
-            measurementColumn.style.left = '-99999px';
-            measurementColumn.style.top = '0';
-            measurementColumn.style.width = `${columnWidth}px`;
-            document.body.appendChild(measurementColumn);
-
-            const heights = items.map(item => {
-                const clone = item.cloneNode(true);
-                clone.style.width = '100%';
-                measurementColumn.appendChild(clone);
-                const height = clone.getBoundingClientRect().height;
-                measurementColumn.removeChild(clone);
-                return height;
-            });
-
-            document.body.removeChild(measurementColumn);
-            return heights;
-        };
-
-        const createBalancedPartitions = (heights, columnCount) => {
-            const itemCount = heights.length;
-            if (columnCount <= 1 || itemCount <= 1) {
-                return [Array.from({ length: itemCount }, (_, index) => index)];
-            }
-
-            const prefixSums = [0];
-            heights.forEach(height => {
-                prefixSums.push(prefixSums[prefixSums.length - 1] + height);
-            });
-
-            const targetHeight = prefixSums[itemCount] / columnCount;
-            const dpMax = Array.from({ length: itemCount + 1 }, () => Array(columnCount + 1).fill(Infinity));
-            const dpPenalty = Array.from({ length: itemCount + 1 }, () => Array(columnCount + 1).fill(Infinity));
-            const splits = Array.from({ length: itemCount + 1 }, () => Array(columnCount + 1).fill(0));
-
-            dpMax[0][0] = 0;
-            dpPenalty[0][0] = 0;
-
-            for (let end = 1; end <= itemCount; end += 1) {
-                for (let groups = 1; groups <= Math.min(end, columnCount); groups += 1) {
-                    for (let split = groups - 1; split < end; split += 1) {
-                        const segmentHeight = prefixSums[end] - prefixSums[split];
-                        const candidateMax = Math.max(dpMax[split][groups - 1], segmentHeight);
-                        const candidatePenalty = dpPenalty[split][groups - 1] + Math.pow(segmentHeight - targetHeight, 2);
-
-                        if (
-                            candidateMax < dpMax[end][groups]
-                            || (candidateMax === dpMax[end][groups] && candidatePenalty < dpPenalty[end][groups])
-                        ) {
-                            dpMax[end][groups] = candidateMax;
-                            dpPenalty[end][groups] = candidatePenalty;
-                            splits[end][groups] = split;
-                        }
-                    }
-                }
-            }
-
-            const partitions = Array.from({ length: columnCount }, () => []);
-            let end = itemCount;
-            let groups = columnCount;
-
-            while (groups > 0) {
-                const split = splits[end][groups];
-                partitions[groups - 1] = Array.from({ length: end - split }, (_, offset) => split + offset);
-                end = split;
-                groups -= 1;
-            }
-
-            return partitions;
-        };
-
-        const createBalancedColumnPartitions = (grid, sourceItems, columnCount) => {
-            const columnWidth = getColumnWidth(grid, columnCount);
-            if (!columnWidth) {
-                return createFallbackPartitions(sourceItems.length, columnCount);
-            }
-
-            const heights = measureItemHeights(sourceItems, columnWidth);
-            return createBalancedPartitions(heights, columnCount);
-        };
-
-        const renderMasonryGrid = (grid, items = null) => {
-            const sourceItems = items || masonry_sources.get(grid) || [];
-            grid.innerHTML = '';
-
-            if (!sourceItems.length) {
-                return;
-            }
-
-            const columnCount = Math.min(getColumnCount(), sourceItems.length);
-            const partitions = createBalancedColumnPartitions(grid, sourceItems, columnCount);
-            const columns = [];
-
-            for (let index = 0; index < columnCount; index += 1) {
-                const column = document.createElement('div');
-                column.className = 'masonry-column';
-                grid.appendChild(column);
-                columns.push(column);
-            }
-
-            partitions.forEach((indexes, columnIndex) => {
-                indexes.forEach(itemIndex => {
-                    columns[columnIndex].appendChild(sourceItems[itemIndex]);
-                });
-            });
-        };
-
-        const renderMenuGrids = () => {
-            menu_grids.forEach(grid => {
-                registerMasonryGrid(grid);
-                renderMasonryGrid(grid);
-            });
-        };
-
-        const renderSearchResults = () => {
+        search.addEventListener('keyup', debounce(() => {
             const term = search.value.toLowerCase().trim();
-
-            current_search_items = [];
-            results_grid.innerHTML = '';
+            let n_results = 0;
+            // Hide and clear results
+            results_column.innerHTML = '';
             search_results.style.display = 'none';
 
+
+            // if the search bar is empty, show all dishes
             if (!term) {
+                // access data-total attribute
                 let n_recipes = document.querySelector('#n_results').dataset.total;
                 document.querySelector('#n_results').textContent = `${n_recipes} recipes`;
+
                 return;
             }
 
+            // Fuzzy search using quick score
             const results = quickscore.search(term);
-            current_search_items = results.map(result => {
-                let html_element = result.item.html.cloneNode(true);
-                html_element.removeAttribute('id');
-                let masonry_item = document.createElement('article');
-                masonry_item.className = 'masonry-item';
-                masonry_item.appendChild(html_element);
-                return masonry_item;
+
+            // Display the results by relevance
+            results_column.innerHTML = '';
+            results.forEach(result => {
+                let html_element = result.item.html;
+                // Remove html id
+                html_element.id = '';
+                // Add a div around of class "column is-one-third"
+                let column = document.createElement('div');
+                column.className = 'column is-one-third';
+                column.appendChild(html_element);
+                results_column.appendChild(column);
             });
 
             search_results.style.display = 'block';
-            renderMasonryGrid(results_grid, current_search_items);
 
-            let n_results = results.length;
+            n_results = results.length;
             let n_results_text = n_results == 1 ? 'recipe' : 'recipes';
-            document.querySelector('#n_results').textContent = `${n_results} ${n_results_text}`;
-        };
 
-        renderMenuGrids();
-        window.addEventListener('load', () => {
-            renderMenuGrids();
-            if (search.value.trim()) {
-                renderSearchResults();
-            }
-        });
-        search.addEventListener('keyup', debounce(renderSearchResults, 150));
-        window.addEventListener('resize', debounce(() => {
-            renderMenuGrids();
-            if (search.value.trim()) {
-                renderSearchResults();
-            }
-        }, 100));
+            document.querySelector('#n_results').textContent = `${n_results} ${n_results_text}`;
+
+        }, 150));
+
 
         // When clicking on a filter, add the characters to the search bar
         const filters = document.querySelectorAll('.filter');
         filters.forEach(filter => {
             filter.addEventListener('click', () => {
+                // trim extra spaces
                 search.value = search.value.trim();
                 search.value += filter.textContent.trim();
                 search.dispatchEvent(new Event('keyup'));
             });
         });
+
+
 
     </script>
     <!-- Use image swipe to zoom in images when clicked -->
