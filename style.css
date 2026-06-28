@@ -71,13 +71,10 @@ div.top {
     line-height: 0.95;
 }
 
-.main-section .container {
-    max-width: 1240px !important;
-}
 
 .masonry-grid {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.5rem;
     align-items: flex-start;
 }
 
@@ -86,7 +83,7 @@ div.top {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
 }
 
 .masonry-item {
@@ -95,7 +92,7 @@ div.top {
 
 .dish-block {
     scroll-margin-top: 100px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: 1px solid rgba(10, 10, 10, 0.06);
     box-shadow: 0 10px 25px rgba(10, 10, 10, 0.08);
 }
@@ -116,7 +113,7 @@ div.top {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 0.75rem;
+    border-radius: 0.1rem;
 }
 
 @media screen and (max-width: 768px) {

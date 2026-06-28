@@ -132,6 +132,8 @@
                                 target="_blank">
                                 <figure class="image">
                                     <img loading="lazy"
+                                        width="{{ dish_info.image_width }}"
+                                        height="{{ dish_info.image_height }}"
                                         class="dish-photo" src="{{dish.image}}" alt="Dish image">
                                 </figure>
                             </a>
@@ -196,6 +198,17 @@
             return 3;
         };
 
+        const getGridGap = (grid) => {
+            const computed = window.getComputedStyle(grid);
+            return parseFloat(computed.gap || computed.columnGap || '0') || 0;
+        };
+
+        const getColumnWidth = (grid, columnCount) => {
+            const gap = getGridGap(grid);
+            const availableWidth = grid.clientWidth - gap * (columnCount - 1);
+            return availableWidth > 0 ? availableWidth / columnCount : 0;
+        };
+
         const registerMasonryGrid = (grid) => {
             if (!masonry_sources.has(grid)) {
                 const source_items = Array.from(grid.children).filter(child => child.classList.contains('masonry-item'));
@@ -203,28 +216,128 @@
             }
         };
 
+        const createFallbackPartitions = (itemCount, columnCount) => {
+            const partitions = [];
+            const itemsPerColumn = Math.ceil(itemCount / columnCount);
+
+            for (let columnIndex = 0; columnIndex < columnCount; columnIndex += 1) {
+                const start = columnIndex * itemsPerColumn;
+                const end = Math.min(start + itemsPerColumn, itemCount);
+                partitions.push(Array.from({ length: Math.max(end - start, 0) }, (_, offset) => start + offset));
+            }
+
+            return partitions;
+        };
+
+        const measureItemHeights = (items, columnWidth) => {
+            const measurementColumn = document.createElement('div');
+            measurementColumn.className = 'masonry-column';
+            measurementColumn.style.position = 'absolute';
+            measurementColumn.style.visibility = 'hidden';
+            measurementColumn.style.pointerEvents = 'none';
+            measurementColumn.style.left = '-99999px';
+            measurementColumn.style.top = '0';
+            measurementColumn.style.width = `${columnWidth}px`;
+            document.body.appendChild(measurementColumn);
+
+            const heights = items.map(item => {
+                const clone = item.cloneNode(true);
+                clone.style.width = '100%';
+                measurementColumn.appendChild(clone);
+                const height = clone.getBoundingClientRect().height;
+                measurementColumn.removeChild(clone);
+                return height;
+            });
+
+            document.body.removeChild(measurementColumn);
+            return heights;
+        };
+
+        const createBalancedPartitions = (heights, columnCount) => {
+            const itemCount = heights.length;
+            if (columnCount <= 1 || itemCount <= 1) {
+                return [Array.from({ length: itemCount }, (_, index) => index)];
+            }
+
+            const prefixSums = [0];
+            heights.forEach(height => {
+                prefixSums.push(prefixSums[prefixSums.length - 1] + height);
+            });
+
+            const targetHeight = prefixSums[itemCount] / columnCount;
+            const dpMax = Array.from({ length: itemCount + 1 }, () => Array(columnCount + 1).fill(Infinity));
+            const dpPenalty = Array.from({ length: itemCount + 1 }, () => Array(columnCount + 1).fill(Infinity));
+            const splits = Array.from({ length: itemCount + 1 }, () => Array(columnCount + 1).fill(0));
+
+            dpMax[0][0] = 0;
+            dpPenalty[0][0] = 0;
+
+            for (let end = 1; end <= itemCount; end += 1) {
+                for (let groups = 1; groups <= Math.min(end, columnCount); groups += 1) {
+                    for (let split = groups - 1; split < end; split += 1) {
+                        const segmentHeight = prefixSums[end] - prefixSums[split];
+                        const candidateMax = Math.max(dpMax[split][groups - 1], segmentHeight);
+                        const candidatePenalty = dpPenalty[split][groups - 1] + Math.pow(segmentHeight - targetHeight, 2);
+
+                        if (
+                            candidateMax < dpMax[end][groups]
+                            || (candidateMax === dpMax[end][groups] && candidatePenalty < dpPenalty[end][groups])
+                        ) {
+                            dpMax[end][groups] = candidateMax;
+                            dpPenalty[end][groups] = candidatePenalty;
+                            splits[end][groups] = split;
+                        }
+                    }
+                }
+            }
+
+            const partitions = Array.from({ length: columnCount }, () => []);
+            let end = itemCount;
+            let groups = columnCount;
+
+            while (groups > 0) {
+                const split = splits[end][groups];
+                partitions[groups - 1] = Array.from({ length: end - split }, (_, offset) => split + offset);
+                end = split;
+                groups -= 1;
+            }
+
+            return partitions;
+        };
+
+        const createBalancedColumnPartitions = (grid, sourceItems, columnCount) => {
+            const columnWidth = getColumnWidth(grid, columnCount);
+            if (!columnWidth) {
+                return createFallbackPartitions(sourceItems.length, columnCount);
+            }
+
+            const heights = measureItemHeights(sourceItems, columnWidth);
+            return createBalancedPartitions(heights, columnCount);
+        };
+
         const renderMasonryGrid = (grid, items = null) => {
-            const source_items = items || masonry_sources.get(grid) || [];
+            const sourceItems = items || masonry_sources.get(grid) || [];
             grid.innerHTML = '';
 
-            if (!source_items.length) {
+            if (!sourceItems.length) {
                 return;
             }
 
-            const column_count = Math.min(getColumnCount(), source_items.length);
-            const items_per_column = Math.ceil(source_items.length / column_count);
+            const columnCount = Math.min(getColumnCount(), sourceItems.length);
+            const partitions = createBalancedColumnPartitions(grid, sourceItems, columnCount);
             const columns = [];
 
-            for (let index = 0; index < column_count; index += 1) {
+            for (let index = 0; index < columnCount; index += 1) {
                 const column = document.createElement('div');
                 column.className = 'masonry-column';
                 grid.appendChild(column);
                 columns.push(column);
             }
 
-            source_items.forEach((item, index) => {
-                const column_index = Math.min(Math.floor(index / items_per_column), column_count - 1);
-                columns[column_index].appendChild(item);
+            partitions.forEach((indexes, columnIndex) => {
+                indexes.forEach(itemIndex => {
+                    columns[columnIndex].appendChild(sourceItems[itemIndex]);
+                });
             });
         };
 
@@ -258,8 +371,8 @@
                 return masonry_item;
             });
 
-            renderMasonryGrid(results_grid, current_search_items);
             search_results.style.display = 'block';
+            renderMasonryGrid(results_grid, current_search_items);
 
             let n_results = results.length;
             let n_results_text = n_results == 1 ? 'recipe' : 'recipes';
@@ -267,6 +380,12 @@
         };
 
         renderMenuGrids();
+        window.addEventListener('load', () => {
+            renderMenuGrids();
+            if (search.value.trim()) {
+                renderSearchResults();
+            }
+        });
         search.addEventListener('keyup', debounce(renderSearchResults, 150));
         window.addEventListener('resize', debounce(() => {
             renderMenuGrids();
