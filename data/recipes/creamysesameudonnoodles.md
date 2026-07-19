@@ -1,32 +1,32 @@
 ## Creamy Sesame Udon Noodles
 
-From https://www.pickuplimes.com/
-
 ### Ingredients
 
 For 2 people:
 
 #### Miso Sesame Sauce
-- 1 Tbsp (15 mL) vegetable oil
+- 15 mL (1 tbsp) vegetable oil
 - 2 stalks green onion, thinly sliced (white and green separated)
 - 2 cloves garlic, minced
-- 2 Tbsp (17 g) all-purpose flour
-- 2 cups (480 mL) unsweetened soy milk
-- 2 Tbsp (30 mL) Asian sesame paste
-- 1 Tbsp (17 g) miso paste
-- ½ Tbsp (8 mL) sodium-reduced soy sauce
-- ½ tsp (2 g) granulated sugar
+- 17 g (2 tbsp) all-purpose flour
+- 480 mL (2 cups) unsweetened soy milk
+- 30 mL (2 tbsp) Asian sesame paste
+- 17 g (1 tbsp) miso paste
+- 8 mL (0.5 tbsp) sodium-reduced soy sauce
+- 2 g (0.5 tsp) granulated sugar
 
 #### Assembly
-- 5.6 oz (160 g) dry udon noodles
-- 3.2 oz (90 g) cremini mushrooms, halved or whole if small
-- 3.5 oz (100 g) smoked tofu, sliced into thin strips
-- ½ Tbsp (8 mL) sodium-reduced soy sauce
-- ½ cup (35 g) shredded red cabbage
-- ⅓ cup (55 g) canned corn
-- 1 tsp (3 g) toasted sesame seeds
+- 160 g (5.6 oz) dry udon noodles
+- 90 g (3.2 oz) cremini mushrooms, halved or whole if small
+- 100 g (3.5 oz) smoked tofu, sliced into thin strips
+- 8 mL (0.5 tbsp) sodium-reduced soy sauce
+- 35 g (0.5 cup) shredded red cabbage
+- 55 g (⅓ cup) canned corn
+- 3 g (1 tsp) toasted sesame seeds
 
 ### Steps
+
+Note: tofu can be cooked separately with sesame oil and soja sauce
 
 1. Cook the noodles according to the package instructions. Then drain, rinse, and set aside.
 2. Meanwhile, add the oil, the lighter part of the green onion, and garlic to a saucepan. Cook for 2 - 3 minutes.
