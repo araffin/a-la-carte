@@ -114,6 +114,16 @@
   link: https://www.marmiton.org/recettes/recette_financier-minute-pour-utiliser-des-blancs-d-oeuf_17526.aspx
   image: images/financier.webp
 
+- name: Financier aux myrtilles
+  options: ''
+  ingredients:
+  - almond powder
+  - blueberry
+  tags:
+  - france
+  link: https://www.iletaitunefoislapatisserie.com/2021/01/financiers-aux-amandes-recette-facile.html
+  image: images/financierauxmyrtilles.webp
+
 - name: Flan
   options: ''
   ingredients: []
@@ -291,6 +301,20 @@
   link: ''
   image: images/smoothie.webp
 
+- name: Suji Halwa
+  options: ''
+  ingredients:
+  - sugar
+  - ghee
+  - cashew
+  - semolina
+  - cardamom
+  - raisin
+  tags:
+  - india
+  link: https://www.vegrecipesofindia.com/sooji-halwa-recipe-rava-sheera/#wprm-recipe-container-138476
+  image: images/sujihalwa.webp
+
 - name: Tarte aux framboises
   options: with crème patissière
   ingredients: []
@@ -315,4 +339,16 @@
   tags: []
   link: https://www.marmiton.org/recettes/recette_tarte-a-la-rhubarbe-facile-et-rapide_37644.aspx
   image: images/rhubarbe.webp
+
+- name: Zucchini Chocolate Cake (Vegan)
+  options: ''
+  ingredients:
+  - zucchini
+  - chocolate powder
+  - maple syrup
+  - ''
+  tags:
+  - vegan
+  link: https://biancazapatka.com/de/zucchini-schokoladenkuchen/
+  image: ''
 
