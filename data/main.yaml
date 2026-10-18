@@ -508,6 +508,7 @@
   - red chili
   - gram flour
   - yoghurt
+  - potato
   tags:
   - india
   - spicy
@@ -591,6 +592,19 @@
   - india
   link: https://hebbarskitchen.com/methi-dal-fry-recipe-dal-methi-fry/
   image: images/methi.webp
+
+- name: Methi Malai Matar
+  options: ''
+  ingredients:
+  - green peas
+  - onion
+  - garlic
+  - ginger
+  - coconut milk
+  tags:
+  - india
+  link: methimalaimatar
+  image: images/methimalaimatar.webp
 
 - name: Moong Dal
   options: served with chapatis / rice
@@ -1093,6 +1107,18 @@
   - india
   link: https://www.indianhealthyrecipes.com/veg-cutlet-recipe-vegetable-cutlet-recipe/
   image: images/veg_cutlet.webp
+
+- name: Veg braid
+  options: ''
+  ingredients:
+  - vegan soja minced meat
+  - dried tomatoes
+  - cheese
+  - puff pastry
+  tags:
+  - ''
+  link: vegbraid
+  image: images/vegbraid.webp
 
 - name: Vegetable Pakora
   options: ''
