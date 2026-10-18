@@ -459,7 +459,7 @@
   link: isa
   image: images/isa_omelette.webp
 
-- name: Jaimie's Cauliflower Gratin
+- name: Jamie's Cauliflower Gratin
   options: ''
   ingredients:
   - cauliflower
@@ -722,7 +722,7 @@
   link: ''
   image: images/aglio.webp
 
-- name: Pasta Paprika à la Jamie Olivier
+- name: Pasta Paprika à la Jamie Oliver
   options: with feta and rocket
   ingredients:
   - paprika
