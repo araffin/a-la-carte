@@ -499,6 +499,21 @@
   link: https://hebbarskitchen.com/kadai-paneer-recipe-karahi-paneer-gravy/
   image: images/kadai.webp
 
+- name: Kadhi Pakora
+  options: ''
+  ingredients:
+  - onion
+  - ginger
+  - garlic
+  - red chili
+  - gram flour
+  - yoghurt
+  tags:
+  - india
+  - spicy
+  link: https://www.indianhealthyrecipes.com/kadhi-pakora-recipe/
+  image: images/kadhipakora.webp
+
 - name: Kerala Egg Curry With Coconut Milk
   options: ''
   ingredients:
@@ -827,19 +842,6 @@
   link: https://www.indianhealthyrecipes.com/rajma-recipe-rajma-masala-recipe/
   image: images/rajma.webp
 
-- name: Ratatouille
-  options: served with rice or pasta
-  ingredients:
-  - aubergine
-  - zucchini
-  - tomato
-  - onion
-  - garlic
-  tags:
-  - france
-  link: ''
-  image: ''
-
 - name: Ravioles
   options: with butter/oil or champignons
   ingredients:
@@ -1135,10 +1137,14 @@
   ingredients:
   - butternut
   - crème fraîche
+  - vegetable broth
+  - nutmeg
+  - onion
+  - garlic
   tags:
   - winter
-  link: ''
-  image: ''
+  link: https://cuisine.journaldesfemmes.fr/recette/339344-veloute-de-butternut
+  image: images/veloutdebutternut.webp
 
 - name: Velouté de champignons aux noisettes
   options: ''
